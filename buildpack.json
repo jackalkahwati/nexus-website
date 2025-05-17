@@ -1,0 +1,10 @@
+{
+  "language": "nodejs",
+  "version": "20",
+  "framework": "nextjs",
+  "config": {
+    "installCommand": "npm install --legacy-peer-deps",
+    "buildCommand": "cp prisma/schema.prisma.railway prisma/schema.prisma || true && NEXT_CONFIG_PATH=next.config.railway.mjs npm run build",
+    "startCommand": "npm run start"
+  }
+}

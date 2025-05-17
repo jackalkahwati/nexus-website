@@ -1,0 +1,62 @@
+[
+  {
+    "query": "fleet management",
+    "filters": {
+      "category": "management"
+    }
+  },
+  {
+    "query": "vehicle maintenance",
+    "filters": {
+      "category": "maintenance"
+    }
+  },
+  {
+    "query": "driver safety",
+    "filters": {
+      "category": "safety"
+    }
+  },
+  {
+    "query": "route optimization",
+    "filters": {
+      "category": "routing"
+    }
+  },
+  {
+    "query": "fuel efficiency",
+    "filters": {
+      "category": "efficiency"
+    }
+  },
+  {
+    "query": "compliance reports",
+    "filters": {
+      "category": "compliance"
+    }
+  },
+  {
+    "query": "vehicle tracking",
+    "filters": {
+      "category": "tracking"
+    }
+  },
+  {
+    "query": "driver performance",
+    "filters": {
+      "category": "performance"
+    }
+  },
+  {
+    "query": "maintenance schedule",
+    "filters": {
+      "category": "maintenance"
+    }
+  },
+  {
+    "query": "fleet analytics",
+    "filters": {
+      "category": "analytics"
+    }
+  }
+] 

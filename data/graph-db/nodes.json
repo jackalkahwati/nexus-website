@@ -1,0 +1,2419 @@
+[
+  {
+    "identity": "1",
+    "labels": [
+      "Type"
+    ],
+    "properties": {
+      "name": "Fleet Types",
+      "path": "/types/fleet.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Types for fleet management system"
+    }
+  },
+  {
+    "identity": "2",
+    "labels": [
+      "Type"
+    ],
+    "properties": {
+      "name": "Maintenance Types",
+      "path": "/types/maintenance.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Types for maintenance system"
+    }
+  },
+  {
+    "identity": "3",
+    "labels": [
+      "Type"
+    ],
+    "properties": {
+      "name": "Booking Types",
+      "path": "/types/booking.ts",
+      "domain": "Booking",
+      "projectId": "nexus-core",
+      "description": "Types for booking system"
+    }
+  },
+  {
+    "identity": "4",
+    "labels": [
+      "Type"
+    ],
+    "properties": {
+      "name": "Driver Types",
+      "path": "/types/driver.ts",
+      "domain": "Drivers",
+      "projectId": "nexus-core",
+      "description": "Types for driver management"
+    }
+  },
+  {
+    "identity": "5",
+    "labels": [
+      "Type"
+    ],
+    "properties": {
+      "name": "Payment Types",
+      "path": "/types/payment.ts",
+      "domain": "Payments",
+      "projectId": "nexus-core",
+      "description": "Types for payment processing"
+    }
+  },
+  {
+    "identity": "6",
+    "labels": [
+      "Type"
+    ],
+    "properties": {
+      "name": "Analytics Types",
+      "path": "/types/analytics.ts",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Types for analytics system"
+    }
+  },
+  {
+    "identity": "7",
+    "labels": [
+      "Type"
+    ],
+    "properties": {
+      "name": "Route Optimization Types",
+      "path": "/types/route-optimization.ts",
+      "domain": "Routes",
+      "projectId": "nexus-core",
+      "description": "Types for route optimization"
+    }
+  },
+  {
+    "identity": "8",
+    "labels": [
+      "Service"
+    ],
+    "properties": {
+      "name": "Analytics Service",
+      "path": "/lib/services/analytics.ts",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Service for analytics operations"
+    }
+  },
+  {
+    "identity": "9",
+    "labels": [
+      "Service"
+    ],
+    "properties": {
+      "name": "Payment Service",
+      "path": "/lib/services/payment.ts",
+      "domain": "Payments",
+      "projectId": "nexus-core",
+      "description": "Service for payment processing"
+    }
+  },
+  {
+    "identity": "10",
+    "labels": [
+      "Service"
+    ],
+    "properties": {
+      "name": "Monitoring Service",
+      "path": "/lib/services/monitoring.ts",
+      "domain": "Monitoring",
+      "projectId": "nexus-core",
+      "description": "Service for system monitoring"
+    }
+  },
+  {
+    "identity": "11",
+    "labels": [
+      "Service"
+    ],
+    "properties": {
+      "name": "Logging Service",
+      "path": "/lib/services/logging.ts",
+      "domain": "Core",
+      "projectId": "nexus-core",
+      "description": "Service for logging operations"
+    }
+  },
+  {
+    "identity": "12",
+    "labels": [
+      "Service"
+    ],
+    "properties": {
+      "name": "Database Service",
+      "path": "/lib/services/database.ts",
+      "domain": "Core",
+      "projectId": "nexus-core",
+      "description": "Service for database operations"
+    }
+  },
+  {
+    "identity": "13",
+    "labels": [
+      "Service"
+    ],
+    "properties": {
+      "name": "Cache Service",
+      "path": "/lib/services/cache.ts",
+      "domain": "Core",
+      "projectId": "nexus-core",
+      "description": "Service for caching operations"
+    }
+  },
+  {
+    "identity": "14",
+    "labels": [
+      "Service"
+    ],
+    "properties": {
+      "name": "Storage Service",
+      "path": "/lib/services/storage.ts",
+      "domain": "Core",
+      "projectId": "nexus-core",
+      "description": "Service for storage operations"
+    }
+  },
+  {
+    "identity": "15",
+    "labels": [
+      "Service"
+    ],
+    "properties": {
+      "name": "Task Queue Service",
+      "path": "/lib/services/task-queue.ts",
+      "domain": "Core",
+      "projectId": "nexus-core",
+      "description": "Service for task queue operations"
+    }
+  },
+  {
+    "identity": "16",
+    "labels": [
+      "Service"
+    ],
+    "properties": {
+      "name": "Predictive Maintenance Service",
+      "path": "/lib/services/predictive-maintenance.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service for predictive maintenance"
+    }
+  },
+  {
+    "identity": "17",
+    "labels": [
+      "Util"
+    ],
+    "properties": {
+      "name": "Booking Utils",
+      "path": "/lib/booking-utils.ts",
+      "domain": "Booking",
+      "projectId": "nexus-core",
+      "description": "Utilities for booking operations"
+    }
+  },
+  {
+    "identity": "18",
+    "labels": [
+      "Util"
+    ],
+    "properties": {
+      "name": "Maintenance Utils",
+      "path": "/lib/maintenance-utils.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Utilities for maintenance operations"
+    }
+  },
+  {
+    "identity": "19",
+    "labels": [
+      "Util"
+    ],
+    "properties": {
+      "name": "Maintenance Scheduler",
+      "path": "/lib/maintenance-scheduler.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Utilities for scheduling maintenance"
+    }
+  },
+  {
+    "identity": "20",
+    "labels": [
+      "Util"
+    ],
+    "properties": {
+      "name": "Log Rotation Utils",
+      "path": "/lib/utils/log-rotation.ts",
+      "domain": "Monitoring",
+      "projectId": "nexus-core",
+      "description": "Utilities for log rotation"
+    }
+  },
+  {
+    "identity": "21",
+    "labels": [
+      "Util"
+    ],
+    "properties": {
+      "name": "Demand Forecast Utils",
+      "path": "/lib/demand-forecast-utils.ts",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Utilities for demand forecasting"
+    }
+  },
+  {
+    "identity": "22",
+    "labels": [
+      "Util"
+    ],
+    "properties": {
+      "name": "Rebalancing Utils",
+      "path": "/lib/rebalancing-utils.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Utilities for fleet rebalancing"
+    }
+  },
+  {
+    "identity": "23",
+    "labels": [
+      "Hook"
+    ],
+    "properties": {
+      "name": "useVehicles",
+      "path": "/hooks/use-vehicles.ts",
+      "domain": "Vehicles",
+      "projectId": "nexus-core",
+      "description": "Hook for vehicle data operations"
+    }
+  },
+  {
+    "identity": "24",
+    "labels": [
+      "Hook"
+    ],
+    "properties": {
+      "name": "useDrivers",
+      "path": "/hooks/use-drivers.ts",
+      "domain": "Drivers",
+      "projectId": "nexus-core",
+      "description": "Hook for driver data operations"
+    }
+  },
+  {
+    "identity": "25",
+    "labels": [
+      "Hook"
+    ],
+    "properties": {
+      "name": "useFleetAssignments",
+      "path": "/hooks/use-fleet-assignments.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Hook for fleet assignment operations"
+    }
+  },
+  {
+    "identity": "26",
+    "labels": [
+      "Hook"
+    ],
+    "properties": {
+      "name": "useFleetOperations",
+      "path": "/hooks/use-fleet-operations.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Hook for fleet operations"
+    }
+  },
+  {
+    "identity": "27",
+    "labels": [
+      "Hook"
+    ],
+    "properties": {
+      "name": "useMaintenance",
+      "path": "/hooks/use-maintenance.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Hook for maintenance operations"
+    }
+  },
+  {
+    "identity": "28",
+    "labels": [
+      "Hook"
+    ],
+    "properties": {
+      "name": "useBookings",
+      "path": "/hooks/use-bookings.ts",
+      "domain": "Booking",
+      "projectId": "nexus-core",
+      "description": "Hook for booking operations"
+    }
+  },
+  {
+    "identity": "29",
+    "labels": [
+      "Hook"
+    ],
+    "properties": {
+      "name": "useTechnicians",
+      "path": "/hooks/use-technicians.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Hook for technician operations"
+    }
+  },
+  {
+    "identity": "30",
+    "labels": [
+      "Page"
+    ],
+    "properties": {
+      "name": "Fleet Page",
+      "path": "/app/fleet/page.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet management page"
+    }
+  },
+  {
+    "identity": "31",
+    "labels": [
+      "Page"
+    ],
+    "properties": {
+      "name": "Dashboard Page",
+      "path": "/app/dashboard/page.tsx",
+      "domain": "Core",
+      "projectId": "nexus-core",
+      "description": "Main dashboard page"
+    }
+  },
+  {
+    "identity": "32",
+    "labels": [
+      "Page"
+    ],
+    "properties": {
+      "name": "Fleet Dashboard Page",
+      "path": "/app/dashboard/fleet/page.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet dashboard page"
+    }
+  },
+  {
+    "identity": "33",
+    "labels": [
+      "Page"
+    ],
+    "properties": {
+      "name": "Maintenance Page",
+      "path": "/app/dashboard/maintenance/page.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance management page"
+    }
+  },
+  {
+    "identity": "34",
+    "labels": [
+      "Page"
+    ],
+    "properties": {
+      "name": "Maintenance History Page",
+      "path": "/app/dashboard/maintenance/history/page.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance history page"
+    }
+  },
+  {
+    "identity": "35",
+    "labels": [
+      "Page"
+    ],
+    "properties": {
+      "name": "Drivers Page",
+      "path": "/app/dashboard/drivers/page.tsx",
+      "domain": "Drivers",
+      "projectId": "nexus-core",
+      "description": "Drivers management page"
+    }
+  },
+  {
+    "identity": "36",
+    "labels": [
+      "Page"
+    ],
+    "properties": {
+      "name": "Bookings Page",
+      "path": "/app/dashboard/bookings/page.tsx",
+      "domain": "Booking",
+      "projectId": "nexus-core",
+      "description": "Bookings management page"
+    }
+  },
+  {
+    "identity": "37",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMap",
+      "path": "/components/fleet/FleetMap.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Map component for fleet visualization"
+    }
+  },
+  {
+    "identity": "38",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetVisualization",
+      "path": "/components/fleet/FleetVisualization.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Component for fleet visualization"
+    }
+  },
+  {
+    "identity": "39",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AssignmentDialog",
+      "path": "/components/fleet/AssignmentDialog.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Dialog for vehicle-driver assignments"
+    }
+  },
+  {
+    "identity": "40",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleDetailsDialog",
+      "path": "/components/fleet/VehicleDetailsDialog.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Dialog for vehicle details"
+    }
+  },
+  {
+    "identity": "41",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceDialog",
+      "path": "/components/maintenance/maintenance-dialog.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Dialog for maintenance operations"
+    }
+  },
+  {
+    "identity": "42",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceForm",
+      "path": "/components/maintenance/maintenance-form.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Form for maintenance data"
+    }
+  },
+  {
+    "identity": "43",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceHistoryDialog",
+      "path": "/components/maintenance/service-history-dialog.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Dialog for service history"
+    }
+  },
+  {
+    "identity": "44",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "StatusBadge",
+      "path": "/components/maintenance/status-badge.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Badge for status display"
+    }
+  },
+  {
+    "identity": "45",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Fleet API",
+      "path": "/app/api/fleet/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for fleet operations"
+    }
+  },
+  {
+    "identity": "46",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Fleet Status API",
+      "path": "/app/api/fleet/status/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for fleet status"
+    }
+  },
+  {
+    "identity": "47",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Fleet Locations API",
+      "path": "/app/api/fleet/locations/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for fleet locations"
+    }
+  },
+  {
+    "identity": "48",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Fleet Operations API",
+      "path": "/app/api/fleet/operations/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for fleet operations"
+    }
+  },
+  {
+    "identity": "49",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Fleet Alerts API",
+      "path": "/app/api/fleet/alerts/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for fleet alerts"
+    }
+  },
+  {
+    "identity": "50",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Fleet Stream API",
+      "path": "/app/api/fleet/stream/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for fleet streaming data"
+    }
+  },
+  {
+    "identity": "51",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Vehicle Assignments API",
+      "path": "/app/api/fleet/vehicles/[id]/assignments/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for vehicle assignments"
+    }
+  },
+  {
+    "identity": "52",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Vehicle Sensor Data API",
+      "path": "/app/api/fleet/vehicles/[id]/sensor-data/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for vehicle sensor data"
+    }
+  },
+  {
+    "identity": "53",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Vehicle Status API",
+      "path": "/app/api/fleet/vehicles/[id]/status/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for vehicle status"
+    }
+  },
+  {
+    "identity": "54",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Maintenance API",
+      "path": "/app/api/maintenance/route.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "API for maintenance operations"
+    }
+  },
+  {
+    "identity": "55",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Maintenance Detail API",
+      "path": "/app/api/maintenance/[id]/route.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "API for maintenance details"
+    }
+  },
+  {
+    "identity": "56",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Maintenance Schedule API",
+      "path": "/app/api/maintenance/schedule/route.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "API for maintenance scheduling"
+    }
+  },
+  {
+    "identity": "57",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Maintenance Tasks API",
+      "path": "/app/api/maintenance/tasks/route.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "API for maintenance tasks"
+    }
+  },
+  {
+    "identity": "58",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Maintenance Task Detail API",
+      "path": "/app/api/maintenance/tasks/[taskId]/route.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "API for maintenance task details"
+    }
+  },
+  {
+    "identity": "59",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Assign Task API",
+      "path": "/app/api/maintenance/tasks/[taskId]/assign/route.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "API for assigning maintenance tasks"
+    }
+  },
+  {
+    "identity": "60",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Complete Task API",
+      "path": "/app/api/maintenance/tasks/[taskId]/complete/route.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "API for completing maintenance tasks"
+    }
+  },
+  {
+    "identity": "61",
+    "labels": [
+      "Context"
+    ],
+    "properties": {
+      "name": "FleetContext",
+      "path": "/contexts/FleetContext.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Context for fleet state management"
+    }
+  },
+  {
+    "identity": "62",
+    "labels": [
+      "Context"
+    ],
+    "properties": {
+      "name": "MaintenanceContext",
+      "path": "/contexts/MaintenanceContext.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Context for maintenance state management"
+    }
+  },
+  {
+    "identity": "63",
+    "labels": [
+      "Context"
+    ],
+    "properties": {
+      "name": "RouteOptimizationContext",
+      "path": "/contexts/RouteOptimizationContext.tsx",
+      "domain": "Routes",
+      "projectId": "nexus-core",
+      "description": "Context for route optimization"
+    }
+  },
+  {
+    "identity": "64",
+    "labels": [
+      "Context"
+    ],
+    "properties": {
+      "name": "NotificationContext",
+      "path": "/contexts/NotificationContext.tsx",
+      "domain": "Notifications",
+      "projectId": "nexus-core",
+      "description": "Context for notifications"
+    }
+  },
+  {
+    "identity": "65",
+    "labels": [
+      "Context"
+    ],
+    "properties": {
+      "name": "AnalyticsContext",
+      "path": "/contexts/AnalyticsContext.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Context for analytics"
+    }
+  },
+  {
+    "identity": "66",
+    "labels": [
+      "Model"
+    ],
+    "properties": {
+      "name": "Vehicle Model",
+      "path": "/types/fleet.ts:Vehicle",
+      "domain": "Vehicles",
+      "projectId": "nexus-core",
+      "description": "Vehicle data model"
+    }
+  },
+  {
+    "identity": "67",
+    "labels": [
+      "Model"
+    ],
+    "properties": {
+      "name": "Driver Model",
+      "path": "/types/driver.ts:Driver",
+      "domain": "Drivers",
+      "projectId": "nexus-core",
+      "description": "Driver data model"
+    }
+  },
+  {
+    "identity": "68",
+    "labels": [
+      "Model"
+    ],
+    "properties": {
+      "name": "Maintenance Task Model",
+      "path": "/types/maintenance.ts:MaintenanceTask",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance task data model"
+    }
+  },
+  {
+    "identity": "69",
+    "labels": [
+      "Model"
+    ],
+    "properties": {
+      "name": "Maintenance Part Model",
+      "path": "/types/maintenance.ts:MaintenancePart",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance part data model"
+    }
+  },
+  {
+    "identity": "70",
+    "labels": [
+      "Model"
+    ],
+    "properties": {
+      "name": "Booking Model",
+      "path": "/types/booking.ts:Booking",
+      "domain": "Booking",
+      "projectId": "nexus-core",
+      "description": "Booking data model"
+    }
+  },
+  {
+    "identity": "71",
+    "labels": [
+      "Model"
+    ],
+    "properties": {
+      "name": "Route Model",
+      "path": "/types/fleet.ts:Route",
+      "domain": "Routes",
+      "projectId": "nexus-core",
+      "description": "Route data model"
+    }
+  },
+  {
+    "identity": "72",
+    "labels": [
+      "Model"
+    ],
+    "properties": {
+      "name": "Analytics Model",
+      "path": "/types/fleet.ts:Analytics",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics data model"
+    }
+  },
+  {
+    "identity": "73",
+    "labels": [
+      "Model"
+    ],
+    "properties": {
+      "name": "Robotaxi Vehicle Model",
+      "path": "/types/fleet.ts:RobotaxiVehicle",
+      "domain": "Robotaxi",
+      "projectId": "nexus-core",
+      "description": "Robotaxi vehicle data model"
+    }
+  },
+  {
+    "identity": "74",
+    "labels": [
+      "Model"
+    ],
+    "properties": {
+      "name": "Fleet Alert Model",
+      "path": "/types/fleet.ts:FleetAlert",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet alert data model"
+    }
+  },
+  {
+    "identity": "75",
+    "labels": [
+      "Util"
+    ],
+    "properties": {
+      "name": "Fleet Mock Data",
+      "path": "/lib/mock/fleet-data.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Mock data for fleet"
+    }
+  },
+  {
+    "identity": "76",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor1",
+      "path": "/components/fleet/monitors/FleetMonitor1.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 1"
+    }
+  },
+  {
+    "identity": "77",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard1",
+      "path": "/components/fleet/vehicles/VehicleCard1.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 1"
+    }
+  },
+  {
+    "identity": "78",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule1",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule1.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 1"
+    }
+  },
+  {
+    "identity": "79",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport1",
+      "path": "/components/maintenance/reports/ServiceReport1.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 1"
+    }
+  },
+  {
+    "identity": "80",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard1",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard1.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 1"
+    }
+  },
+  {
+    "identity": "81",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart1",
+      "path": "/components/analytics/charts/MetricsChart1.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 1"
+    }
+  },
+  {
+    "identity": "82",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor2",
+      "path": "/components/fleet/monitors/FleetMonitor2.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 2"
+    }
+  },
+  {
+    "identity": "83",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard2",
+      "path": "/components/fleet/vehicles/VehicleCard2.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 2"
+    }
+  },
+  {
+    "identity": "84",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule2",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule2.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 2"
+    }
+  },
+  {
+    "identity": "85",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport2",
+      "path": "/components/maintenance/reports/ServiceReport2.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 2"
+    }
+  },
+  {
+    "identity": "86",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard2",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard2.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 2"
+    }
+  },
+  {
+    "identity": "87",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart2",
+      "path": "/components/analytics/charts/MetricsChart2.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 2"
+    }
+  },
+  {
+    "identity": "88",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor3",
+      "path": "/components/fleet/monitors/FleetMonitor3.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 3"
+    }
+  },
+  {
+    "identity": "89",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard3",
+      "path": "/components/fleet/vehicles/VehicleCard3.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 3"
+    }
+  },
+  {
+    "identity": "90",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule3",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule3.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 3"
+    }
+  },
+  {
+    "identity": "91",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport3",
+      "path": "/components/maintenance/reports/ServiceReport3.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 3"
+    }
+  },
+  {
+    "identity": "92",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard3",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard3.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 3"
+    }
+  },
+  {
+    "identity": "93",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart3",
+      "path": "/components/analytics/charts/MetricsChart3.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 3"
+    }
+  },
+  {
+    "identity": "94",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor4",
+      "path": "/components/fleet/monitors/FleetMonitor4.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 4"
+    }
+  },
+  {
+    "identity": "95",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard4",
+      "path": "/components/fleet/vehicles/VehicleCard4.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 4"
+    }
+  },
+  {
+    "identity": "96",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule4",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule4.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 4"
+    }
+  },
+  {
+    "identity": "97",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport4",
+      "path": "/components/maintenance/reports/ServiceReport4.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 4"
+    }
+  },
+  {
+    "identity": "98",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard4",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard4.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 4"
+    }
+  },
+  {
+    "identity": "99",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart4",
+      "path": "/components/analytics/charts/MetricsChart4.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 4"
+    }
+  },
+  {
+    "identity": "100",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor5",
+      "path": "/components/fleet/monitors/FleetMonitor5.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 5"
+    }
+  },
+  {
+    "identity": "101",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard5",
+      "path": "/components/fleet/vehicles/VehicleCard5.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 5"
+    }
+  },
+  {
+    "identity": "102",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule5",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule5.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 5"
+    }
+  },
+  {
+    "identity": "103",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport5",
+      "path": "/components/maintenance/reports/ServiceReport5.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 5"
+    }
+  },
+  {
+    "identity": "104",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard5",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard5.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 5"
+    }
+  },
+  {
+    "identity": "105",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart5",
+      "path": "/components/analytics/charts/MetricsChart5.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 5"
+    }
+  },
+  {
+    "identity": "106",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor6",
+      "path": "/components/fleet/monitors/FleetMonitor6.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 6"
+    }
+  },
+  {
+    "identity": "107",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard6",
+      "path": "/components/fleet/vehicles/VehicleCard6.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 6"
+    }
+  },
+  {
+    "identity": "108",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule6",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule6.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 6"
+    }
+  },
+  {
+    "identity": "109",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport6",
+      "path": "/components/maintenance/reports/ServiceReport6.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 6"
+    }
+  },
+  {
+    "identity": "110",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard6",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard6.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 6"
+    }
+  },
+  {
+    "identity": "111",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart6",
+      "path": "/components/analytics/charts/MetricsChart6.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 6"
+    }
+  },
+  {
+    "identity": "112",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor7",
+      "path": "/components/fleet/monitors/FleetMonitor7.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 7"
+    }
+  },
+  {
+    "identity": "113",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard7",
+      "path": "/components/fleet/vehicles/VehicleCard7.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 7"
+    }
+  },
+  {
+    "identity": "114",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule7",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule7.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 7"
+    }
+  },
+  {
+    "identity": "115",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport7",
+      "path": "/components/maintenance/reports/ServiceReport7.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 7"
+    }
+  },
+  {
+    "identity": "116",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard7",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard7.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 7"
+    }
+  },
+  {
+    "identity": "117",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart7",
+      "path": "/components/analytics/charts/MetricsChart7.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 7"
+    }
+  },
+  {
+    "identity": "118",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor8",
+      "path": "/components/fleet/monitors/FleetMonitor8.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 8"
+    }
+  },
+  {
+    "identity": "119",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard8",
+      "path": "/components/fleet/vehicles/VehicleCard8.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 8"
+    }
+  },
+  {
+    "identity": "120",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule8",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule8.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 8"
+    }
+  },
+  {
+    "identity": "121",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport8",
+      "path": "/components/maintenance/reports/ServiceReport8.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 8"
+    }
+  },
+  {
+    "identity": "122",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard8",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard8.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 8"
+    }
+  },
+  {
+    "identity": "123",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart8",
+      "path": "/components/analytics/charts/MetricsChart8.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 8"
+    }
+  },
+  {
+    "identity": "124",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor9",
+      "path": "/components/fleet/monitors/FleetMonitor9.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 9"
+    }
+  },
+  {
+    "identity": "125",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard9",
+      "path": "/components/fleet/vehicles/VehicleCard9.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 9"
+    }
+  },
+  {
+    "identity": "126",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule9",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule9.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 9"
+    }
+  },
+  {
+    "identity": "127",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport9",
+      "path": "/components/maintenance/reports/ServiceReport9.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 9"
+    }
+  },
+  {
+    "identity": "128",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard9",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard9.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 9"
+    }
+  },
+  {
+    "identity": "129",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart9",
+      "path": "/components/analytics/charts/MetricsChart9.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 9"
+    }
+  },
+  {
+    "identity": "130",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor10",
+      "path": "/components/fleet/monitors/FleetMonitor10.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 10"
+    }
+  },
+  {
+    "identity": "131",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard10",
+      "path": "/components/fleet/vehicles/VehicleCard10.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 10"
+    }
+  },
+  {
+    "identity": "132",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule10",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule10.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 10"
+    }
+  },
+  {
+    "identity": "133",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport10",
+      "path": "/components/maintenance/reports/ServiceReport10.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 10"
+    }
+  },
+  {
+    "identity": "134",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard10",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard10.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 10"
+    }
+  },
+  {
+    "identity": "135",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart10",
+      "path": "/components/analytics/charts/MetricsChart10.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 10"
+    }
+  },
+  {
+    "identity": "136",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor11",
+      "path": "/components/fleet/monitors/FleetMonitor11.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 11"
+    }
+  },
+  {
+    "identity": "137",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard11",
+      "path": "/components/fleet/vehicles/VehicleCard11.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 11"
+    }
+  },
+  {
+    "identity": "138",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule11",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule11.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 11"
+    }
+  },
+  {
+    "identity": "139",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport11",
+      "path": "/components/maintenance/reports/ServiceReport11.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 11"
+    }
+  },
+  {
+    "identity": "140",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard11",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard11.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 11"
+    }
+  },
+  {
+    "identity": "141",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart11",
+      "path": "/components/analytics/charts/MetricsChart11.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 11"
+    }
+  },
+  {
+    "identity": "142",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor12",
+      "path": "/components/fleet/monitors/FleetMonitor12.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 12"
+    }
+  },
+  {
+    "identity": "143",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard12",
+      "path": "/components/fleet/vehicles/VehicleCard12.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 12"
+    }
+  },
+  {
+    "identity": "144",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule12",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule12.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 12"
+    }
+  },
+  {
+    "identity": "145",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport12",
+      "path": "/components/maintenance/reports/ServiceReport12.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 12"
+    }
+  },
+  {
+    "identity": "146",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard12",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard12.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 12"
+    }
+  },
+  {
+    "identity": "147",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart12",
+      "path": "/components/analytics/charts/MetricsChart12.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 12"
+    }
+  },
+  {
+    "identity": "148",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor13",
+      "path": "/components/fleet/monitors/FleetMonitor13.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 13"
+    }
+  },
+  {
+    "identity": "149",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard13",
+      "path": "/components/fleet/vehicles/VehicleCard13.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 13"
+    }
+  },
+  {
+    "identity": "150",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule13",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule13.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 13"
+    }
+  },
+  {
+    "identity": "151",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport13",
+      "path": "/components/maintenance/reports/ServiceReport13.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 13"
+    }
+  },
+  {
+    "identity": "152",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard13",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard13.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 13"
+    }
+  },
+  {
+    "identity": "153",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart13",
+      "path": "/components/analytics/charts/MetricsChart13.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 13"
+    }
+  },
+  {
+    "identity": "154",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor14",
+      "path": "/components/fleet/monitors/FleetMonitor14.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 14"
+    }
+  },
+  {
+    "identity": "155",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard14",
+      "path": "/components/fleet/vehicles/VehicleCard14.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 14"
+    }
+  },
+  {
+    "identity": "156",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule14",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule14.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 14"
+    }
+  },
+  {
+    "identity": "157",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport14",
+      "path": "/components/maintenance/reports/ServiceReport14.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 14"
+    }
+  },
+  {
+    "identity": "158",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard14",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard14.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 14"
+    }
+  },
+  {
+    "identity": "159",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart14",
+      "path": "/components/analytics/charts/MetricsChart14.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 14"
+    }
+  },
+  {
+    "identity": "160",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "FleetMonitor15",
+      "path": "/components/fleet/monitors/FleetMonitor15.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Fleet monitoring component 15"
+    }
+  },
+  {
+    "identity": "161",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "VehicleCard15",
+      "path": "/components/fleet/vehicles/VehicleCard15.tsx",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "Vehicle card component 15"
+    }
+  },
+  {
+    "identity": "162",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MaintenanceSchedule15",
+      "path": "/components/maintenance/schedules/MaintenanceSchedule15.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Maintenance schedule component 15"
+    }
+  },
+  {
+    "identity": "163",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "ServiceReport15",
+      "path": "/components/maintenance/reports/ServiceReport15.tsx",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "Service report component 15"
+    }
+  },
+  {
+    "identity": "164",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "AnalyticsDashboard15",
+      "path": "/components/analytics/dashboards/AnalyticsDashboard15.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Analytics dashboard component 15"
+    }
+  },
+  {
+    "identity": "165",
+    "labels": [
+      "Component"
+    ],
+    "properties": {
+      "name": "MetricsChart15",
+      "path": "/components/analytics/charts/MetricsChart15.tsx",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "Metrics chart component 15"
+    }
+  },
+  {
+    "identity": "166",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Fleet Metrics 1 API",
+      "path": "/app/api/fleet/metrics/1/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for fleet metrics 1"
+    }
+  },
+  {
+    "identity": "167",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Maintenance Report 1 API",
+      "path": "/app/api/maintenance/reports/1/route.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "API for maintenance report 1"
+    }
+  },
+  {
+    "identity": "168",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Analytics Dashboard 1 API",
+      "path": "/app/api/analytics/dashboards/1/route.ts",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "API for analytics dashboard 1"
+    }
+  },
+  {
+    "identity": "169",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Booking Operation 1 API",
+      "path": "/app/api/bookings/operations/1/route.ts",
+      "domain": "Booking",
+      "projectId": "nexus-core",
+      "description": "API for booking operation 1"
+    }
+  },
+  {
+    "identity": "170",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Fleet Metrics 2 API",
+      "path": "/app/api/fleet/metrics/2/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for fleet metrics 2"
+    }
+  },
+  {
+    "identity": "171",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Maintenance Report 2 API",
+      "path": "/app/api/maintenance/reports/2/route.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "API for maintenance report 2"
+    }
+  },
+  {
+    "identity": "172",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Analytics Dashboard 2 API",
+      "path": "/app/api/analytics/dashboards/2/route.ts",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "API for analytics dashboard 2"
+    }
+  },
+  {
+    "identity": "173",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Booking Operation 2 API",
+      "path": "/app/api/bookings/operations/2/route.ts",
+      "domain": "Booking",
+      "projectId": "nexus-core",
+      "description": "API for booking operation 2"
+    }
+  },
+  {
+    "identity": "174",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Fleet Metrics 3 API",
+      "path": "/app/api/fleet/metrics/3/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for fleet metrics 3"
+    }
+  },
+  {
+    "identity": "175",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Maintenance Report 3 API",
+      "path": "/app/api/maintenance/reports/3/route.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "API for maintenance report 3"
+    }
+  },
+  {
+    "identity": "176",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Analytics Dashboard 3 API",
+      "path": "/app/api/analytics/dashboards/3/route.ts",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "API for analytics dashboard 3"
+    }
+  },
+  {
+    "identity": "177",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Booking Operation 3 API",
+      "path": "/app/api/bookings/operations/3/route.ts",
+      "domain": "Booking",
+      "projectId": "nexus-core",
+      "description": "API for booking operation 3"
+    }
+  },
+  {
+    "identity": "178",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Fleet Metrics 4 API",
+      "path": "/app/api/fleet/metrics/4/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for fleet metrics 4"
+    }
+  },
+  {
+    "identity": "179",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Maintenance Report 4 API",
+      "path": "/app/api/maintenance/reports/4/route.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "API for maintenance report 4"
+    }
+  },
+  {
+    "identity": "180",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Analytics Dashboard 4 API",
+      "path": "/app/api/analytics/dashboards/4/route.ts",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "API for analytics dashboard 4"
+    }
+  },
+  {
+    "identity": "181",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Booking Operation 4 API",
+      "path": "/app/api/bookings/operations/4/route.ts",
+      "domain": "Booking",
+      "projectId": "nexus-core",
+      "description": "API for booking operation 4"
+    }
+  },
+  {
+    "identity": "182",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Fleet Metrics 5 API",
+      "path": "/app/api/fleet/metrics/5/route.ts",
+      "domain": "Fleet",
+      "projectId": "nexus-core",
+      "description": "API for fleet metrics 5"
+    }
+  },
+  {
+    "identity": "183",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Maintenance Report 5 API",
+      "path": "/app/api/maintenance/reports/5/route.ts",
+      "domain": "Maintenance",
+      "projectId": "nexus-core",
+      "description": "API for maintenance report 5"
+    }
+  },
+  {
+    "identity": "184",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Analytics Dashboard 5 API",
+      "path": "/app/api/analytics/dashboards/5/route.ts",
+      "domain": "Analytics",
+      "projectId": "nexus-core",
+      "description": "API for analytics dashboard 5"
+    }
+  },
+  {
+    "identity": "185",
+    "labels": [
+      "API"
+    ],
+    "properties": {
+      "name": "Booking Operation 5 API",
+      "path": "/app/api/bookings/operations/5/route.ts",
+      "domain": "Booking",
+      "projectId": "nexus-core",
+      "description": "API for booking operation 5"
+    }
+  },
+  {
+    "identity": "test-123",
+    "labels": [
+      "TestNode"
+    ],
+    "properties": {
+      "name": "Test Node",
+      "created": "2025-04-06T05:46:35.673Z",
+      "testValue": 42,
+      "projectId": "test-project"
+    }
+  }
+]

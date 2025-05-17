@@ -1,0 +1,721 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String          @id @default(cuid())
+  email           String          @unique
+  name            String?
+  roleId          String?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  image           String?
+  deletedAt       DateTime?
+  status          UserStatus      @default(ACTIVE)
+  hashedPassword  String?         @map("password")
+  mfaEnabled      Boolean         @default(false)
+  mfaSecret       String?
+  lastLoginAt     DateTime?
+  resetToken      String?
+  resetTokenExpiry DateTime?
+  emailVerified   DateTime?
+  Account         Account[]
+  Activity        Activity[]
+  bookings        Booking[]
+  loyaltyAccount  LoyaltyAccount?
+  Session         Session[]
+  StripeCustomer  StripeCustomer?
+  Task            Task[]
+  Role            Role?           @relation(fields: [roleId], references: [id])
+  waitlistEntries WaitlistEntry[]
+  RecoveryCodes   RecoveryCodes[]
+
+  @@index([email])
+  @@index([status])
+}
+
+model Vehicle {
+  id                     String                 @id @default(cuid())
+  name                   String
+  createdAt              DateTime               @default(now())
+  updatedAt              DateTime               @updatedAt
+  type                   String                 @default("standard")
+  fleetId                String?
+  lastMaintenance        DateTime?
+  mileage                Int                    @default(0)
+  nextMaintenanceDue     DateTime?
+  zoneId                 String?
+  lastMaintenanceMileage Int?
+  deletedAt              DateTime?
+  status                 VehicleStatus          @default(AVAILABLE)
+  bookings               Booking[]
+  maintenanceSchedules   MaintenanceSchedule[]
+  maintenanceTasks       MaintenanceTask[]
+  rebalancingTasks       RebalancingTask[]
+  Fleet                  Fleet?                 @relation(fields: [fleetId], references: [id])
+  Zone                   Zone?                  @relation(fields: [zoneId], references: [id])
+  VehicleStatusHistory   VehicleStatusHistory[]
+  waitlistEntries        WaitlistEntry[]
+  insurancePolicies      InsurancePolicy[]
+
+  @@index([status])
+  @@index([type])
+  @@index([fleetId])
+  @@index([zoneId])
+}
+
+model InsurancePolicy {
+  id           String   @id @default(cuid())
+  vehicleId    String
+  vehicle      Vehicle  @relation(fields: [vehicleId], references: [id])
+  provider     String
+  policyNumber String   @unique
+  type         String
+  startDate    DateTime
+  endDate      DateTime
+  coverage     Float
+  deductible   Float
+  premium      Float
+  status       String
+  documents    Json?
+  claims       Json?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([vehicleId])
+  @@index([status])
+  @@index([policyNumber])
+}
+
+model Booking {
+  id              String        @id @default(cuid())
+  userId          String
+  vehicleId       String
+  startTime       DateTime
+  endTime         DateTime
+  location        String?
+  participants    Int           @default(1)
+  recurringPattern String?
+  price           Int
+  notes           String?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  deletedAt       DateTime?
+  feedback        String?
+  rating          Int?
+  type            BookingType   @default(STANDARD)
+  status          BookingStatus @default(PENDING)
+  pointsEarned    Int?
+  pointsRedeemed  Int?
+  user            User          @relation(fields: [userId], references: [id])
+  vehicle         Vehicle       @relation(fields: [vehicleId], references: [id])
+  loyaltyTransactions LoyaltyTransaction[]
+  payment         Payment?
+
+  @@index([userId])
+  @@index([vehicleId])
+  @@index([status])
+  @@index([startTime])
+  @@index([endTime])
+}
+
+model BookingPolicy {
+  id              String   @id @default(cuid())
+  maxDuration     Int
+  minDuration     Int
+  pricePerMinute  Float
+  pricePerHour    Float
+  pricePerDay     Float
+  lateFee         Float
+  cancellationFee Float
+  isActive        Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  name            String   @unique
+
+  @@index([isActive])
+}
+
+model Payment {
+  id                    String        @id @default(cuid())
+  amount                Int
+  currency              String        @default("usd")
+  stripePaymentIntentId String        @unique
+  createdAt             DateTime      @default(now())
+  updatedAt             DateTime      @updatedAt
+  bookingId             String        @unique
+  refundAmount          Int?
+  refundReason          String?
+  status                PaymentStatus @default(PENDING)
+  booking               Booking       @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+
+  @@index([status])
+}
+
+model Technician {
+  id           String                 @id @default(cuid())
+  name         String
+  email        String                 @unique
+  specialties  String[]
+  createdAt    DateTime               @default(now())
+  updatedAt    DateTime               @updatedAt
+  deletedAt    DateTime?
+  availability TechnicianAvailability @default(AVAILABLE)
+  tasks        MaintenanceTask[]
+
+  @@index([availability])
+}
+
+model MaintenanceTask {
+  id           String                  @id @default(cuid())
+  title        String
+  description  String?
+  dueDate      DateTime?
+  completedAt  DateTime?
+  vehicleId    String
+  technicianId String?
+  notes        String?
+  createdAt    DateTime                @default(now())
+  updatedAt    DateTime                @updatedAt
+  templateId   String?
+  type         MaintenanceTaskType
+  priority     MaintenanceTaskPriority
+  status       MaintenanceTaskStatus   @default(PENDING)
+  technician   Technician?             @relation(fields: [technicianId], references: [id])
+  template     MaintenanceTemplate?    @relation(fields: [templateId], references: [id])
+  vehicle      Vehicle                 @relation(fields: [vehicleId], references: [id])
+  parts        MaintenancePart[]       @relation("MaintenancePartToMaintenanceTask")
+
+  @@index([status])
+  @@index([priority])
+  @@index([vehicleId])
+  @@index([technicianId])
+  @@index([dueDate])
+}
+
+model MaintenanceTemplate {
+  id          String                @id @default(cuid())
+  name        String
+  description String?
+  type        MaintenanceTaskType
+  steps       Json
+  duration    Int
+  parts       Json?
+  createdAt   DateTime              @default(now())
+  updatedAt   DateTime              @updatedAt
+  schedules   MaintenanceSchedule[]
+  tasks       MaintenanceTask[]
+
+  @@index([type])
+}
+
+model MaintenancePart {
+  id          String            @id @default(cuid())
+  name        String
+  partNumber  String            @unique
+  description String?
+  quantity    Int
+  minQuantity Int               @default(0)
+  price       Float
+  supplier    String?
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  tasks       MaintenanceTask[] @relation("MaintenancePartToMaintenanceTask")
+
+  @@index([partNumber])
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  userId       String
+  expires      DateTime
+  sessionToken String   @unique
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Role {
+  id          String       @id @default(cuid())
+  name        String       @unique
+  users       User[]
+  permissions Permission[] @relation("PermissionToRole")
+}
+
+model Permission {
+  id    String @id @default(cuid())
+  name  String @unique
+  roles Role[] @relation("PermissionToRole")
+}
+
+model Activity {
+  id        String   @id @default(cuid())
+  action    String
+  target    String
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([createdAt])
+}
+
+model VehicleStatusHistory {
+  id        String   @id @default(cuid())
+  vehicleId String
+  status    String
+  timestamp DateTime @default(now())
+  vehicle   Vehicle  @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+
+  @@index([timestamp])
+  @@index([status])
+  @@index([vehicleId])
+}
+
+model DemoRequest {
+  id        String   @id @default(cuid())
+  fullName  String
+  email     String
+  company   String
+  status    String   @default("PENDING")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Integration {
+  id          String           @id @default(cuid())
+  name        String
+  type        String
+  category    String
+  config      Json             @default("{}")
+  status      String           @default("pending")
+  description String?
+  metadata    Json             @default("{}")
+  permissions String[]         @default([])
+  userId      String
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  logs        IntegrationLog[]
+
+  @@index([userId])
+  @@index([type])
+  @@index([category])
+  @@index([status])
+}
+
+model IntegrationLog {
+  id            String      @id @default(cuid())
+  integrationId String
+  type          String
+  message       String
+  details       Json        @default("{}")
+  createdAt     DateTime    @default(now())
+  integration   Integration @relation(fields: [integrationId], references: [id], onDelete: Cascade)
+
+  @@index([integrationId])
+  @@index([type])
+  @@index([createdAt])
+}
+
+model StripeCustomer {
+  id               String   @id @default(cuid())
+  userId           String   @unique
+  stripeCustomerId String   @unique
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Task {
+  id           String    @id @default(cuid())
+  name         String
+  type         String
+  data         Json      @default("{}")
+  status       String    @default("pending")
+  priority     String    @default("medium")
+  attempts     Int       @default(0)
+  maxAttempts  Int       @default(3)
+  progress     Int       @default(0)
+  totalRecords Int       @default(0)
+  error        String?
+  result       Json?
+  userId       String
+  workerId     String?
+  retryDelay   Int?
+  dependencies String[]
+  startedAt    DateTime?
+  completedAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  worker       Worker?
+
+  @@index([type])
+  @@index([status])
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model Subscription {
+  id                   String   @id @default(cuid())
+  stripeSubscriptionId String   @unique
+  status               String
+  currentPeriodStart   DateTime
+  currentPeriodEnd     DateTime
+  customerId           String
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+}
+
+model ApiKey {
+  id          String    @id @default(cuid())
+  name        String
+  key         String    @unique
+  lastRotated DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  isActive    Boolean   @default(true)
+}
+
+model Fleet {
+  id          String    @id @default(cuid())
+  name        String
+  description String?
+  status      String    @default("active")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  vehicles    Vehicle[]
+  zones       Zone[]
+
+  @@index([status])
+}
+
+model Zone {
+  id          String    @id @default(cuid())
+  name        String
+  description String?
+  coordinates Json
+  fleetId     String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  stations    Station[]
+  vehicles    Vehicle[]
+  fleet       Fleet     @relation(fields: [fleetId], references: [id])
+
+  @@index([fleetId])
+}
+
+model WaitlistEntry {
+  id        String   @id @default(cuid())
+  userId    String
+  vehicleId String
+  startTime DateTime
+  endTime   DateTime
+  status    String   @default("PENDING")
+  priority  Int      @default(0)
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id])
+  vehicle   Vehicle  @relation(fields: [vehicleId], references: [id])
+
+  @@index([userId])
+  @@index([vehicleId])
+  @@index([status])
+  @@index([startTime])
+}
+
+model LoyaltyAccount {
+  id            String               @id @default(cuid())
+  userId        String               @unique
+  points        Int                  @default(0)
+  tier          String               @default("BRONZE")
+  totalBookings Int                  @default(0)
+  totalSpent    Float                @default(0)
+  createdAt     DateTime             @default(now())
+  updatedAt     DateTime             @updatedAt
+  user          User                 @relation(fields: [userId], references: [id])
+  transactions  LoyaltyTransaction[]
+
+  @@index([tier])
+}
+
+model LoyaltyTransaction {
+  id               String         @id @default(cuid())
+  loyaltyAccountId String
+  type             String
+  points           Int
+  description      String
+  bookingId        String?
+  createdAt        DateTime       @default(now())
+  booking          Booking?       @relation(fields: [bookingId], references: [id])
+  loyaltyAccount   LoyaltyAccount @relation(fields: [loyaltyAccountId], references: [id])
+
+  @@index([loyaltyAccountId])
+  @@index([type])
+  @@index([createdAt])
+}
+
+model MaintenanceSchedule {
+  id            String              @id @default(cuid())
+  vehicleId     String
+  templateId    String
+  frequency     Int
+  lastScheduled DateTime?
+  nextScheduled DateTime?
+  isActive      Boolean             @default(true)
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  template      MaintenanceTemplate @relation(fields: [templateId], references: [id])
+  vehicle       Vehicle             @relation(fields: [vehicleId], references: [id])
+
+  @@index([vehicleId])
+  @@index([isActive])
+  @@index([nextScheduled])
+}
+
+model Station {
+  id               String            @id @default(cuid())
+  name             String
+  type             StationType       @default(DOCKING)
+  location         Json
+  capacity         Int
+  currentCount     Int               @default(0)
+  minThreshold     Int               @default(2)
+  maxThreshold     Int?
+  isActive         Boolean           @default(true)
+  zoneId           String?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  demandForecasts  DemandForecast[]
+  rebalancingTasks RebalancingTask[]
+  zone             Zone?             @relation(fields: [zoneId], references: [id])
+
+  @@index([type])
+  @@index([zoneId])
+  @@index([isActive])
+}
+
+model RebalancingTask {
+  id            String              @id @default(cuid())
+  stationId     String
+  priority      RebalancingPriority @default(MEDIUM)
+  status        RebalancingStatus   @default(PENDING)
+  requiredCount Int
+  currentCount  Int
+  vehicleId     String?
+  assignedTo    String?
+  startTime     DateTime?
+  completedAt   DateTime?
+  notes         String?
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  station       Station             @relation(fields: [stationId], references: [id])
+  vehicle       Vehicle?            @relation(fields: [vehicleId], references: [id])
+
+  @@index([stationId])
+  @@index([status])
+  @@index([priority])
+  @@index([vehicleId])
+}
+
+model DemandForecast {
+  id              String   @id @default(cuid())
+  stationId       String
+  timestamp       DateTime
+  predictedDemand Int
+  actualDemand    Int?
+  confidence      Float    @default(0.0)
+  factors         Json?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  station         Station  @relation(fields: [stationId], references: [id])
+
+  @@index([stationId])
+  @@index([timestamp])
+}
+
+model WeatherData {
+  id            String   @id @default(cuid())
+  timestamp     DateTime
+  temperature   Float
+  precipitation Float
+  windSpeed     Float
+  conditions    String
+  location      Json
+  source        String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([timestamp])
+}
+
+model Event {
+  id                 String   @id @default(cuid())
+  name               String
+  type               String
+  location           Json
+  startTime          DateTime
+  endTime            DateTime
+  expectedAttendance Int?
+  impact             Float?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  @@index([startTime])
+  @@index([endTime])
+  @@index([type])
+}
+
+model Worker {
+  id            String    @id @default(cuid())
+  name          String
+  type          String
+  status        String    @default("idle")
+  lastHeartbeat DateTime?
+  taskId        String?   @unique
+  error         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  currentTask   Task?     @relation(fields: [taskId], references: [id])
+
+  @@index([type])
+  @@index([status])
+}
+
+model RecoveryCodes {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  codes     String[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model SOC2AuditLog {
+  id          String   @id @default(cuid())
+  action      String
+  resourceId  String?
+  resourceType String
+  userId      String?
+  metadata    Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([action])
+  @@index([resourceType])
+  @@index([createdAt])
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+}
+
+enum VehicleStatus {
+  AVAILABLE
+  IN_USE
+  MAINTENANCE
+  OUT_OF_SERVICE
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum BookingType {
+  STANDARD
+  PREMIUM
+  GROUP
+}
+
+enum PaymentStatus {
+  PENDING
+  PROCESSING
+  SUCCEEDED
+  FAILED
+  REFUNDED
+}
+
+enum MaintenanceTaskType {
+  ROUTINE
+  REPAIR
+  INSPECTION
+  EMERGENCY
+  UPGRADE
+}
+
+enum MaintenanceTaskPriority {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum MaintenanceTaskStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum TechnicianAvailability {
+  AVAILABLE
+  BUSY
+  OFF_DUTY
+  ON_LEAVE
+}
+
+enum StationType {
+  DOCKING
+  VIRTUAL
+  HUB
+}
+
+enum RebalancingPriority {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum RebalancingStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
