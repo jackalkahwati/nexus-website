@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps API Reference - Nexus</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/developers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <style>
+        .api-docs-header {
+            margin-bottom: 2rem;
+        }
+        .api-docs-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .api-docs-header p {
+            font-size: 1.2rem;
+            color: #9ba3af;
+        }
+        .api-sidebar {
+            position: sticky;
+            top: 20px;
+            width: 250px;
+            float: left;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+        .sidebar-section {
+            margin-bottom: 1.5rem;
+        }
+        .sidebar-section h3 {
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            color: #9ba3af;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+        .sidebar-section ul {
+            list-style: none;
+            padding-left: 0.5rem;
+        }
+        .sidebar-section li {
+            margin-bottom: 0.5rem;
+        }
+        .sidebar-section li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .sidebar-section li a:hover {
+            color: #3498db;
+        }
+        .api-content {
+            margin-left: 280px;
+            overflow: auto;
+        }
+        @media (max-width: 992px) {
+            .api-sidebar {
+                position: static;
+                width: 100%;
+                float: none;
+                margin-bottom: 30px;
+            }
+            .api-content {
+                margin-left: 0;
+            }
+        }
+        .api-docs-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+        .endpoint {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            border-bottom: 1px solid #333;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+        .endpoint h4 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            color: #9ba3af;
+        }
+        .endpoint code {
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+        .method {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-right: 4px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .get { background-color: #2ecc71; color: #fff; }
+        .post { background-color: #3498db; color: #fff; }
+        .put { background-color: #f39c12; color: #fff; }
+        .delete { background-color: #e74c3c; color: #fff; }
+        .patch { background-color: #9b59b6; color: #fff; }
+        pre {
+            margin: 1rem 0;
+            border-radius: 4px;
+            background-color: #282c34;
+            overflow: hidden;
+        }
+        pre code {
+            border-radius: 4px;
+            padding: 1rem;
+            overflow-x: auto;
+            display: block;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .param-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 15px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .param-table th, .param-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        .param-table th {
+            font-weight: bold;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+        .param-table tbody tr:nth-child(even) {
+            background-color: #222;
+        }
+        .param-table tbody tr:hover {
+            background-color: #2a2a2a;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../">
+                    <img src="../../images/logos/nexus_logo_dark.png" alt="Nexus Logo" class="logo-image">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="../../products.html">Products</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../../solutions.html">Solutions</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="../../developers.html">Developers</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../../company.html">Company</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../../resources.html">Resources</a>
+                    </li>
+                    <li><a href="../../pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="../../contact/index.html" class="contact-link">Contact us</a>
+                <a href="https://dashboard.nexus-platform.com" class="account-button">Go to account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="api-docs-header">
+            <h1>Maps API Reference</h1>
+            <p>Create interactive maps and visualize geospatial data</p>
+        </div>
+
+        <div class="api-docs-container">
+            <div class="api-sidebar">
+                <div class="sidebar-section">
+                    <h3>Maps API</h3>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#maps">Maps</a></li>
+                        <li><a href="#styles">Map Styles</a></li>
+                        <li><a href="#markers">Markers</a></li>
+                        <li><a href="#polygons">Polygons & Polylines</a></li>
+                        <li><a href="#layers">Data Layers</a></li>
+                        <li><a href="#clustering">Marker Clustering</a></li>
+                        <li><a href="#heatmaps">Heatmaps</a></li>
+                        <li><a href="#events">Map Events</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Related APIs</h3>
+                    <ul>
+                        <li><a href="navigation.html">Navigation API</a></li>
+                        <li><a href="search.html">Search API</a></li>
+                        <li><a href="data.html">Data API</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../../docs/sdk-libraries.html">SDK Libraries</a></li>
+                        <li><a href="../../docs/examples.html">Code Examples</a></li>
+                        <li><a href="../../docs/first-api-request.html">First API Request</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="api-content">
+                <section id="introduction">
+                    <h2>Introduction</h2>
+                    <p>
+                        The Nexus Maps API allows you to add interactive maps to your web and mobile applications with
+                        customizable styles, markers, routing capabilities, and geospatial data visualization.
+                    </p>
+                    <p>
+                        Our Maps API provides both a JavaScript SDK for web applications and native SDKs for iOS and Android,
+                        making it easy to integrate maps into any platform.
+                    </p>
+                </section>
+
+                <section id="maps">
+                    <h2>Maps</h2>
+                    <p>
+                        The Maps API allows you to create and customize interactive maps for your applications.
+                    </p>
+
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <code>/v2/maps/render</code>
+                        <p>Render a static map image</p>
+
+                        <h4>Request Parameters</h4>
+                        <table class="param-table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Type</th>
+                                    <th>Required</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>center</td>
+                                    <td>string</td>
+                                    <td>Yes</td>
+                                    <td>Center coordinates in "lat,lng" format</td>
+                                </tr>
+                                <tr>
+                                    <td>zoom</td>
+                                    <td>integer</td>
+                                    <td>Yes</td>
+                                    <td>Zoom level (0-20)</td>
+                                </tr>
+                                <tr>
+                                    <td>width</td>
+                                    <td>integer</td>
+                                    <td>Yes</td>
+                                    <td>Width of the map image (max 2048)</td>
+                                </tr>
+                                <tr>
+                                    <td>height</td>
+                                    <td>integer</td>
+                                    <td>Yes</td>
+                                    <td>Height of the map image (max 2048)</td>
+                                </tr>
+                                <tr>
+                                    <td>style</td>
+                                    <td>string</td>
+                                    <td>No</td>
+                                    <td>Map style ID (default: "standard")</td>
+                                </tr>
+                                <tr>
+                                    <td>format</td>
+                                    <td>string</td>
+                                    <td>No</td>
+                                    <td>Image format: "png" or "jpeg" (default: "png")</td>
+                                </tr>
+                                <tr>
+                                    <td>markers</td>
+                                    <td>string</td>
+                                    <td>No</td>
+                                    <td>Markers to display on the map (format: "lat1,lng1|lat2,lng2")</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>Example Request</h4>
+                        <pre><code class="language-bash">curl -X GET "https://api.nexus-platform.com/v2/maps/render?center=37.7749,-122.4194&zoom=13&width=800&height=600&style=standard" \
+    -H "Authorization: Bearer your_api_key"</code></pre>
+
+                        <h4>Example Response</h4>
+                        <p>Returns a map image in the requested format.</p>
+                    </div>
+
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <code>/v2/maps/static</code>
+                        <p>Get a static map URL for embedding</p>
+
+                        <h4>Request Parameters</h4>
+                        <table class="param-table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Type</th>
+                                    <th>Required</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>center</td>
+                                    <td>string</td>
+                                    <td>Yes</td>
+                                    <td>Center coordinates in "lat,lng" format</td>
+                                </tr>
+                                <tr>
+                                    <td>zoom</td>
+                                    <td>integer</td>
+                                    <td>Yes</td>
+                                    <td>Zoom level (0-20)</td>
+                                </tr>
+                                <tr>
+                                    <td>width</td>
+                                    <td>integer</td>
+                                    <td>Yes</td>
+                                    <td>Width of the map image (max 2048)</td>
+                                </tr>
+                                <tr>
+                                    <td>height</td>
+                                    <td>integer</td>
+                                    <td>Yes</td>
+                                    <td>Height of the map image (max 2048)</td>
+                                </tr>
+                                <tr>
+                                    <td>style</td>
+                                    <td>string</td>
+                                    <td>No</td>
+                                    <td>Map style ID (default: "standard")</td>
+                                </tr>
+                                <tr>
+                                    <td>markers</td>
+                                    <td>string</td>
+                                    <td>No</td>
+                                    <td>Markers to display on the map (format: "lat1,lng1|lat2,lng2")</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>Example Request</h4>
+                        <pre><code class="language-bash">curl -X GET "https://api.nexus-platform.com/v2/maps/static?center=37.7749,-122.4194&zoom=13&width=800&height=600&style=dark" \
+    -H "Authorization: Bearer your_api_key"</code></pre>
+
+                        <h4>Example Response</h4>
+                        <pre><code class="language-json">{
+  "url": "https://static.nexus-platform.com/maps/static/ABC123/37.7749,-122.4194,13/800x600/dark",
+  "html_snippet": "<img src='https://static.nexus-platform.com/maps/static/ABC123/37.7749,-122.4194,13/800x600/dark' alt='Map' width='800' height='600'>",
+  "expires_at": "2024-04-15T12:00:00Z"
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="styles">
+                    <h2>Map Styles</h2>
+                    <p>
+                        The Maps API offers various pre-defined styles and allows you to create custom styles for your maps.
+                    </p>
+
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <code>/v2/maps/styles</code>
+                        <p>List available map styles</p>
+
+                        <h4>Example Request</h4>
+                        <pre><code class="language-bash">curl -X GET "https://api.nexus-platform.com/v2/maps/styles" \
+    -H "Authorization: Bearer your_api_key"</code></pre>
+
+                        <h4>Example Response</h4>
+                        <pre><code class="language-json">{
+  "styles": [
+    {
+      "id": "standard",
+      "name": "Standard",
+      "description": "Default map style with clear roads and landmarks",
+      "preview_url": "https://static.nexus-platform.com/styles/standard/preview.jpg"
+    },
+    {
+      "id": "satellite",
+      "name": "Satellite",
+      "description": "Satellite imagery of the world",
+      "preview_url": "https://static.nexus-platform.com/styles/satellite/preview.jpg"
+    },
+    {
+      "id": "dark",
+      "name": "Dark",
+      "description": "Dark theme optimized for low light conditions",
+      "preview_url": "https://static.nexus-platform.com/styles/dark/preview.jpg"
+    },
+    {
+      "id": "light",
+      "name": "Light",
+      "description": "Light theme with subtle colors",
+      "preview_url": "https://static.nexus-platform.com/styles/light/preview.jpg"
+    }
+  ]
+}</code></pre>
+                    </div>
+
+                    <div class="endpoint">
+                        <span class="method post">POST</span>
+                        <code>/v2/maps/styles/custom</code>
+                        <p>Create a custom map style</p>
+
+                        <h4>Request Body</h4>
+                        <pre><code class="language-json">{
+  "name": "My Custom Style",
+  "description": "A custom map style for my application",
+  "base_style": "standard",
+  "elements": [
+    {
+      "type": "water",
+      "color": "#0088cc"
+    },
+    {
+      "type": "park",
+      "color": "#33cc66"
+    },
+    {
+      "type": "road",
+      "color": "#ffffff",
+      "width": 1.2
+    }
+  ]
+}</code></pre>
+
+                        <h4>Example Request</h4>
+                        <pre><code class="language-bash">curl -X POST "https://api.nexus-platform.com/v2/maps/styles/custom" \
+    -H "Authorization: Bearer your_api_key" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "name": "My Custom Style",
+      "description": "A custom map style for my application",
+      "base_style": "standard",
+      "elements": [
+        {
+          "type": "water",
+          "color": "#0088cc"
+        },
+        {
+          "type": "park",
+          "color": "#33cc66"
+        },
+        {
+          "type": "road",
+          "color": "#ffffff",
+          "width": 1.2
+        }
+      ]
+    }'</code></pre>
+
+                        <h4>Example Response</h4>
+                        <pre><code class="language-json">{
+  "style_id": "custom_abc123",
+  "name": "My Custom Style",
+  "description": "A custom map style for my application",
+  "preview_url": "https://static.nexus-platform.com/styles/custom_abc123/preview.jpg",
+  "created_at": "2024-04-01T10:30:00Z"
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="markers">
+                    <h2>Markers</h2>
+                    <p>
+                        Add markers to your maps to indicate points of interest, vehicle locations, or other important locations.
+                    </p>
+
+                    <div class="endpoint">
+                        <span class="method post">POST</span>
+                        <code>/v2/maps/markers</code>
+                        <p>Create a new marker or set of markers</p>
+
+                        <h4>Request Body</h4>
+                        <pre><code class="language-json">{
+  "markers": [
+    {
+      "position": {
+        "lat": 37.7749,
+        "lng": -122.4194
+      },
+      "title": "San Francisco",
+      "icon": "pin",
+      "color": "#FF5500",
+      "metadata": {
+        "population": 874961,
+        "state": "California"
+      }
+    },
+    {
+      "position": {
+        "lat": 40.7128,
+        "lng": -74.0060
+      },
+      "title": "New York",
+      "icon": "pin",
+      "color": "#0055FF",
+      "metadata": {
+        "population": 8804190,
+        "state": "New York"
+      }
+    }
+  ]
+}</code></pre>
+
+                        <h4>Example Request</h4>
+                        <pre><code class="language-bash">curl -X POST "https://api.nexus-platform.com/v2/maps/markers" \
+    -H "Authorization: Bearer your_api_key" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "markers": [
+        {
+          "position": {
+            "lat": 37.7749,
+            "lng": -122.4194
+          },
+          "title": "San Francisco",
+          "icon": "pin",
+          "color": "#FF5500",
+          "metadata": {
+            "population": 874961,
+            "state": "California"
+          }
+        },
+        {
+          "position": {
+            "lat": 40.7128,
+            "lng": -74.0060
+          },
+          "title": "New York",
+          "icon": "pin",
+          "color": "#0055FF",
+          "metadata": {
+            "population": 8804190,
+            "state": "New York"
+          }
+        }
+      ]
+    }'</code></pre>
+
+                        <h4>Example Response</h4>
+                        <pre><code class="language-json">{
+  "marker_set_id": "ms_123abc",
+  "markers": [
+    {
+      "id": "m_abc1",
+      "position": {
+        "lat": 37.7749,
+        "lng": -122.4194
+      },
+      "title": "San Francisco"
+    },
+    {
+      "id": "m_abc2",
+      "position": {
+        "lat": 40.7128,
+        "lng": -74.0060
+      },
+      "title": "New York"
+    }
+  ],
+  "created_at": "2024-04-01T10:35:00Z"
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="polygons">
+                    <h2>Polygons & Polylines</h2>
+                    <p>
+                        Create polygons and polylines to represent areas, routes, and boundaries on your maps.
+                    </p>
+
+                    <div class="endpoint">
+                        <span class="method post">POST</span>
+                        <code>/v2/maps/polygons</code>
+                        <p>Create a polygon on the map</p>
+
+                        <h4>Request Body</h4>
+                        <pre><code class="language-json">{
+  "paths": [
+    {"lat": 37.7858, "lng": -122.4064},
+    {"lat": 37.7958, "lng": -122.4364},
+    {"lat": 37.7758, "lng": -122.4464},
+    {"lat": 37.7658, "lng": -122.4164}
+  ],
+  "fill_color": "#FF550055",
+  "stroke_color": "#FF5500",
+  "stroke_weight": 2,
+  "metadata": {
+    "name": "Downtown Area",
+    "type": "business-district"
+  }
+}</code></pre>
+
+                        <h4>Example Request</h4>
+                        <pre><code class="language-bash">curl -X POST "https://api.nexus-platform.com/v2/maps/polygons" \
+    -H "Authorization: Bearer your_api_key" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "paths": [
+        {"lat": 37.7858, "lng": -122.4064},
+        {"lat": 37.7958, "lng": -122.4364},
+        {"lat": 37.7758, "lng": -122.4464},
+        {"lat": 37.7658, "lng": -122.4164}
+      ],
+      "fill_color": "#FF550055",
+      "stroke_color": "#FF5500",
+      "stroke_weight": 2,
+      "metadata": {
+        "name": "Downtown Area",
+        "type": "business-district"
+      }
+    }'</code></pre>
+
+                        <h4>Example Response</h4>
+                        <pre><code class="language-json">{
+  "polygon_id": "poly_123abc",
+  "paths": [
+    {"lat": 37.7858, "lng": -122.4064},
+    {"lat": 37.7958, "lng": -122.4364},
+    {"lat": 37.7758, "lng": -122.4464},
+    {"lat": 37.7658, "lng": -122.4164}
+  ],
+  "center": {
+    "lat": 37.7808,
+    "lng": -122.4264
+  },
+  "area_sqm": 12345.67,
+  "created_at": "2024-04-01T10:40:00Z"
+}</code></pre>
+                    </div>
+
+                    <div class="endpoint">
+                        <span class="method post">POST</span>
+                        <code>/v2/maps/polylines</code>
+                        <p>Create a polyline on the map</p>
+
+                        <h4>Request Body</h4>
+                        <pre><code class="language-json">{
+  "path": [
+    {"lat": 37.7749, "lng": -122.4194},
+    {"lat": 37.7850, "lng": -122.4074},
+    {"lat": 37.7900, "lng": -122.4030},
+    {"lat": 37.7950, "lng": -122.3980}
+  ],
+  "color": "#0055FF",
+  "weight": 5,
+  "metadata": {
+    "name": "Route to Downtown",
+    "distance_km": 3.5
+  }
+}</code></pre>
+
+                        <h4>Example Request</h4>
+                        <pre><code class="language-bash">curl -X POST "https://api.nexus-platform.com/v2/maps/polylines" \
+    -H "Authorization: Bearer your_api_key" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "path": [
+        {"lat": 37.7749, "lng": -122.4194},
+        {"lat": 37.7850, "lng": -122.4074},
+        {"lat": 37.7900, "lng": -122.4030},
+        {"lat": 37.7950, "lng": -122.3980}
+      ],
+      "color": "#0055FF",
+      "weight": 5,
+      "metadata": {
+        "name": "Route to Downtown",
+        "distance_km": 3.5
+      }
+    }'</code></pre>
+
+                        <h4>Example Response</h4>
+                        <pre><code class="language-json">{
+  "polyline_id": "line_123abc",
+  "path": [
+    {"lat": 37.7749, "lng": -122.4194},
+    {"lat": 37.7850, "lng": -122.4074},
+    {"lat": 37.7900, "lng": -122.4030},
+    {"lat": 37.7950, "lng": -122.3980}
+  ],
+  "length_meters": 3500,
+  "created_at": "2024-04-01T10:45:00Z"
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="layers">
+                    <h2>Data Layers</h2>
+                    <p>
+                        Data layers allow you to visualize geospatial data on top of your maps, such as traffic, weather, or custom datasets.
+                    </p>
+
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <code>/v2/maps/layers</code>
+                        <p>List available data layers</p>
+
+                        <h4>Example Request</h4>
+                        <pre><code class="language-bash">curl -X GET "https://api.nexus-platform.com/v2/maps/layers" \
+    -H "Authorization: Bearer your_api_key"</code></pre>
+
+                        <h4>Example Response</h4>
+                        <pre><code class="language-json">{
+  "layers": [
+    {
+      "id": "traffic",
+      "name": "Traffic",
+      "description": "Real-time traffic conditions",
+      "type": "overlay"
+    },
+    {
+      "id": "weather",
+      "name": "Weather",
+      "description": "Current weather conditions",
+      "type": "overlay"
+    },
+    {
+      "id": "transit",
+      "name": "Transit",
+      "description": "Public transportation routes and stops",
+      "type": "overlay"
+    },
+    {
+      "id": "bicycle",
+      "name": "Bicycle Lanes",
+      "description": "Bicycle lanes and paths",
+      "type": "overlay"
+    }
+  ]
+}</code></pre>
+                    </div>
+
+                    <div class="endpoint">
+                        <span class="method post">POST</span>
+                        <code>/v2/maps/layers/custom</code>
+                        <p>Create a custom data layer from GeoJSON</p>
+
+                        <h4>Request Body</h4>
+                        <pre><code class="language-json">{
+  "name": "Coffee Shops",
+  "description": "Locations of coffee shops in San Francisco",
+  "geojson": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-122.4194, 37.7749]
+        },
+        "properties": {
+          "name": "Downtown Coffee",
+          "rating": 4.5
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-122.4074, 37.7850]
+        },
+        "properties": {
+          "name": "North Beach Café",
+          "rating": 4.8
+        }
+      }
+    ]
+  },
+  "style": {
+    "marker_icon": "coffee",
+    "marker_color": "#8B4513"
+  }
+}</code></pre>
+
+                        <h4>Example Request</h4>
+                        <pre><code class="language-bash">curl -X POST "https://api.nexus-platform.com/v2/maps/layers/custom" \
+    -H "Authorization: Bearer your_api_key" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "name": "Coffee Shops",
+      "description": "Locations of coffee shops in San Francisco",
+      "geojson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-122.4194, 37.7749]
+            },
+            "properties": {
+              "name": "Downtown Coffee",
+              "rating": 4.5
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-122.4074, 37.7850]
+            },
+            "properties": {
+              "name": "North Beach Café",
+              "rating": 4.8
+            }
+          }
+        ]
+      },
+      "style": {
+        "marker_icon": "coffee",
+        "marker_color": "#8B4513"
+      }
+    }'</code></pre>
+
+                        <h4>Example Response</h4>
+                        <pre><code class="language-json">{
+  "layer_id": "layer_coffee_123",
+  "name": "Coffee Shops",
+  "description": "Locations of coffee shops in San Francisco",
+  "feature_count": 2,
+  "bounds": {
+    "northeast": {"lat": 37.7850, "lng": -122.4074},
+    "southwest": {"lat": 37.7749, "lng": -122.4194}
+  },
+  "created_at": "2024-04-01T10:50:00Z"
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="clustering">
+                    <h2>Marker Clustering</h2>
+                    <p>
+                        Marker clustering allows you to group nearby markers together to improve map performance and readability.
+                    </p>
+
+                    <div class="endpoint">
+                        <span class="method post">POST</span>
+                        <code>/v2/maps/markers/cluster</code>
+                        <p>Create a clustered marker set</p>
+
+                        <h4>Request Body</h4>
+                        <pre><code class="language-json">{
+  "markers": [
+    {"lat": 37.7749, "lng": -122.4194, "title": "Location 1"},
+    {"lat": 37.7750, "lng": -122.4195, "title": "Location 2"},
+    {"lat": 37.7751, "lng": -122.4196, "title": "Location 3"},
+    {"lat": 40.7128, "lng": -74.0060, "title": "Location 4"},
+    {"lat": 40.7129, "lng": -74.0061, "title": "Location 5"}
+  ],
+  "cluster_radius": 50,
+  "cluster_min_size": 2,
+  "cluster_colors": ["#FF5500", "#FFAA00", "#00AA00"]
+}</code></pre>
+
+                        <h4>Example Request</h4>
+                        <pre><code class="language-bash">curl -X POST "https://api.nexus-platform.com/v2/maps/markers/cluster" \
+    -H "Authorization: Bearer your_api_key" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "markers": [
+        {"lat": 37.7749, "lng": -122.4194, "title": "Location 1"},
+        {"lat": 37.7750, "lng": -122.4195, "title": "Location 2"},
+        {"lat": 37.7751, "lng": -122.4196, "title": "Location 3"},
+        {"lat": 40.7128, "lng": -74.0060, "title": "Location 4"},
+        {"lat": 40.7129, "lng": -74.0061, "title": "Location 5"}
+      ],
+      "cluster_radius": 50,
+      "cluster_min_size": 2,
+      "cluster_colors": ["#FF5500", "#FFAA00", "#00AA00"]
+    }'</code></pre>
+
+                        <h4>Example Response</h4>
+                        <pre><code class="language-json">{
+  "cluster_id": "cls_123abc",
+  "marker_count": 5,
+  "cluster_count": 2,
+  "clusters": [
+    {
+      "center": {"lat": 37.7750, "lng": -122.4195},
+      "count": 3,
+      "bounds": {
+        "northeast": {"lat": 37.7751, "lng": -122.4194},
+        "southwest": {"lat": 37.7749, "lng": -122.4196}
+      }
+    },
+    {
+      "center": {"lat": 40.7128, "lng": -74.0060},
+      "count": 2,
+      "bounds": {
+        "northeast": {"lat": 40.7129, "lng": -74.0060},
+        "southwest": {"lat": 40.7128, "lng": -74.0061}
+      }
+    }
+  ],
+  "created_at": "2024-04-01T10:55:00Z"
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="heatmaps">
+                    <h2>Heatmaps</h2>
+                    <p>
+                        Create heatmaps to visualize density of data points on your maps.
+                    </p>
+
+                    <div class="endpoint">
+                        <span class="method post">POST</span>
+                        <code>/v2/maps/heatmaps</code>
+                        <p>Create a heatmap layer</p>
+
+                        <h4>Request Body</h4>
+                        <pre><code class="language-json">{
+  "name": "Traffic Density",
+  "points": [
+    {"lat": 37.7749, "lng": -122.4194, "weight": 1.0},
+    {"lat": 37.7750, "lng": -122.4195, "weight": 0.8},
+    {"lat": 37.7751, "lng": -122.4196, "weight": 0.6},
+    {"lat": 37.7748, "lng": -122.4193, "weight": 0.9},
+    {"lat": 37.7747, "lng": -122.4192, "weight": 0.7}
+  ],
+  "gradient": ["#00FF00", "#FFFF00", "#FF0000"],
+  "radius": 20,
+  "opacity": 0.7
+}</code></pre>
+
+                        <h4>Example Request</h4>
+                        <pre><code class="language-bash">curl -X POST "https://api.nexus-platform.com/v2/maps/heatmaps" \
+    -H "Authorization: Bearer your_api_key" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "name": "Traffic Density",
+      "points": [
+        {"lat": 37.7749, "lng": -122.4194, "weight": 1.0},
+        {"lat": 37.7750, "lng": -122.4195, "weight": 0.8},
+        {"lat": 37.7751, "lng": -122.4196, "weight": 0.6},
+        {"lat": 37.7748, "lng": -122.4193, "weight": 0.9},
+        {"lat": 37.7747, "lng": -122.4192, "weight": 0.7}
+      ],
+      "gradient": ["#00FF00", "#FFFF00", "#FF0000"],
+      "radius": 20,
+      "opacity": 0.7
+    }'</code></pre>
+
+                        <h4>Example Response</h4>
+                        <pre><code class="language-json">{
+  "heatmap_id": "heat_123abc",
+  "name": "Traffic Density",
+  "point_count": 5,
+  "bounds": {
+    "northeast": {"lat": 37.7751, "lng": -122.4192},
+    "southwest": {"lat": 37.7747, "lng": -122.4196}
+  },
+  "created_at": "2024-04-01T11:00:00Z"
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="events">
+                    <h2>Map Events</h2>
+                    <p>
+                        The Maps API provides WebSocket endpoints to receive real-time map events.
+                    </p>
+
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <code>/v2/maps/events/connect</code>
+                        <p>Connect to a WebSocket for real-time map events</p>
+
+                        <h4>Query Parameters</h4>
+                        <table class="param-table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Type</th>
+                                    <th>Required</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>token</td>
+                                    <td>string</td>
+                                    <td>Yes</td>
+                                    <td>API key or access token</td>
+                                </tr>
+                                <tr>
+                                    <td>events</td>
+                                    <td>string</td>
+                                    <td>No</td>
+                                    <td>Comma-separated list of event types to subscribe to (default: all)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>WebSocket Events</h4>
+                        <table class="param-table">
+                            <thead>
+                                <tr>
+                                    <th>Event Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>marker.added</td>
+                                    <td>A new marker has been added to the map</td>
+                                </tr>
+                                <tr>
+                                    <td>marker.updated</td>
+                                    <td>A marker has been updated (position, properties, etc.)</td>
+                                </tr>
+                                <tr>
+                                    <td>marker.removed</td>
+                                    <td>A marker has been removed from the map</td>
+                                </tr>
+                                <tr>
+                                    <td>layer.added</td>
+                                    <td>A new layer has been added to the map</td>
+                                </tr>
+                                <tr>
+                                    <td>layer.updated</td>
+                                    <td>A layer has been updated</td>
+                                </tr>
+                                <tr>
+                                    <td>layer.removed</td>
+                                    <td>A layer has been removed from the map</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>Example WebSocket Connection</h4>
+                        <pre><code class="language-javascript">const socket = new WebSocket('wss://api.nexus-platform.com/v2/maps/events/connect?token=your_api_key&events=marker.updated,marker.added');
+
+socket.onopen = () => {
+  console.log('Connected to Maps API events');
+};
+
+socket.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+  console.log('Received event:', data);
+  
+  // Handle different event types
+  switch (data.type) {
+    case 'marker.added':
+      console.log('New marker added:', data.marker);
+      break;
+    case 'marker.updated':
+      console.log('Marker updated:', data.marker);
+      break;
+  }
+};
+
+socket.onclose = () => {
+  console.log('Disconnected from Maps API events');
+};</code></pre>
+                    </div>
+                </section>
+
+                <div class="next-steps">
+                    <h2>Next Steps</h2>
+                    <style>
+                        .next-steps {
+                            margin-top: 3rem;
+                            padding-top: 2rem;
+                            border-top: 1px solid #333;
+                        }
+                        .next-steps-cards {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 20px;
+                            margin-top: 1.5rem;
+                        }
+                        .next-step-card {
+                            flex: 1;
+                            min-width: 250px;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            padding: 1.5rem;
+                            border-radius: 8px;
+                            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+                            text-decoration: none;
+                            color: inherit;
+                            transition: transform 0.2s, box-shadow 0.2s;
+                        }
+                        .next-step-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                        }
+                        .next-step-card h3 {
+                            margin-top: 0;
+                            color: #fff;
+                            font-size: 1.2rem;
+                        }
+                        .next-step-card p {
+                            margin-bottom: 1rem;
+                            color: #9ba3af;
+                        }
+                        .next-link {
+                            color: #3498db;
+                            font-weight: 500;
+                            display: inline-block;
+                        }
+                    </style>
+                    <div class="next-steps-cards">
+                        <a href="navigation.html" class="next-step-card">
+                            <h3>Navigation API</h3>
+                            <p>Implement turn-by-turn navigation and routing capabilities.</p>
+                            <span class="next-link">Explore Navigation API →</span>
+                        </a>
+                        <a href="search.html" class="next-step-card">
+                            <h3>Search API</h3>
+                            <p>Add geocoding, address search, and place search functionality.</p>
+                            <span class="next-link">Explore Search API →</span>
+                        </a>
+                        <a href="../../docs/examples.html" class="next-step-card">
+                            <h3>Code Examples</h3>
+                            <p>See examples of implementing the Maps API in your applications.</p>
+                            <span class="next-link">View Examples →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="../../images/logos/nexus_logo_dark.png" alt="Nexus Logo" class="footer-logo-image">
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>PRODUCTS</h4>
+                        <ul>
+                            <li><a href="../../products.html#maps">Maps</a></li>
+                            <li><a href="../../products.html#navigation">Navigation</a></li>
+                            <li><a href="../../products.html#carshare">CarShare</a></li>
+                            <li><a href="../../products.html#robotaxi">RoboTaxi</a></li>
+                            <li><a href="../../products.html#fleet">Fleet</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>SOLUTIONS</h4>
+                        <ul>
+                            <li><a href="../../solutions.html#logistics">Logistics</a></li>
+                            <li><a href="../../solutions.html#automotive">Automotive</a></li>
+                            <li><a href="../../solutions.html#carsharing">Carsharing</a></li>
+                            <li><a href="../../solutions.html#insurance">Insurance</a></li>
+                            <li><a href="../../solutions.html#transit">Public Transit</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>DEVELOPERS</h4>
+                        <ul>
+                            <li><a href="../../developers.html#docs">Documentation</a></li>
+                            <li><a href="../../developers.html#tutorials">Tutorials</a></li>
+                            <li><a href="../../developers.html#api">API Reference</a></li>
+                            <li><a href="../../developers.html#support">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="../../company.html#about">About us</a></li>
+                            <li><a href="../../company.html#careers">Careers</a></li>
+                            <li><a href="../../company.html#press">Press</a></li>
+                            <li><a href="../../company.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            hljs.highlightAll();
+        });
+    </script>
+</body>
+</html>

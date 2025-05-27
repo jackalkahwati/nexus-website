@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/" />
+    <title>Developers - Nexus</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/developers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="images/logos/logo6.png" alt="Nexus Logo" class="logo-image">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="products.html">Products</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="solutions.html">Solutions</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="developers.html">Developers</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="company.html">Company</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="resources.html">Resources</a>
+                    </li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="contact/index.html" class="contact-link">Contact us</a>
+                <a href="#" id="login-button" class="account-button">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title-section">
+            <h1>Developer Resources</h1>
+            <p>Everything you need to build with Nexus: documentation, API references, SDKs, and support resources for our complete ecosystem of products.</p>
+        </section>
+
+        <!-- Core Resources Section -->
+        <section id="core-resources" class="dev-resources-section">
+            <h2 class="section-title">Getting Started</h2>
+            <p class="section-subtitle">Essential resources to begin building with Nexus</p>
+
+            <div class="developer-resources-grid">
+                <div id="docs" class="resource-card">
+                    <i class="fas fa-book resource-icon"></i>
+                    <h2>Documentation</h2>
+                    <p>Comprehensive guides and documentation to help you start working with Nexus APIs and SDKs.</p>
+                    <a href="docs/first-api-request.html" class="feature-link">Go to Docs →</a>
+                </div>
+                <div id="tutorials" class="resource-card">
+                    <i class="fas fa-graduation-cap resource-icon"></i>
+                    <h2>Tutorials</h2>
+                    <p>Step-by-step tutorials and code examples to guide you through implementing common use cases and features.</p>
+                    <a href="docs/examples.html" class="feature-link">View Tutorials →</a>
+                </div>
+                <div id="api" class="resource-card">
+                    <i class="fas fa-code resource-icon"></i>
+                    <h2>API Reference</h2>
+                    <p>Detailed reference for all Nexus APIs, including request parameters, response schemas, and code samples.</p>
+                    <a href="api-docs/index.html" class="feature-link">API Reference →</a>
+                </div>
+                <div id="support" class="resource-card">
+                    <i class="fas fa-headset resource-icon"></i>
+                    <h2>Support</h2>
+                    <p>Get help from our support team, access the community forum, or find answers in our frequently asked questions.</p>
+                    <a href="contact/index.html" class="feature-link">Get Support →</a>
+                </div>
+                <div class="resource-card full-width">
+                    <i class="fas fa-terminal resource-icon"></i>
+                    <h2>SDKs & Libraries</h2>
+                    <p>Download our official SDKs for Web (JavaScript), iOS, and Android to easily integrate Nexus into your applications.</p>
+                    <div class="sdk-links">
+                        <a href="docs/sdk-libraries.html" class="sdk-link"><i class="fab fa-js-square"></i> Web SDK</a>
+                        <a href="docs/sdk-libraries.html#ios-sdk" class="sdk-link"><i class="fab fa-apple"></i> iOS SDK</a>
+                        <a href="docs/sdk-libraries.html#android-sdk" class="sdk-link"><i class="fab fa-android"></i> Android SDK</a>
+                        <a href="docs/sdk-libraries.html#react-sdk" class="sdk-link"><i class="fab fa-react"></i> React</a>
+                        <a href="docs/sdk-libraries.html#flutter-sdk" class="sdk-link"><i class="fab fa-flutter"></i> Flutter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API Documentation Section -->
+        <section id="api-documentation" class="api-docs-section">
+            <h2 class="section-title">API Documentation</h2>
+            <p class="section-subtitle">Detailed documentation for all Nexus product APIs</p>
+
+            <div class="api-category">
+                <h3 class="api-category-title">Core Technology</h3>
+                <div class="api-products-grid">
+                    <div class="api-product-card">
+                        <div class="api-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Maps API</h3>
+                        <p>Render interactive maps with customizable styles and features.</p>
+                        <div class="api-links">
+                            <a href="api-docs/reference/maps.html" class="api-link">API Reference</a>
+                            <a href="docs/examples.html#maps-examples" class="api-link">Examples</a>
+                        </div>
+                    </div>
+                    <div class="api-product-card">
+                        <div class="api-icon">
+                            <i class="fas fa-directions"></i>
+                        </div>
+                        <h3>Navigation API</h3>
+                        <p>Build turn-by-turn routing with traffic-aware directions.</p>
+                        <div class="api-links">
+                            <a href="#" class="api-link">API Reference</a>
+                            <a href="#" class="api-link">Examples</a>
+                        </div>
+                    </div>
+                    <div class="api-product-card">
+                        <div class="api-icon">
+                            <i class="fas fa-search-location"></i>
+                        </div>
+                        <h3>Search API</h3>
+                        <p>Geocoding, reverse geocoding, and place search capabilities.</p>
+                        <div class="api-links">
+                            <a href="#" class="api-link">API Reference</a>
+                            <a href="#" class="api-link">Examples</a>
+                        </div>
+                    </div>
+                    <div class="api-product-card">
+                        <div class="api-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Data API</h3>
+                        <p>Access to traffic, movement, and location datasets.</p>
+                        <div class="api-links">
+                            <a href="#" class="api-link">API Reference</a>
+                            <a href="#" class="api-link">Examples</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="api-category">
+                <h3 class="api-category-title">Mobility Services</h3>
+                <div class="api-products-grid">
+                    <div class="api-product-card">
+                        <div class="api-icon">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <h3>CarShare API</h3>
+                        <p>Vehicle sharing platform with booking, access control, and management.</p>
+                        <div class="api-links">
+                            <a href="#" class="api-link">API Reference</a>
+                            <a href="#" class="api-link">Examples</a>
+                        </div>
+                    </div>
+                    <div class="api-product-card">
+                        <div class="api-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>RoboTaxi API</h3>
+                        <p>Autonomous vehicle management and passenger experience APIs.</p>
+                        <div class="api-links">
+                            <a href="#" class="api-link">API Reference</a>
+                            <a href="#" class="api-link">Examples</a>
+                        </div>
+                    </div>
+                    <div class="api-product-card">
+                        <div class="api-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Mobility API</h3>
+                        <p>Multi-modal trip planning, unified payments, and MaaS integration.</p>
+                        <div class="api-links">
+                            <a href="#" class="api-link">API Reference</a>
+                            <a href="#" class="api-link">Examples</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="api-category">
+                <h3 class="api-category-title">Enterprise Solutions</h3>
+                <div class="api-products-grid">
+                    <div class="api-product-card">
+                        <div class="api-icon">
+                            <i class="fas fa-truck-moving"></i>
+                        </div>
+                        <h3>Fleet API</h3>
+                        <p>Fleet management with vehicle tracking, maintenance, and analytics.</p>
+                        <div class="api-links">
+                            <a href="#" class="api-link">API Reference</a>
+                            <a href="#" class="api-link">Examples</a>
+                        </div>
+                    </div>
+                    <div class="api-product-card">
+                        <div class="api-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Delivery API</h3>
+                        <p>Last-mile delivery optimization and tracking capabilities.</p>
+                        <div class="api-links">
+                            <a href="#" class="api-link">API Reference</a>
+                            <a href="#" class="api-link">Examples</a>
+                        </div>
+                    </div>
+                    <div class="api-product-card">
+                        <div class="api-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Insurance API</h3>
+                        <p>Usage-based insurance with telemetry and risk assessment.</p>
+                        <div class="api-links">
+                            <a href="#" class="api-link">API Reference</a>
+                            <a href="#" class="api-link">Examples</a>
+                        </div>
+                    </div>
+                    <div class="api-product-card">
+                        <div class="api-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>OEM API</h3>
+                        <p>Vehicle manufacturer integration for connected services.</p>
+                        <div class="api-links">
+                            <a href="#" class="api-link">API Reference</a>
+                            <a href="#" class="api-link">Examples</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integration Section -->
+        <section id="integration-guides" class="integration-section">
+            <h2 class="section-title">Integration Guides</h2>
+            <p class="section-subtitle">Learn how to integrate multiple Nexus services for complete solutions</p>
+
+            <div class="integration-cards">
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <i class="fas fa-car-side"></i>
+                        <h3>Vehicle Sharing Platform</h3>
+                    </div>
+                    <p>Build a complete carsharing service by integrating Nexus CarShare with Maps, Navigation, and Fleet APIs.</p>
+                    <ul class="integration-features">
+                        <li>Vehicle discovery and booking</li>
+                        <li>User authentication and access control</li>
+                        <li>Turn-by-turn navigation</li>
+                        <li>Fleet management and analytics</li>
+                    </ul>
+                    <a href="#" class="feature-link">View Guide →</a>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <i class="fas fa-truck"></i>
+                        <h3>Delivery Management System</h3>
+                    </div>
+                    <p>Create an end-to-end delivery platform by combining Nexus Delivery with Maps, Navigation, and Fleet APIs.</p>
+                    <ul class="integration-features">
+                        <li>Route optimization</li>
+                        <li>Real-time tracking</li>
+                        <li>Proof of delivery</li>
+                        <li>Fleet analytics and reporting</li>
+                    </ul>
+                    <a href="#" class="feature-link">View Guide →</a>
+                </div>
+
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <i class="fas fa-bus"></i>
+                        <h3>Mobility as a Service (MaaS)</h3>
+                    </div>
+                    <p>Build a MaaS platform by integrating Nexus Mobility with Maps, CarShare, and public transit data.</p>
+                    <ul class="integration-features">
+                        <li>Multi-modal trip planning</li>
+                        <li>Unified payment system</li>
+                        <li>Transit schedule integration</li>
+                        <li>Micromobility options</li>
+                    </ul>
+                    <a href="#" class="feature-link">View Guide →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live API Sandbox -->
+        <section id="api-sandbox" class="api-sandbox-section">
+            <h2 class="section-title">Live API Sandbox</h2>
+            <p class="section-subtitle">Test a sample endpoint right from your browser—no API key required.</p>
+            <div class="sandbox-panel">
+                <label>Endpoint:</label>
+                <select id="sandbox-endpoint">
+                    <option value="/health">GET /health (Core Service Health-Check)</option>
+                </select>
+                <button id="sandbox-run" class="primary-button" style="margin-top:1rem;">Run Request</button>
+                <pre id="sandbox-response" style="margin-top:1rem; background:rgba(0,0,0,0.6); padding:1rem; border-radius:8px; max-height:300px; overflow:auto;"></pre>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Start Building Today</h2>
+            <p>Create a free account to get your API keys and start integrating Nexus location services.</p>
+            <div class="cta-buttons">
+                <a href="docs/first-api-request.html" class="primary-button">Get Started</a>
+                <a href="api-docs/index.html" class="secondary-button">View API Docs</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="images/logos/logo6.png" alt="Lattis-Nexus Logo" class="footer-logo-image">
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>PRODUCTS</h4>
+                        <ul>
+                            <li><a href="products.html#maps">Maps</a></li>
+                            <li><a href="products.html#navigation">Navigation</a></li>
+                            <li><a href="products.html#carshare">CarShare</a></li>
+                            <li><a href="products.html#robotaxi">RoboTaxi</a></li>
+                            <li><a href="products.html#fleet">Fleet</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>SOLUTIONS</h4>
+                        <ul>
+                            <li><a href="solutions.html#logistics">Logistics</a></li>
+                            <li><a href="solutions.html#automotive">Automotive</a></li>
+                            <li><a href="solutions.html#carsharing">Carsharing</a></li>
+                            <li><a href="solutions.html#insurance">Insurance</a></li>
+                            <li><a href="solutions.html#transit">Public Transit</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>DEVELOPERS</h4>
+                        <ul>
+                            <li><a href="developers.html#docs">Documentation</a></li>
+                            <li><a href="developers.html#tutorials">Tutorials</a></li>
+                            <li><a href="developers.html#api-documentation">API Reference</a></li>
+                            <li><a href="developers.html#support">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="company.html#about">About us</a></li>
+                            <li><a href="company.html#careers">Careers</a></li>
+                            <li><a href="company.html#press">Press</a></li>
+                            <li><a href="company.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2013-2025 Nexus. All rights reserved.</p>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

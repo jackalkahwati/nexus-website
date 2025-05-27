@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation - Nexus</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/developers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <style>
+        .api-sidebar {
+            position: sticky;
+            top: 20px;
+        }
+        .api-content {
+            margin-left: 280px;
+        }
+        @media (max-width: 992px) {
+            .api-content {
+                margin-left: 0;
+            }
+        }
+        .endpoint {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #333;
+        }
+        .method {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .get { background-color: #2ecc71; color: #fff; }
+        .post { background-color: #3498db; color: #fff; }
+        .put { background-color: #f39c12; color: #fff; }
+        .delete { background-color: #e74c3c; color: #fff; }
+        .patch { background-color: #9b59b6; color: #fff; }
+        pre code {
+            border-radius: 4px;
+            padding: 1rem;
+            overflow-x: auto;
+            display: block;
+        }
+        .param-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .param-table th, .param-table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        .param-table th {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../">
+                    <img src="../images/logos/logo6.png" alt="Nexus Logo" class="logo-image">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="../products.html">Products</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../solutions.html">Solutions</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="../developers.html">Developers</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../company.html">Company</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../resources.html">Resources</a>
+                    </li>
+                    <li><a href="../pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="../contact/index.html" class="contact-link">Contact us</a>
+                <a href="https://dashboard.nexus-platform.com" class="account-button">Go to account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="api-docs-header">
+            <h1>Nexus API Documentation</h1>
+            <p>Comprehensive documentation for integrating with the Nexus platform</p>
+        </div>
+
+        <div class="api-docs-container">
+            <div class="api-sidebar">
+                <div class="sidebar-section">
+                    <h3>Getting Started</h3>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#authentication">Authentication</a></li>
+                        <li><a href="#errors">Error Handling</a></li>
+                        <li><a href="#rate-limits">Rate Limits</a></li>
+                        <li><a href="#versioning">API Versioning</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Core APIs</h3>
+                    <ul>
+                        <li><a href="reference/maps.html">Maps API</a></li>
+                        <li><a href="reference/navigation.html">Navigation API</a></li>
+                        <li><a href="reference/search.html">Search API</a></li>
+                        <li><a href="reference/data.html">Data API</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Mobility APIs</h3>
+                    <ul>
+                        <li><a href="reference/carshare.html">CarShare API</a></li>
+                        <li><a href="reference/robotaxi.html">RoboTaxi API</a></li>
+                        <li><a href="reference/mobility.html">Mobility API</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Enterprise APIs</h3>
+                    <ul>
+                        <li><a href="reference/fleet.html">Fleet API</a></li>
+                        <li><a href="reference/delivery.html">Delivery API</a></li>
+                        <li><a href="reference/insurance.html">Insurance API</a></li>
+                        <li><a href="reference/oem.html">OEM API</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../docs/sdk-libraries.html">SDK Libraries</a></li>
+                        <li><a href="../docs/examples.html">Code Examples</a></li>
+                        <li><a href="../docs/websocket.html">WebSocket APIs</a></li>
+                        <li><a href="../docs/webhooks.html">Webhooks</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="api-content">
+                <section id="introduction">
+                    <h2>Introduction</h2>
+                    <p>
+                        The Nexus API is organized around REST principles. Our API has predictable resource-oriented URLs, 
+                        accepts JSON-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response 
+                        codes, authentication, and verbs.
+                    </p>
+                    <p>
+                        All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests 
+                        without authentication will also fail.
+                    </p>
+                    <h3>Base URL</h3>
+                    <p>All API requests should be made to the following base URL:</p>
+                    <pre><code>https://api.nexus-platform.com/v2</code></pre>
+                </section>
+
+                <section id="authentication">
+                    <h2>Authentication</h2>
+                    <p>
+                        The Nexus API uses API keys for authentication. You can manage your API keys from your 
+                        Nexus Dashboard. Your API keys carry many privileges, so be sure to keep them secure!
+                    </p>
+                    <p>
+                        Authentication to the API is performed via HTTP Bearer Auth. Provide your API key as the 
+                        bearer token value in the Authorization header.
+                    </p>
+                    <h3>Example Request</h3>
+                    <pre><code class="language-bash">curl -X GET "https://api.nexus-platform.com/v2/fleet/vehicles" \
+  -H "Authorization: Bearer your_api_key_here" \
+  -H "Content-Type: application/json"</code></pre>
+
+                    <h3>API Key Types</h3>
+                    <p>Nexus offers two types of API keys:</p>
+                    <ul>
+                        <li><strong>Live keys</strong> - For production environments. These keys affect real data.</li>
+                        <li><strong>Test keys</strong> - For testing and development. Actions performed with test keys won't affect your production data.</li>
+                    </ul>
+
+                    <h3>OAuth Authentication</h3>
+                    <p>
+                        For applications that act on behalf of users, we support OAuth 2.0 authentication. 
+                        This allows your application to request authorization from a user to access specific resources.
+                    </p>
+                    <p>
+                        To learn more about implementing OAuth authentication, please visit our 
+                        <a href="../docs/authentication-setup.html">Authentication Setup Guide</a>.
+                    </p>
+                </section>
+
+                <section id="errors">
+                    <h2>Error Handling</h2>
+                    <p>
+                        The Nexus API uses conventional HTTP response codes to indicate the success or failure of an API request. 
+                        In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that failed 
+                        given the information provided (e.g., a required parameter was omitted), and codes in the 5xx range 
+                        indicate an error with Nexus's servers.
+                    </p>
+
+                    <h3>HTTP Status Codes</h3>
+                    <table class="param-table">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>200 - OK</td>
+                                <td>Everything worked as expected.</td>
+                            </tr>
+                            <tr>
+                                <td>201 - Created</td>
+                                <td>A resource was successfully created.</td>
+                            </tr>
+                            <tr>
+                                <td>400 - Bad Request</td>
+                                <td>The request was unacceptable, often due to missing a required parameter.</td>
+                            </tr>
+                            <tr>
+                                <td>401 - Unauthorized</td>
+                                <td>No valid API key provided.</td>
+                            </tr>
+                            <tr>
+                                <td>403 - Forbidden</td>
+                                <td>The API key doesn't have permissions to perform the request.</td>
+                            </tr>
+                            <tr>
+                                <td>404 - Not Found</td>
+                                <td>The requested resource doesn't exist.</td>
+                            </tr>
+                            <tr>
+                                <td>429 - Too Many Requests</td>
+                                <td>Too many requests hit the API too quickly.</td>
+                            </tr>
+                            <tr>
+                                <td>500, 502, 503, 504 - Server Errors</td>
+                                <td>Something went wrong on Nexus's end.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Error Response Format</h3>
+                    <p>
+                        When an error occurs, the Nexus API will return a JSON response with information about the error.
+                    </p>
+                    <pre><code class="language-json">{
+  "error": {
+    "code": "invalid_parameter",
+    "message": "The parameter 'vehicle_id' is required.",
+    "status": 400,
+    "details": {
+      "param": "vehicle_id"
+    },
+    "request_id": "req_1234567890"
+  }
+}</code></pre>
+                </section>
+
+                <section id="rate-limits">
+                    <h2>Rate Limits</h2>
+                    <p>
+                        The Nexus API implements rate limiting to protect our infrastructure and maintain a high quality of service
+                        for all users. Rate limits are applied on a per-API key basis.
+                    </p>
+                    
+                    <h3>Default Rate Limits</h3>
+                    <table class="param-table">
+                        <thead>
+                            <tr>
+                                <th>Plan</th>
+                                <th>Requests per Minute</th>
+                                <th>Requests per Day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Basic</td>
+                                <td>60</td>
+                                <td>10,000</td>
+                            </tr>
+                            <tr>
+                                <td>Professional</td>
+                                <td>300</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <td>Enterprise</td>
+                                <td>1,000+</td>
+                                <td>Customizable</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Rate Limit Headers</h3>
+                    <p>
+                        All API responses include headers that provide information about your current rate limit status:
+                    </p>
+                    <ul>
+                        <li><code>X-RateLimit-Limit</code>: The maximum number of requests allowed in the current period</li>
+                        <li><code>X-RateLimit-Remaining</code>: The number of requests remaining in the current period</li>
+                        <li><code>X-RateLimit-Reset</code>: The time at which the current rate limit window resets, in UTC epoch seconds</li>
+                    </ul>
+
+                    <h3>Rate Limit Exceeded</h3>
+                    <p>
+                        If you exceed the rate limit, you will receive a 429 Too Many Requests response with information about when 
+                        you can retry. The response will include a Retry-After header indicating how many seconds to wait before retrying.
+                    </p>
+                    <pre><code class="language-json">{
+  "error": {
+    "code": "rate_limit_exceeded",
+    "message": "Rate limit exceeded. Please retry after 30 seconds.",
+    "status": 429,
+    "retry_after": 30,
+    "request_id": "req_1234567890"
+  }
+}</code></pre>
+                </section>
+
+                <section id="versioning">
+                    <h2>API Versioning</h2>
+                    <p>
+                        The Nexus API is versioned to ensure backward compatibility as we evolve the platform. The current version 
+                        is v2, which is reflected in the URL path of all API endpoints.
+                    </p>
+                    <p>
+                        We recommend explicitly specifying the version in your API requests to ensure compatibility with your 
+                        implementation.
+                    </p>
+
+                    <h3>Version Lifecycle</h3>
+                    <p>
+                        When we make backwards-incompatible changes to the API, we release a new version. We maintain older 
+                        versions for a reasonable period to give you time to upgrade.
+                    </p>
+                    <ul>
+                        <li><strong>Active</strong>: The current version of the API (v2).</li>
+                        <li><strong>Deprecated</strong>: A version that will be removed in the future. We provide at least 12 months notice before removing a deprecated version.</li>
+                        <li><strong>Sunset</strong>: A version that is no longer supported and will return an error response.</li>
+                    </ul>
+
+                    <h3>Version Status</h3>
+                    <table class="param-table">
+                        <thead>
+                            <tr>
+                                <th>Version</th>
+                                <th>Status</th>
+                                <th>Sunset Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>v2</td>
+                                <td>Active</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>v1</td>
+                                <td>Deprecated</td>
+                                <td>January 1, 2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        For more information on our versioning policy, please visit our 
+                        <a href="../docs/api-versioning.html">API Versioning Guide</a>.
+                    </p>
+                </section>
+
+                <div class="next-steps">
+                    <h2>Next Steps</h2>
+                    <div class="next-steps-cards">
+                        <a href="reference/maps.html" class="next-step-card">
+                            <h3>Maps API</h3>
+                            <p>Render interactive maps with customizable styles and features.</p>
+                            <span class="next-link">Explore Maps API →</span>
+                        </a>
+                        <a href="reference/fleet.html" class="next-step-card">
+                            <h3>Fleet API</h3>
+                            <p>Fleet management with vehicle tracking, maintenance, and analytics.</p>
+                            <span class="next-link">Explore Fleet API →</span>
+                        </a>
+                        <a href="../docs/first-api-request.html" class="next-step-card">
+                            <h3>Make Your First API Request</h3>
+                            <p>A step-by-step guide to making your first API request.</p>
+                            <span class="next-link">Get Started →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="../images/logos/logo6.png" alt="Nexus Logo" class="footer-logo-image">
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>PRODUCTS</h4>
+                        <ul>
+                            <li><a href="../products.html#maps">Maps</a></li>
+                            <li><a href="../products.html#navigation">Navigation</a></li>
+                            <li><a href="../products.html#carshare">CarShare</a></li>
+                            <li><a href="../products.html#robotaxi">RoboTaxi</a></li>
+                            <li><a href="../products.html#fleet">Fleet</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>SOLUTIONS</h4>
+                        <ul>
+                            <li><a href="../solutions.html#logistics">Logistics</a></li>
+                            <li><a href="../solutions.html#automotive">Automotive</a></li>
+                            <li><a href="../solutions.html#carsharing">Carsharing</a></li>
+                            <li><a href="../solutions.html#insurance">Insurance</a></li>
+                            <li><a href="../solutions.html#transit">Public Transit</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>DEVELOPERS</h4>
+                        <ul>
+                            <li><a href="../developers.html#docs">Documentation</a></li>
+                            <li><a href="../developers.html#tutorials">Tutorials</a></li>
+                            <li><a href="../developers.html#api">API Reference</a></li>
+                            <li><a href="../developers.html#support">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="../company.html#about">About us</a></li>
+                            <li><a href="../company.html#careers">Careers</a></li>
+                            <li><a href="../company.html#press">Press</a></li>
+                            <li><a href="../company.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            hljs.highlightAll();
+        });
+    </script>
+</body>
+</html>

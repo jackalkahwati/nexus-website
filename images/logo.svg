@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="150" height="50" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { font-family: 'Arial', sans-serif; font-weight: bold; }
+    .pin { fill: #0096FF; }
+    .nexus { fill: #ffffff; }
+  </style>
+  
+  <!-- Location Pin -->
+  <g class="pin">
+    <path d="M35,10 C28.5,10 23,15.5 23,22 C23,30 35,40 35,40 C35,40 47,30 47,22 C47,15.5 41.5,10 35,10 Z M35,26 C32.8,26 31,24.2 31,22 C31,19.8 32.8,18 35,18 C37.2,18 39,19.8 39,22 C39,24.2 37.2,26 35,26 Z" />
+  </g>
+  
+  <!-- NEXUS text -->
+  <text x="55" y="30" class="logo-text nexus" font-size="24">NEXUS</text>
+</svg>

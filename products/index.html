@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/" />
+    <title>Products - Nexus</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="images/logos/logo6.png" alt="Nexus Logo" class="logo-image">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="products.html">Products</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="solutions.html">Solutions</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="developers.html">Developers</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="company.html">Company</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="resources.html">Resources</a>
+                    </li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="contact/index.html" class="contact-link">Contact us</a>
+                <a href="#" id="login-button" class="account-button">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title-section">
+            <h1>Our Products</h1>
+            <p>Discover the complete ecosystem of Nexus products designed for advanced location intelligence and mobility solutions.</p>
+        </section>
+
+        <!-- Core Technology Products -->
+        <section id="core-tech" class="product-category-section">
+            <h2 class="section-title">Core Technology</h2>
+            <p class="section-subtitle">The foundation of our location intelligence platform</p>
+
+            <section id="maps" class="product-detail-section feature-block">
+                <div class="feature-content">
+                    <h2>Nexus Maps</h2>
+                    <p>Bring location to life with beautiful, customizable maps. Use our APIs and SDKs, ready-made map styles, and live updating data to build dynamic map experiences for web, mobile, automotive, and AR.</p>
+                    <ul class="product-features-list">
+                        <li>Interactive map rendering</li>
+                        <li>Customizable map styles (including dark theme)</li>
+                        <li>Real-time data integration</li>
+                        <li>Cross-platform SDKs (Web, iOS, Android)</li>
+                    </ul>
+                    <a href="api-docs/reference/maps.html" class="feature-link">Explore Maps →</a>
+                </div>
+                <div class="feature-image">
+                    <img src="images/features/isometric2.png" alt="Nexus Maps">
+                </div>
+            </section>
+
+            <section id="navigation" class="product-detail-section feature-block reverse">
+                <div class="feature-content">
+                    <h2>Nexus Navigation</h2>
+                    <p>Optimize routing with customized navigation solutions. Benefit from advanced routing engines, accurate traffic-aware travel times, and intuitive turn-by-turn directions tailored for mobile and automotive applications.</p>
+                    <ul class="product-features-list">
+                        <li>Traffic-aware routing</li>
+                        <li>Turn-by-turn guidance</li>
+                        <li>Customizable route profiles (trucks, cars, etc.)</li>
+                        <li>Mobile and Embedded SDKs</li>
+                    </ul>
+                    <a href="api-docs/reference/navigation.html" class="feature-link">Explore Navigation →</a>
+                </div>
+                <div class="feature-image">
+                    <img src="images/features/navigation2.png" alt="Nexus Navigation">
+                </div>
+            </section>
+
+            <section id="search" class="product-detail-section feature-block">
+                <div class="feature-content">
+                    <h2>Nexus Search</h2>
+                    <p>Transform location features with powerful search capabilities. Our APIs and SDKs provide precise geocoding, reverse geocoding, and search for addresses, place names, and points of interest globally.</p>
+                    <ul class="product-features-list">
+                        <li>Forward & Reverse Geocoding</li>
+                        <li>Points of Interest (POI) Search</li>
+                        <li>Address Autocomplete</li>
+                        <li>Batch Geocoding API</li>
+                    </ul>
+                    <a href="api-docs/reference/search.html" class="feature-link">Explore Search →</a>
+                </div>
+                <div class="feature-image">
+                    <img src="images/features/dark-map2.png" alt="Nexus Search">
+                </div>
+            </section>
+
+            <section id="data" class="product-detail-section feature-block reverse">
+                <div class="feature-content">
+                    <h2>Nexus Data</h2>
+                    <p>Generate insights with comprehensive location data. Build with global datasets for Boundaries, Traffic, and Movement, informed by insights from a vast network of users and sources.</p>
+                    <ul class="product-features-list">
+                        <li>Global Boundary Data</li>
+                        <li>Real-time Traffic Information</li>
+                        <li>Movement and Telemetry Data</li>
+                        <li>Data Visualization Tools</li>
+                    </ul>
+                    <a href="api-docs/reference/data.html" class="feature-link">Explore Data →</a>
+                </div>
+                <div class="feature-image">
+                    <img src="images/features/analytics2.png" alt="Nexus Data">
+                </div>
+            </section>
+
+            <section id="studio" class="product-detail-section feature-block">
+                <div class="feature-content">
+                    <h2>Nexus Studio</h2>
+                    <p>Design and manage your custom maps and location data effortlessly. Nexus Studio provides a powerful web-based interface to visualize data, customize map styles, and manage your location assets.</p>
+                    <ul class="product-features-list">
+                        <li>Visual Map Style Editor</li>
+                        <li>Data Upload and Management</li>
+                        <li>Dataset Visualization</li>
+                        <li>Collaboration Tools</li>
+                    </ul>
+                    <a href="docs/examples.html" class="feature-link">Explore Studio →</a>
+                </div>
+                <div class="feature-image">
+                    <img src="images/features/control-center.png" alt="Nexus Studio">
+                </div>
+            </section>
+        </section>
+
+        <!-- Mobility Services Products -->
+        <section id="mobility-services" class="product-category-section">
+            <h2 class="section-title">Mobility Services</h2>
+            <p class="section-subtitle">Complete solutions for modern transportation needs</p>
+
+            <section id="carshare" class="product-detail-section feature-block">
+                <div class="feature-content">
+                    <h2>Nexus CarShare</h2>
+                    <p>Our comprehensive carsharing platform enables businesses to launch and operate vehicle-sharing services. From fleet management to customer-facing apps, Nexus CarShare provides the technology infrastructure for successful shared mobility operations.</p>
+                    <ul class="product-features-list">
+                        <li>User-friendly booking apps for iOS and Android</li>
+                        <li>Vehicle access control and remote unlock</li>
+                        <li>Host tools for vehicle owners</li>
+                        <li>Dynamic pricing and demand forecasting</li>
+                        <li>Fleet management dashboard</li>
+                    </ul>
+                    <a href="api-docs/reference/carshare.html" class="feature-link">Explore Nexus CarShare →</a>
+                </div>
+                <div class="feature-image">
+                    <img src="images/features/isometric2.png" alt="Nexus CarShare Platform">
+                </div>
+            </section>
+
+            <section id="robotaxi" class="product-detail-section feature-block reverse">
+                <div class="feature-content">
+                    <h2>Nexus RoboTaxi</h2>
+                    <p>Our autonomous ride-hailing platform combines advanced navigation technology with AI-powered vehicle control systems. Nexus RoboTaxi enables transportation providers to deploy and manage fleets of autonomous vehicles for passenger transport.</p>
+                    <ul class="product-features-list">
+                        <li>Autonomous vehicle management</li>
+                        <li>Rider mobile app for booking</li>
+                        <li>Remote monitoring and intervention</li>
+                        <li>Safety and compliance systems</li>
+                        <li>Fleet orchestration platform</li>
+                    </ul>
+                    <a href="api-docs/reference/robotaxi.html" class="feature-link">Explore Nexus RoboTaxi →</a>
+                </div>
+                <div class="feature-image">
+                    <img src="images/features/enterpise.png" alt="Nexus RoboTaxi Platform">
+                </div>
+            </section>
+
+            <section id="mobility" class="product-detail-section feature-block">
+                <div class="feature-content">
+                    <h2>Nexus Mobility</h2>
+                    <p>A unified mobility platform that integrates multiple transportation options into a seamless user experience. Nexus Mobility enables cities and transportation providers to offer MaaS (Mobility as a Service) solutions that combine public transit, ride-sharing, bike-sharing and more.</p>
+                    <ul class="product-features-list">
+                        <li>Multi-modal trip planning</li>
+                        <li>Unified payment system</li>
+                        <li>Real-time transit information</li>
+                        <li>Mobility credits and loyalty features</li>
+                        <li>Transportation analytics dashboard</li>
+                    </ul>
+                    <a href="api-docs/reference/mobility.html" class="feature-link">Explore Nexus Mobility →</a>
+                </div>
+                <div class="feature-image">
+                    <img src="images/features/navigation2.png" alt="Nexus Mobility Platform">
+                </div>
+            </section>
+        </section>
+
+        <!-- Enterprise Solutions Products -->
+        <section id="enterprise-solutions" class="product-category-section">
+            <h2 class="section-title">Enterprise Solutions</h2>
+            <p class="section-subtitle">Specialized platforms for business operations</p>
+
+            <section id="fleet" class="product-detail-section feature-block">
+                <div class="feature-content">
+                    <h2>Nexus Fleet</h2>
+                    <p>A comprehensive fleet management solution designed for businesses operating vehicle fleets of any size. Nexus Fleet combines location tracking, maintenance management, and operational analytics to optimize fleet performance and reduce costs.</p>
+                    <ul class="product-features-list">
+                        <li>Real-time vehicle tracking and telemetry</li>
+                        <li>Maintenance scheduling and alerts</li>
+                        <li>Driver behavior analysis</li>
+                        <li>Fuel efficiency optimization</li>
+                        <li>Compliance and reporting tools</li>
+                    </ul>
+                    <a href="api-docs/reference/fleet.html" class="feature-link">Explore Nexus Fleet →</a>
+                </div>
+                <div class="feature-image">
+                    <img src="images/features/dark-map2.png" alt="Nexus Fleet Management">
+                </div>
+            </section>
+
+            <section id="delivery" class="product-detail-section feature-block reverse">
+                <div class="feature-content">
+                    <h2>Nexus Delivery</h2>
+                    <p>A specialized platform for delivery operations, providing end-to-end management of last-mile logistics. Nexus Delivery optimizes routes, manages delivery schedules, and provides real-time tracking for both operators and customers.</p>
+                    <ul class="product-features-list">
+                        <li>Optimized multi-stop routing</li>
+                        <li>Delivery scheduling and dispatching</li>
+                        <li>Real-time delivery tracking</li>
+                        <li>Proof of delivery capture</li>
+                        <li>Customer notification system</li>
+                    </ul>
+                    <a href="api-docs/reference/delivery.html" class="feature-link">Explore Nexus Delivery →</a>
+                </div>
+                <div class="feature-image">
+                    <img src="images/features/analytics2.png" alt="Nexus Delivery Platform">
+                </div>
+            </section>
+
+            <section id="insurance" class="product-detail-section feature-block">
+                <div class="feature-content">
+                    <h2>Nexus Insurance</h2>
+                    <p>A specialized platform for usage-based insurance and risk management in mobility services. Nexus Insurance provides telemetry-based risk assessment, dynamic pricing, and claims management for insurance providers in the transportation sector.</p>
+                    <ul class="product-features-list">
+                        <li>Usage-based insurance (UBI) platform</li>
+                        <li>Driver behavior scoring</li>
+                        <li>Risk assessment analytics</li>
+                        <li>Automated claims processing</li>
+                        <li>Fraud detection system</li>
+                    </ul>
+                    <a href="api-docs/reference/insurance.html" class="feature-link">Explore Nexus Insurance →</a>
+                </div>
+                <div class="feature-image">
+                    <img src="images/features/navigation2.png" alt="Nexus Insurance Platform">
+                </div>
+            </section>
+
+            <section id="oem" class="product-detail-section feature-block reverse">
+                <div class="feature-content">
+                    <h2>Nexus OEM</h2>
+                    <p>A specialized platform for automotive manufacturers looking to integrate advanced location and mobility services into their vehicles. Nexus OEM provides customizable in-vehicle experiences, connectivity solutions, and data analytics for connected car ecosystems.</p>
+                    <ul class="product-features-list">
+                        <li>Embedded navigation systems</li>
+                        <li>Connected vehicle services</li>
+                        <li>OTA (Over-the-Air) update infrastructure</li>
+                        <li>Vehicle data analytics</li>
+                        <li>Branded mobility service integration</li>
+                    </ul>
+                    <a href="api-docs/reference/oem.html" class="feature-link">Explore Nexus OEM →</a>
+                </div>
+                <div class="feature-image">
+                    <img src="images/features/enterpise.png" alt="Nexus OEM Platform">
+                </div>
+            </section>
+        </section>
+
+        <section class="product-ecosystem-section">
+            <h2>The Nexus Ecosystem</h2>
+            <p>Our products are designed to work together seamlessly, creating a comprehensive mobility platform that addresses every aspect of modern transportation needs.</p>
+            
+            <div class="ecosystem-image">
+                <img src="images/features/developer_imagery.png" alt="Nexus Ecosystem" style="max-width: 800px; margin: 30px auto; display: block;">
+            </div>
+            
+            <p>From core location technology to specialized mobility solutions, the Nexus ecosystem provides the tools needed for the future of transportation and logistics.</p>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Transform your Mobility Operations?</h2>
+            <p>Explore our documentation or contact sales to find the best solution for your needs.</p>
+            <div class="cta-buttons">
+                <a href="developers.html" class="primary-button">View Documentation</a>
+                <a href="contact/index.html" class="secondary-button">Contact Sales</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="images/logos/logo6.png" alt="Nexus Logo" class="footer-logo-image">
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>PRODUCTS</h4>
+                        <ul>
+                            <li><a href="products.html#maps">Maps</a></li>
+                            <li><a href="products.html#navigation">Navigation</a></li>
+                            <li><a href="products.html#carshare">CarShare</a></li>
+                            <li><a href="products.html#robotaxi">RoboTaxi</a></li>
+                            <li><a href="products.html#fleet">Fleet</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>SOLUTIONS</h4>
+                        <ul>
+                            <li><a href="solutions.html#logistics">Logistics</a></li>
+                            <li><a href="solutions.html#automotive">Automotive</a></li>
+                            <li><a href="solutions.html#carsharing">Carsharing</a></li>
+                            <li><a href="solutions.html#insurance">Insurance</a></li>
+                            <li><a href="solutions.html#transit">Public Transit</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>DEVELOPERS</h4>
+                        <ul>
+                            <li><a href="developers.html#docs">Documentation</a></li>
+                            <li><a href="developers.html#tutorials">Tutorials</a></li>
+                            <li><a href="developers.html#api">API Reference</a></li>
+                            <li><a href="developers.html#support">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="company.html#about">About us</a></li>
+                            <li><a href="company.html#careers">Careers</a></li>
+                            <li><a href="company.html#press">Press</a></li>
+                            <li><a href="company.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2013-2025 Nexus. All rights reserved.</p>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

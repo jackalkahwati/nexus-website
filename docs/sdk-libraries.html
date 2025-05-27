@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDK Libraries - Nexus</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/developers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <style>
+        .sdk-card {
+            background-color: rgba(30, 30, 30, 0.5);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .sdk-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .sdk-logo {
+            background-color: rgba(0, 150, 220, 0.2);
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+        }
+        .sdk-logo i {
+            font-size: 24px;
+            color: #0096dc;
+        }
+        .sdk-version {
+            background-color: rgba(0, 150, 220, 0.2);
+            color: #0096dc;
+            padding: 4px 8px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 12px;
+        }
+        .sdk-install {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            padding: 16px;
+            margin-top: 16px;
+            overflow-x: auto;
+        }
+        .sdk-install pre {
+            margin: 0;
+        }
+        .sdk-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .sdk-button {
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .primary {
+            background-color: #0096dc;
+            color: white;
+        }
+        .secondary {
+            background-color: rgba(0, 150, 220, 0.2);
+            color: #0096dc;
+        }
+        .feature-list {
+            margin-top: 16px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        .feature-item i {
+            color: #0096dc;
+            margin-right: 8px;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../">
+                    <img src="../images/logos/logo6.png" alt="Nexus Logo" class="logo-image">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="../products.html">Products</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../solutions.html">Solutions</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="../developers.html">Developers</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../company.html">Company</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../resources.html">Resources</a>
+                    </li>
+                    <li><a href="../pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="../pages/contact/index.html" class="contact-link">Contact us</a>
+                <a href="http://localhost:3001/signup" class="account-button">Go to account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="section-header text-center">
+            <h1>SDK Libraries</h1>
+            <p>Official client libraries for the Nexus platform</p>
+        </div>
+
+        <div class="content-container">
+            <section id="overview">
+                <h2>Overview</h2>
+                <p>
+                    Nexus provides a comprehensive set of Software Development Kits (SDKs) that make it easy to integrate 
+                    our services into your applications. Our SDKs are available for multiple platforms and programming languages, 
+                    each providing a native experience tailored to that platform.
+                </p>
+                <p>
+                    All our SDKs are open-source and maintained by the Nexus development team. They are designed to be
+                    easy to use, well-documented, and consistently updated with the latest features and improvements.
+                </p>
+            </section>
+
+            <section id="sdk-libraries">
+                <h2>Available SDKs</h2>
+                
+                <div class="sdk-card">
+                    <div class="sdk-header">
+                        <div class="sdk-logo">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div>
+                            <h3>JavaScript SDK<span class="sdk-version">v2.4.0</span></h3>
+                            <p>For web applications and Node.js</p>
+                        </div>
+                    </div>
+                    <p>
+                        The Nexus JavaScript SDK allows you to integrate Nexus services into web applications and Node.js servers.
+                        It provides type definitions for TypeScript users and supports both module and script tag imports.
+                    </p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Maps & Navigation</strong>: Interactive maps, routing, geocoding, and directions
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Real-time Updates</strong>: WebSocket support for live vehicle tracking and updates
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Authentication</strong>: User authentication and API key management
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Data Visualization</strong>: Heatmaps, marker clustering, and custom styling
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sdk-install">
+                        <pre><code>npm install @nexus/sdk</code></pre>
+                    </div>
+                    
+                    <div class="sdk-buttons">
+                        <a href="../api-docs/reference/javascript-sdk.html" class="sdk-button primary">Documentation</a>
+                        <a href="https://github.com/nexus-platform/nexus-javascript-sdk" class="sdk-button secondary">GitHub Repository</a>
+                        <a href="https://www.npmjs.com/package/@nexus/sdk" class="sdk-button secondary">NPM Package</a>
+                    </div>
+                </div>
+
+                <div class="sdk-card">
+                    <div class="sdk-header">
+                        <div class="sdk-logo">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <div>
+                            <h3>Android SDK<span class="sdk-version">v1.9.2</span></h3>
+                            <p>For Android applications</p>
+                        </div>
+                    </div>
+                    <p>
+                        The Nexus Android SDK enables you to integrate Nexus services into your Android applications.
+                        It provides Java and Kotlin APIs, background service integration, and optimized performance for mobile devices.
+                    </p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Maps & Navigation</strong>: Native map views, turn-by-turn navigation, and offline maps
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Location Services</strong>: Background location tracking, geofencing, and activity recognition
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Offline Support</strong>: Cache data for offline use and synchronize when back online
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Push Notifications</strong>: Receive real-time updates via FCM integration
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sdk-install">
+                        <pre><code>implementation 'com.nexusplatform:sdk:1.9.2'</code></pre>
+                    </div>
+                    
+                    <div class="sdk-buttons">
+                        <a href="../api-docs/reference/android-sdk.html" class="sdk-button primary">Documentation</a>
+                        <a href="https://github.com/nexus-platform/nexus-android-sdk" class="sdk-button secondary">GitHub Repository</a>
+                        <a href="https://jitpack.io/#nexus-platform/nexus-android-sdk" class="sdk-button secondary">JitPack</a>
+                    </div>
+                </div>
+
+                <div class="sdk-card">
+                    <div class="sdk-header">
+                        <div class="sdk-logo">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <div>
+                            <h3>iOS SDK<span class="sdk-version">v1.8.3</span></h3>
+                            <p>For iOS and iPadOS applications</p>
+                        </div>
+                    </div>
+                    <p>
+                        The Nexus iOS SDK enables seamless integration with iOS and iPadOS applications.
+                        It's built with Swift and provides Objective-C compatibility, supporting all iOS devices and versions.
+                    </p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Maps & Navigation</strong>: Native map views, turn-by-turn navigation with voice guidance
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Location Services</strong>: Battery-efficient location tracking and region monitoring
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>CarPlay Support</strong>: Extend your app to Apple CarPlay for in-vehicle use
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Offline Maps</strong>: Download map regions for offline use
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sdk-install">
+                        <pre><code>pod 'NexusSDK', '~> 1.8.3'</code></pre>
+                    </div>
+                    
+                    <div class="sdk-buttons">
+                        <a href="../api-docs/reference/ios-sdk.html" class="sdk-button primary">Documentation</a>
+                        <a href="https://github.com/nexus-platform/nexus-ios-sdk" class="sdk-button secondary">GitHub Repository</a>
+                        <a href="https://cocoapods.org/pods/NexusSDK" class="sdk-button secondary">CocoaPods</a>
+                    </div>
+                </div>
+
+                <div class="sdk-card">
+                    <div class="sdk-header">
+                        <div class="sdk-logo">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div>
+                            <h3>Python SDK<span class="sdk-version">v1.5.1</span></h3>
+                            <p>For backend services and data analysis</p>
+                        </div>
+                    </div>
+                    <p>
+                        The Nexus Python SDK is designed for backend services, data analysis, and machine learning applications.
+                        It provides easy access to all Nexus APIs with asynchronous support (via asyncio) and comprehensive data processing tools.
+                    </p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Data Processing</strong>: Process and analyze location data, routes, and traffic patterns
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Batch Operations</strong>: Efficiently process large datasets with batch operations
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Async Support</strong>: Full asyncio support for high-performance applications
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Integrations</strong>: Integrate with popular data science libraries like Pandas and NumPy
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sdk-install">
+                        <pre><code>pip install nexus-sdk</code></pre>
+                    </div>
+                    
+                    <div class="sdk-buttons">
+                        <a href="../api-docs/reference/python-sdk.html" class="sdk-button primary">Documentation</a>
+                        <a href="https://github.com/nexus-platform/nexus-python-sdk" class="sdk-button secondary">GitHub Repository</a>
+                        <a href="https://pypi.org/project/nexus-sdk/" class="sdk-button secondary">PyPI Package</a>
+                    </div>
+                </div>
+
+                <div class="sdk-card">
+                    <div class="sdk-header">
+                        <div class="sdk-logo">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div>
+                            <h3>React SDK<span class="sdk-version">v2.3.0</span></h3>
+                            <p>React components for web applications</p>
+                        </div>
+                    </div>
+                    <p>
+                        The Nexus React SDK provides ready-to-use React components for maps, navigation, and other Nexus services.
+                        It's built on top of the JavaScript SDK and offers a React-native development experience with hooks and context providers.
+                    </p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>React Components</strong>: Pre-built components for maps, search, directions, and more
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>React Hooks</strong>: Custom hooks for location, routing, and state management
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Context Providers</strong>: Global state management for Nexus services
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>TypeScript Support</strong>: Full TypeScript support with type definitions
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sdk-install">
+                        <pre><code>npm install @nexus/react-sdk</code></pre>
+                    </div>
+                    
+                    <div class="sdk-buttons">
+                        <a href="../api-docs/reference/react-sdk.html" class="sdk-button primary">Documentation</a>
+                        <a href="https://github.com/nexus-platform/nexus-react-sdk" class="sdk-button secondary">GitHub Repository</a>
+                        <a href="https://www.npmjs.com/package/@nexus/react-sdk" class="sdk-button secondary">NPM Package</a>
+                    </div>
+                </div>
+
+                <div class="sdk-card">
+                    <div class="sdk-header">
+                        <div class="sdk-logo">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <div>
+                            <h3>Java SDK<span class="sdk-version">v1.7.2</span></h3>
+                            <p>For Java applications and backend services</p>
+                        </div>
+                    </div>
+                    <p>
+                        The Nexus Java SDK provides access to Nexus services for Java applications and backend services.
+                        It's designed for high-performance enterprise applications with comprehensive error handling and logging.
+                    </p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Enterprise Integration</strong>: Integrate with enterprise Java applications and services
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Spring Support</strong>: Seamless integration with Spring Framework and Spring Boot
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Concurrency</strong>: Thread-safe operations and asynchronous processing
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Enterprise Security</strong>: Advanced authentication and security features
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sdk-install">
+                        <pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;com.nexusplatform&lt;/groupId&gt;
+  &lt;artifactId&gt;nexus-sdk&lt;/artifactId&gt;
+  &lt;version&gt;1.7.2&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+                    </div>
+                    
+                    <div class="sdk-buttons">
+                        <a href="../api-docs/reference/java-sdk.html" class="sdk-button primary">Documentation</a>
+                        <a href="https://github.com/nexus-platform/nexus-java-sdk" class="sdk-button secondary">GitHub Repository</a>
+                        <a href="https://central.sonatype.org/artifact/com.nexusplatform/nexus-sdk/" class="sdk-button secondary">Maven Central</a>
+                    </div>
+                </div>
+
+                <div class="sdk-card">
+                    <div class="sdk-header">
+                        <div class="sdk-logo">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div>
+                            <h3>.NET SDK<span class="sdk-version">v1.6.0</span></h3>
+                            <p>For .NET applications and services</p>
+                        </div>
+                    </div>
+                    <p>
+                        The Nexus .NET SDK provides full access to Nexus services for .NET applications and services.
+                        It supports .NET Standard 2.0+ for cross-platform compatibility and offers C# and F# APIs.
+                    </p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Cross-Platform</strong>: Works with .NET Core, .NET Framework, Xamarin, and Unity
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Async/Await</strong>: Full async/await support for non-blocking operations
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Dependency Injection</strong>: Built-in support for .NET dependency injection
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>LINQ Integration</strong>: Query Nexus data using LINQ
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sdk-install">
+                        <pre><code>dotnet add package Nexus.SDK</code></pre>
+                    </div>
+                    
+                    <div class="sdk-buttons">
+                        <a href="../api-docs/reference/dotnet-sdk.html" class="sdk-button primary">Documentation</a>
+                        <a href="https://github.com/nexus-platform/nexus-dotnet-sdk" class="sdk-button secondary">GitHub Repository</a>
+                        <a href="https://www.nuget.org/packages/Nexus.SDK" class="sdk-button secondary">NuGet Package</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sdk-features">
+                <h2>Common Features</h2>
+                <p>
+                    All Nexus SDKs share a set of common features and principles:
+                </p>
+                
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Authentication</strong>: Simple and secure authentication with API keys or OAuth
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Error Handling</strong>: Comprehensive error handling with detailed error messages
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Rate Limiting</strong>: Automatic handling of rate limits with retries and backoff
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Logging</strong>: Detailed logging for debugging and monitoring
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Versioning</strong>: Clear versioning and compatibility information
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Documentation</strong>: Comprehensive documentation with examples and guides
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sdk-versioning">
+                <h2>SDK Versioning</h2>
+                <p>
+                    All Nexus SDKs follow semantic versioning (MAJOR.MINOR.PATCH):
+                </p>
+                <ul>
+                    <li><strong>MAJOR</strong> version changes include breaking changes</li>
+                    <li><strong>MINOR</strong> version changes add new features in a backward-compatible manner</li>
+                    <li><strong>PATCH</strong> version changes include backward-compatible bug fixes</li>
+                </ul>
+                <p>
+                    We maintain long-term support (LTS) for major versions, typically for at least 18 months after a new major version is released.
+                    This gives you time to upgrade your applications at your own pace.
+                </p>
+            </section>
+
+            <section id="support">
+                <h2>SDK Support</h2>
+                <p>
+                    We provide multiple channels for SDK support:
+                </p>
+                <ul>
+                    <li><strong>GitHub Issues</strong>: Report bugs and request features on our GitHub repositories</li>
+                    <li><strong>Documentation</strong>: Comprehensive guides, reference, and examples</li>
+                    <li><strong>Community Forum</strong>: Connect with other developers using Nexus SDKs</li>
+                    <li><strong>Technical Support</strong>: Enterprise customers receive direct technical support</li>
+                </ul>
+                <p>
+                    For urgent issues or feature requests, please contact our <a href="../pages/contact/index.html">support team</a>.
+                </p>
+            </section>
+
+            <section id="next-steps">
+                <h2>Next Steps</h2>
+                <div class="cta-cards">
+                    <a href="../api-docs/index.html" class="cta-card">
+                        <i class="fas fa-book"></i>
+                        <h3>API Documentation</h3>
+                        <p>Explore the complete API reference for all Nexus services</p>
+                    </a>
+                    <a href="../docs/examples.html" class="cta-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Code Examples</h3>
+                        <p>See practical examples of using Nexus SDKs in your applications</p>
+                    </a>
+                    <a href="../docs/first-api-request.html" class="cta-card">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Quick Start</h3>
+                        <p>Make your first API request with our quick start guide</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="../images/logos/logo6.png" alt="Nexus Logo" class="footer-logo-image">
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>PRODUCTS</h4>
+                        <ul>
+                            <li><a href="../products.html#maps">Maps</a></li>
+                            <li><a href="../products.html#navigation">Navigation</a></li>
+                            <li><a href="../products.html#carshare">CarShare</a></li>
+                            <li><a href="../products.html#robotaxi">RoboTaxi</a></li>
+                            <li><a href="../products.html#fleet">Fleet</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>SOLUTIONS</h4>
+                        <ul>
+                            <li><a href="../solutions.html#logistics">Logistics</a></li>
+                            <li><a href="../solutions.html#automotive">Automotive</a></li>
+                            <li><a href="../solutions.html#carsharing">Carsharing</a></li>
+                            <li><a href="../solutions.html#insurance">Insurance</a></li>
+                            <li><a href="../solutions.html#transit">Public Transit</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>DEVELOPERS</h4>
+                        <ul>
+                            <li><a href="../developers.html#docs">Documentation</a></li>
+                            <li><a href="../developers.html#tutorials">Tutorials</a></li>
+                            <li><a href="../developers.html#api">API Reference</a></li>
+                            <li><a href="../developers.html#support">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="../company.html#about">About us</a></li>
+                            <li><a href="../company.html#careers">Careers</a></li>
+                            <li><a href="../company.html#press">Press</a></li>
+                            <li><a href="../company.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            hljs.highlightAll();
+        });
+    </script>
+</body>
+</html>

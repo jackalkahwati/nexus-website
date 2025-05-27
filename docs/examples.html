@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Examples - Nexus</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/developers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <style>
+        .example-card {
+            background-color: rgba(30, 30, 30, 0.5);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .example-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .example-icon {
+            background-color: rgba(0, 150, 220, 0.2);
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+        }
+        .example-icon i {
+            font-size: 24px;
+            color: #0096dc;
+        }
+        .code-tabs {
+            display: flex;
+            margin-top: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .code-tab {
+            padding: 8px 16px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #ccc;
+            font-weight: bold;
+        }
+        .code-tab.active {
+            color: #0096dc;
+            border-bottom: 2px solid #0096dc;
+        }
+        .code-panel {
+            display: none;
+            margin-top: 16px;
+        }
+        .code-panel.active {
+            display: block;
+        }
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        .tech-tag {
+            background-color: rgba(0, 150, 220, 0.2);
+            color: #0096dc;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../">
+                    <img src="../images/logos/logo6.png" alt="Nexus Logo" class="logo-image">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="../products.html">Products</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../solutions.html">Solutions</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="../developers.html">Developers</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../company.html">Company</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../resources.html">Resources</a>
+                    </li>
+                    <li><a href="../pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="../pages/contact/index.html" class="contact-link">Contact us</a>
+                <a href="http://localhost:3001/signup" class="account-button">Go to account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="section-header text-center">
+            <h1>Code Examples</h1>
+            <p>Practical examples to help you implement Nexus services in your applications</p>
+        </div>
+
+        <div class="content-container">
+            <section id="overview">
+                <h2>Overview</h2>
+                <p>
+                    These code examples demonstrate how to use the Nexus APIs and SDKs to implement common features in your applications.
+                    Each example includes code snippets for multiple programming languages and platforms, along with explanations and links to related documentation.
+                </p>
+                <p>
+                    All examples are available on our <a href="https://github.com/nexus-platform/examples">GitHub repository</a> where you can find complete projects and additional resources.
+                </p>
+            </section>
+
+            <section id="example-categories">
+                <h2>Categories</h2>
+                <ul class="category-links">
+                    <li><a href="#maps-examples">Maps &amp; Visualization</a></li>
+                    <li><a href="#navigation-examples">Navigation &amp; Routing</a></li>
+                    <li><a href="#vehicle-examples">Vehicle Tracking</a></li>
+                    <li><a href="#fleet-examples">Fleet Management</a></li>
+                    <li><a href="#analytics-examples">Analytics &amp; Reporting</a></li>
+                    <li><a href="#integration-examples">Integration Examples</a></li>
+                </ul>
+            </section>
+
+            <section id="maps-examples">
+                <h2>Maps &amp; Visualization</h2>
+                
+                <div class="example-card">
+                    <div class="example-header">
+                        <div class="example-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Interactive Map with Custom Markers</h3>
+                    </div>
+                    <p>
+                        This example demonstrates how to create an interactive map with custom markers, info windows,
+                        and click events using the Nexus Maps API.
+                    </p>
+                    
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Maps API</span>
+                        <span class="tech-tag">Markers</span>
+                    </div>
+                    
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="js">JavaScript</button>
+                        <button class="code-tab" data-lang="react">React</button>
+                        <button class="code-tab" data-lang="android">Android</button>
+                        <button class="code-tab" data-lang="ios">iOS</button>
+                    </div>
+                    
+                    <div class="code-panel active" id="js-panel">
+                        <pre><code class="language-javascript">// Initialize the map
+const map = new nexus.maps.Map(document.getElementById('map'), {
+  center: { lat: 37.7749, lng: -122.4194 },
+  zoom: 12,
+  style: 'standard'
+});
+
+// Add custom markers
+const locations = [
+  { position: { lat: 37.7749, lng: -122.4194 }, title: 'San Francisco' },
+  { position: { lat: 37.7694, lng: -122.4862 }, title: 'Golden Gate Park' },
+  { position: { lat: 37.8199, lng: -122.4783 }, title: 'Golden Gate Bridge' }
+];
+
+// Create markers for each location
+locations.forEach(location => {
+  const marker = new nexus.maps.Marker({
+    position: location.position,
+    map: map,
+    title: location.title,
+    icon: {
+      path: nexus.maps.SymbolPath.CIRCLE,
+      fillColor: '#0096dc',
+      fillOpacity: 0.9,
+      strokeWeight: 2,
+      strokeColor: '#ffffff',
+      scale: 8
+    }
+  });
+  
+  // Add click event to marker
+  marker.addListener('click', () => {
+    const infoWindow = new nexus.maps.InfoWindow({
+      content: `<div><h3>${location.title}</h3><p>Lat: ${location.position.lat}<br>Lng: ${location.position.lng}</p></div>`
+    });
+    infoWindow.open(map, marker);
+  });
+});</code></pre>
+                    </div>
+                    
+                    <div class="code-panel" id="react-panel">
+                        <pre><code class="language-jsx">import React, { useEffect } from 'react';
+import { NexusMap, Marker, InfoWindow } from '@nexus/react-sdk';
+
+const locations = [
+  { position: { lat: 37.7749, lng: -122.4194 }, title: 'San Francisco' },
+  { position: { lat: 37.7694, lng: -122.4862 }, title: 'Golden Gate Park' },
+  { position: { lat: 37.8199, lng: -122.4783 }, title: 'Golden Gate Bridge' }
+];
+
+function MapWithMarkers() {
+  const [selectedMarker, setSelectedMarker] = React.useState(null);
+  
+  return (
+    <NexusMap
+      apiKey="your_api_key"
+      center={{ lat: 37.7749, lng: -122.4194 }}
+      zoom={12}
+      style="standard"
+      style={{ width: '100%', height: '500px' }}
+    >
+      {locations.map((location, index) => (
+        <Marker
+          key={index}
+          position={location.position}
+          title={location.title}
+          icon={{
+            path: 'CIRCLE',
+            fillColor: '#0096dc',
+            fillOpacity: 0.9,
+            strokeWeight: 2,
+            strokeColor: '#ffffff',
+            scale: 8
+          }}
+          onClick={() => setSelectedMarker(location)}
+        />
+      ))}
+      
+      {selectedMarker && (
+        <InfoWindow
+          position={selectedMarker.position}
+          onClose={() => setSelectedMarker(null)}
+        >
+          <div>
+            <h3>{selectedMarker.title}</h3>
+            <p>
+              Lat: {selectedMarker.position.lat}<br />
+              Lng: {selectedMarker.position.lng}
+            </p>
+          </div>
+        </InfoWindow>
+      )}
+    </NexusMap>
+  );
+}</code></pre>
+                    </div>
+                    
+                    <div class="code-panel" id="android-panel">
+                        <pre><code class="language-kotlin">class MapActivity : AppCompatActivity(), OnMapReadyCallback {
+    
+    private lateinit var nexusMap: NexusMap
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_map)
+        
+        val mapFragment = supportFragmentManager
+            .findFragmentById(R.id.map) as SupportMapFragment
+        mapFragment.getMapAsync(this)
+    }
+    
+    override fun onMapReady(map: NexusMap) {
+        nexusMap = map
+        
+        // Set map style and center
+        nexusMap.setMapStyle(MapStyle.STANDARD)
+        nexusMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
+            LatLng(37.7749, -122.4194), 12f))
+        
+        // Define locations
+        val locations = listOf(
+            MarkerData(LatLng(37.7749, -122.4194), "San Francisco"),
+            MarkerData(LatLng(37.7694, -122.4862), "Golden Gate Park"),
+            MarkerData(LatLng(37.8199, -122.4783), "Golden Gate Bridge")
+        )
+        
+        // Add markers for each location
+        locations.forEach { location ->
+            val marker = nexusMap.addMarker(
+                MarkerOptions()
+                    .position(location.position)
+                    .title(location.title)
+                    .icon(BitmapDescriptorFactory.defaultMarker(
+                        BitmapDescriptorFactory.HUE_AZURE))
+            )
+        }
+        
+        // Set marker click listener
+        nexusMap.setOnMarkerClickListener { marker ->
+            marker.showInfoWindow()
+            true
+        }
+    }
+    
+    data class MarkerData(val position: LatLng, val title: String)
+}</code></pre>
+                    </div>
+                    
+                    <div class="code-panel" id="ios-panel">
+                        <pre><code class="language-swift">import UIKit
+import NexusSDK
+
+class MapViewController: UIViewController, NXMapViewDelegate {
+    
+    var mapView: NXMapView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Initialize map view
+        mapView = NXMapView(frame: view.bounds)
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.delegate = self
+        view.addSubview(mapView)
+        
+        // Set map style and center
+        mapView.mapStyle = .standard
+        let sanFrancisco = NXLatLng(latitude: 37.7749, longitude: -122.4194)
+        mapView.camera = NXCameraPosition(target: sanFrancisco, zoom: 12)
+        
+        // Define locations
+        let locations = [
+            (position: NXLatLng(latitude: 37.7749, longitude: -122.4194), title: "San Francisco"),
+            (position: NXLatLng(latitude: 37.7694, longitude: -122.4862), title: "Golden Gate Park"),
+            (position: NXLatLng(latitude: 37.8199, longitude: -122.4783), title: "Golden Gate Bridge")
+        ]
+        
+        // Add markers for each location
+        for location in locations {
+            let marker = NXMarker()
+            marker.position = location.position
+            marker.title = location.title
+            marker.icon = NXIcon(named: "circle_marker")
+            marker.iconColor = UIColor(red: 0, green: 150/255, blue: 220/255, alpha: 1)
+            marker.map = mapView
+        }
+    }
+    
+    // MARK: - NXMapViewDelegate
+    
+    func mapView(_ mapView: NXMapView, didTap marker: NXMarker) -> Bool {
+        // Show info window when marker is tapped
+        return false // return false to show default info window
+    }
+}</code></pre>
+                    </div>
+                    
+                    <a href="https://github.com/nexus-platform/examples/tree/main/maps/custom-markers" class="view-full-example">View full example on GitHub →</a>
+                </div>
+
+                <div class="example-card">
+                    <div class="example-header">
+                        <div class="example-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Heatmap Visualization</h3>
+                    </div>
+                    <p>
+                        This example shows how to create a heatmap visualization to display density of data points on a map,
+                        which is useful for visualizing traffic patterns, user density, or any other geospatial data.
+                    </p>
+                    
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Maps API</span>
+                        <span class="tech-tag">Heatmap</span>
+                        <span class="tech-tag">Data Visualization</span>
+                    </div>
+                    
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="js">JavaScript</button>
+                        <button class="code-tab" data-lang="react">React</button>
+                    </div>
+                    
+                    <div class="code-panel active" id="js-panel-heatmap">
+                        <pre><code class="language-javascript">// Initialize the map
+const map = new nexus.maps.Map(document.getElementById('map'), {
+  center: { lat: 37.7749, lng: -122.4194 },
+  zoom: 12,
+  style: 'standard'
+});
+
+// Generate random data points around San Francisco
+function getRandomPoints(center, numPoints, radius) {
+  const points = [];
+  for (let i = 0; i < numPoints; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const dist = Math.random() * radius;
+    const lat = center.lat + dist * Math.cos(angle) * 0.01;
+    const lng = center.lng + dist * Math.sin(angle) * 0.01;
+    const weight = Math.random();
+    points.push({
+      location: new nexus.maps.LatLng(lat, lng),
+      weight: weight
+    });
+  }
+  return points;
+}
+
+// Create heatmap data
+const heatmapData = getRandomPoints(
+  { lat: 37.7749, lng: -122.4194 }, // San Francisco
+  500, // Number of points
+  10   // Radius
+);
+
+// Create the heatmap layer
+const heatmap = new nexus.maps.HeatmapLayer({
+  data: heatmapData,
+  map: map,
+  radius: 20,
+  opacity: 0.7,
+  gradient: [
+    'rgba(0, 255, 255, 0)',
+    'rgba(0, 255, 255, 1)',
+    'rgba(0, 191, 255, 1)',
+    'rgba(0, 127, 255, 1)',
+    'rgba(0, 63, 255, 1)',
+    'rgba(0, 0, 255, 1)',
+    'rgba(0, 0, 223, 1)',
+    'rgba(0, 0, 191, 1)',
+    'rgba(0, 0, 159, 1)',
+    'rgba(0, 0, 127, 1)'
+  ]
+});
+
+// Add UI controls to toggle heatmap settings
+const toggleHeatmap = document.getElementById('toggle-heatmap');
+toggleHeatmap.addEventListener('click', () => {
+  heatmap.setMap(heatmap.getMap() ? null : map);
+});
+
+const changeRadius = document.getElementById('radius-slider');
+changeRadius.addEventListener('input', () => {
+  heatmap.set('radius', parseInt(changeRadius.value));
+});
+
+const changeOpacity = document.getElementById('opacity-slider');
+changeOpacity.addEventListener('input', () => {
+  heatmap.set('opacity', parseFloat(changeOpacity.value));
+});</code></pre>
+                    </div>
+                    
+                    <div class="code-panel" id="react-panel-heatmap">
+                        <pre><code class="language-jsx">import React, { useState, useEffect } from 'react';
+import { NexusMap, HeatmapLayer } from '@nexus/react-sdk';
+
+function getRandomPoints(center, numPoints, radius) {
+  const points = [];
+  for (let i = 0; i < numPoints; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const dist = Math.random() * radius;
+    const lat = center.lat + dist * Math.cos(angle) * 0.01;
+    const lng = center.lng + dist * Math.sin(angle) * 0.01;
+    const weight = Math.random();
+    points.push({
+      location: { lat, lng },
+      weight: weight
+    });
+  }
+  return points;
+}
+
+function HeatmapExample() {
+  const [showHeatmap, setShowHeatmap] = useState(true);
+  const [radius, setRadius] = useState(20);
+  const [opacity, setOpacity] = useState(0.7);
+  const [heatmapData, setHeatmapData] = useState([]);
+  
+  useEffect(() => {
+    // Generate random data points around San Francisco
+    const data = getRandomPoints(
+      { lat: 37.7749, lng: -122.4194 }, // San Francisco
+      500, // Number of points
+      10   // Radius
+    );
+    setHeatmapData(data);
+  }, []);
+  
+  return (
+    <div>
+      <div className="controls">
+        <button onClick={() => setShowHeatmap(!showHeatmap)}>
+          {showHeatmap ? 'Hide Heatmap' : 'Show Heatmap'}
+        </button>
+        <div>
+          <label>Radius:</label>
+          <input 
+            type="range" 
+            min="5" 
+            max="50" 
+            value={radius} 
+            onChange={(e) => setRadius(parseInt(e.target.value, 10))} 
+          />
+          <span>{radius}px</span>
+        </div>
+        <div>
+          <label>Opacity:</label>
+          <input 
+            type="range" 
+            min="0" 
+            max="1" 
+            step="0.1" 
+            value={opacity} 
+            onChange={(e) => setOpacity(parseFloat(e.target.value))} 
+          />
+          <span>{opacity}</span>
+        </div>
+      </div>
+      
+      <NexusMap
+        apiKey="your_api_key"
+        center={{ lat: 37.7749, lng: -122.4194 }}
+        zoom={12}
+        style="standard"
+        style={{ width: '100%', height: '500px' }}
+      >
+        {showHeatmap && (
+          <HeatmapLayer
+            data={heatmapData}
+            radius={radius}
+            opacity={opacity}
+            gradient={[
+              'rgba(0, 255, 255, 0)',
+              'rgba(0, 255, 255, 1)',
+              'rgba(0, 191, 255, 1)',
+              'rgba(0, 127, 255, 1)',
+              'rgba(0, 63, 255, 1)',
+              'rgba(0, 0, 255, 1)',
+              'rgba(0, 0, 223, 1)',
+              'rgba(0, 0, 191, 1)',
+              'rgba(0, 0, 159, 1)',
+              'rgba(0, 0, 127, 1)'
+            ]}
+          />
+        )}
+      </NexusMap>
+    </div>
+  );
+}</code></pre>
+                    </div>
+                    
+                    <a href="https://github.com/nexus-platform/examples/tree/main/maps/heatmap" class="view-full-example">View full example on GitHub →</a>
+                </div>
+            </section>
+
+            <section id="navigation-examples">
+                <h2>Navigation &amp; Routing</h2>
+                
+                <div class="example-card">
+                    <div class="example-header">
+                        <div class="example-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Multi-Stop Route Planning</h3>
+                    </div>
+                    <p>
+                        This example demonstrates how to calculate and display a route with multiple stops, optimize the route order,
+                        and provide turn-by-turn directions using the Nexus Navigation API.
+                    </p>
+                    
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Navigation API</span>
+                        <span class="tech-tag">Routing</span>
+                        <span class="tech-tag">Directions</span>
+                    </div>
+                    
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="js">JavaScript</button>
+                    </div>
+                    
+                    <div class="code-panel active" id="js-panel-route">
+                        <pre><code class="language-javascript">// Initialize the map
+const map = new nexus.maps.Map(document.getElementById('map'), {
+  center: { lat: 37.7749, lng: -122.4194 },
+  zoom: 12,
+  style: 'standard'
+});
+
+// Define the stops (origin, destinations, and final destination)
+const stops = [
+  { location: { lat: 37.7749, lng: -122.4194 }, name: 'San Francisco City Hall' },
+  { location: { lat: 37.8199, lng: -122.4783 }, name: 'Golden Gate Bridge' },
+  { location: { lat: 37.7694, lng: -122.4862 }, name: 'Golden Gate Park' },
+  { location: { lat: 37.8085, lng: -122.4708 }, name: 'Palace of Fine Arts' },
+  { location: { lat: 37.7559, lng: -122.4282 }, name: 'Oracle Park' }
+];
+
+// Initialize DirectionsService and DirectionsRenderer
+const directionsService = new nexus.navigation.DirectionsService();
+const directionsRenderer = new nexus.navigation.DirectionsRenderer({
+  map: map,
+  panel: document.getElementById('directions-panel'),
+  suppressMarkers: false,
+  markerOptions: {
+    icon: {
+      path: nexus.maps.SymbolPath.CIRCLE,
+      fillColor: '#0096dc',
+      fillOpacity: 0.9,
+      strokeWeight: 2,
+      strokeColor: '#ffffff',
+      scale: 8
+    }
+  }
+});
+
+// Build the request with waypoints
+function calculateRoute(optimize = false) {
+  const waypoints = stops.slice(1, -1).map(stop => ({
+    location: stop.location,
+    stopover: true
+  }));
+  
+  const request = {
+    origin: stops[0].location,
+    destination: stops[stops.length - 1].location,
+    waypoints: waypoints,
+    optimizeWaypoints: optimize,
+    travelMode: nexus.navigation.TravelMode.DRIVING
+  };
+  
+  // Call the directions service
+  directionsService.route(request, (result, status) => {
+    if (status === nexus.navigation.DirectionsStatus.OK) {
+      directionsRenderer.setDirections(result);
+      
+      // If route order was optimized, update the stop order in the UI
+      if (optimize && result.routes[0].waypoint_order) {
+        const waypointOrder = result.routes[0].waypoint_order;
+        const orderedStops = [stops[0]];
+        
+        waypointOrder.forEach(index => {
+          orderedStops.push(stops[index + 1]);
+        });
+        
+        orderedStops.push(stops[stops.length - 1]);
+        
+        // Update stop list in UI
+        updateStopsList(orderedStops);
+      }
+    } else {
+      console.error('Directions request failed: ' + status);
+    }
+  });
+}
+
+// Update the list of stops in the UI
+function updateStopsList(stopsList) {
+  const stopsContainer = document.getElementById('stops-list');
+  stopsContainer.innerHTML = '';
+  
+  stopsList.forEach((stop, index) => {
+    const stopElement = document.createElement('div');
+    stopElement.className = 'stop-item';
+    
+    const markerLabel = String.fromCharCode(65 + index); // A, B, C, etc.
+    
+    stopElement.innerHTML = `
+      <div class="stop-marker">${markerLabel}</div>
+      <div class="stop-name">${stop.name}</div>
+    `;
+    
+    stopsContainer.appendChild(stopElement);
+  });
+}
+
+// Initialize with default stops
+updateStopsList(stops);
+
+// Calculate route when page loads
+calculateRoute(false);
+
+// Add event listeners for UI controls
+document.getElementById('optimize-route').addEventListener('click', () => {
+  calculateRoute(true);
+});
+
+document.getElementById('reset-route').addEventListener('click', () => {
+  updateStopsList(stops);
+  calculateRoute(false);
+});</code></pre>
+                    </div>
+                    
+                    <a href="https://github.com/nexus-platform/examples/tree/main/navigation/multi-stop-routing" class="view-full-example">View full example on GitHub →</a>
+                </div>
+            </section>
+
+            <section id="vehicle-examples">
+                <h2>Vehicle Tracking</h2>
+                
+                <div class="example-card">
+                    <div class="example-header">
+                        <div class="example-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Real-time Vehicle Tracking</h3>
+                    </div>
+                    <p>
+                        This example shows how to implement real-time vehicle tracking with animated marker movement,
+                        using WebSockets to receive live updates from the Nexus Fleet API.
+                    </p>
+                    
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Fleet API</span>
+                        <span class="tech-tag">WebSockets</span>
+                        <span class="tech-tag">Real-time Updates</span>
+                    </div>
+                    
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="js">JavaScript</button>
+                    </div>
+                    
+                    <div class="code-panel active" id="js-panel-vehicle">
+                        <pre><code class="language-javascript">// Initialize the map
+const map = new nexus.maps.Map(document.getElementById('map'), {
+  center: { lat: 37.7749, lng: -122.4194 },
+  zoom: 12,
+  style: 'standard'
+});
+
+// Store vehicle markers
+const vehicleMarkers = new Map();
+
+// Connect to WebSocket for real-time updates
+const socket = new WebSocket('wss://api.nexus-platform.com/v2/fleet/vehicles/stream?token=' + apiKey);
+
+socket.onopen = () => {
+  console.log('Connected to vehicle tracking stream');
+  
+  // Request initial vehicle data
+  socket.send(JSON.stringify({
+    action: 'subscribe',
+    fleetId: 'your_fleet_id'
+  }));
+};
+
+socket.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+  
+  // Handle different message types
+  switch (data.type) {
+    case 'vehicles_initial':
+      // Initial vehicle data
+      handleInitialVehicles(data.vehicles);
+      break;
+    case 'vehicle_update':
+      // Update for a single vehicle
+      updateVehicle(data.vehicle);
+      break;
+    case 'vehicle_added':
+      // New vehicle added to fleet
+      addVehicle(data.vehicle);
+      break;
+    case 'vehicle_removed':
+      // Vehicle removed from fleet
+      removeVehicle(data.vehicleId);
+      break;
+  }
+};
+
+socket.onclose = () => {
+  console.log('Disconnected from vehicle tracking stream');
+};
+
+// Handle initial list of vehicles
+function handleInitialVehicles(vehicles) {
+  vehicles.forEach(vehicle => {
+    addVehicle(vehicle);
+  });
+  
+  // Adjust map to fit all vehicles
+  if (vehicles.length > 0) {
+    const bounds = new nexus.maps.LatLngBounds();
+    vehicles.forEach(vehicle => {
+      bounds.extend(new nexus.maps.LatLng(
+        vehicle.location.lat,
+        vehicle.location.lng
+      ));
+    });
+    map.fitBounds(bounds);
+  }
+}
+
+// Add a new vehicle to the map
+function addVehicle(vehicle) {
+  // Create marker for vehicle
+  const marker = new nexus.maps.Marker({
+    position: {
+      lat: vehicle.location.lat,
+      lng: vehicle.location.lng
+    },
+    map: map,
+    title: vehicle.name,
+    icon: {
+      path: nexus.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+      fillColor: getVehicleColor(vehicle.type),
+      fillOpacity: 0.9,
+      strokeWeight: 2,
+      strokeColor: '#ffffff',
+      scale: 6,
+      rotation: vehicle.heading || 0
+    }
+  });
+  
+  // Add info window
+  const infoWindow = new nexus.maps.InfoWindow({
+    content: createVehicleInfoContent(vehicle)
+  });
+  
+  marker.addListener('click', () => {
+    infoWindow.open(map, marker);
+  });
+  
+  // Store marker reference
+  vehicleMarkers.set(vehicle.id, {
+    marker: marker,
+    infoWindow: infoWindow,
+    vehicle: vehicle
+  });
+}
+
+// Update an existing vehicle
+function updateVehicle(vehicle) {
+  const vehicleData = vehicleMarkers.get(vehicle.id);
+  
+  if (!vehicleData) {
+    // Vehicle not found, add it
+    addVehicle(vehicle);
+    return;
+  }
+  
+  const marker = vehicleData.marker;
+  const infoWindow = vehicleData.infoWindow;
+  const currentPosition = marker.getPosition();
+  const newPosition = new nexus.maps.LatLng(
+    vehicle.location.lat,
+    vehicle.location.lng
+  );
+  
+  // Update stored vehicle data
+  vehicleData.vehicle = vehicle;
+  
+  // Update info window content if it's open
+  if (infoWindow.getMap()) {
+    infoWindow.setContent(createVehicleInfoContent(vehicle));
+  }
+  
+  // Animate marker movement
+  animateMarkerMovement(marker, currentPosition, newPosition, vehicle.heading);
+}
+
+// Remove a vehicle from the map
+function removeVehicle(vehicleId) {
+  const vehicleData = vehicleMarkers.get(vehicleId);
+  
+  if (vehicleData) {
+    vehicleData.marker.setMap(null);
+    vehicleMarkers.delete(vehicleId);
+  }
+}
+
+// Animate marker movement
+function animateMarkerMovement(marker, start, end, heading) {
+  const frames = 20; // Number of animation frames
+  let progress = 0;
+  
+  // Update marker heading
+  const icon = marker.getIcon();
+  icon.rotation = heading || 0;
+  marker.setIcon(icon);
+  
+  const animationStep = () => {
+    progress += 1 / frames;
+    
+    if (progress < 1) {
+      const lat = start.lat() + (end.lat() - start.lat()) * progress;
+      const lng = start.lng() + (end.lng() - start.lng()) * progress;
+      
+      marker.setPosition(new nexus.maps.LatLng(lat, lng));
+      
+      requestAnimationFrame(animationStep);
+    } else {
+      marker.setPosition(end);
+    }
+  };
+  
+  requestAnimationFrame(animationStep);
+}
+
+// Create info window content for a vehicle
+function createVehicleInfoContent(vehicle) {
+  return `
+    <div class="vehicle-info">
+      <h3>${vehicle.name}</h3>
+      <div class="vehicle-details">
+        <p><strong>ID:</strong> ${vehicle.id}</p>
+        <p><strong>Type:</strong> ${vehicle.type}</p>
+        <p><strong>Status:</strong> ${vehicle.status}</p>
+        <p><strong>Speed:</strong> ${vehicle.speed} km/h</p>
+        <p><strong>Battery:</strong> ${vehicle.battery}%</p>
+        <p><strong>Last Updated:</strong> ${new Date(vehicle.lastUpdated).toLocaleString()}</p>
+      </div>
+    </div>
+  `;
+}
+
+// Get color based on vehicle type
+function getVehicleColor(type) {
+  const colors = {
+    'car': '#0096dc',
+    'truck': '#ff9900',
+    'van': '#33cc33',
+    'bike': '#cc3399',
+    'scooter': '#9966ff'
+  };
+  
+  return colors[type] || '#0096dc';
+}</code></pre>
+                    </div>
+                    
+                    <a href="https://github.com/nexus-platform/examples/tree/main/fleet/vehicle-tracking" class="view-full-example">View full example on GitHub →</a>
+                </div>
+            </section>
+
+            <section id="next-steps">
+                <h2>Next Steps</h2>
+                <div class="cta-cards">
+                    <a href="../api-docs/index.html" class="cta-card">
+                        <i class="fas fa-book"></i>
+                        <h3>API Documentation</h3>
+                        <p>Explore the complete API reference for all Nexus services</p>
+                    </a>
+                    <a href="../docs/sdk-libraries.html" class="cta-card">
+                        <i class="fas fa-cubes"></i>
+                        <h3>SDK Libraries</h3>
+                        <p>Learn about our official client libraries for multiple platforms</p>
+                    </a>
+                    <a href="https://github.com/nexus-platform/examples" class="cta-card">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub Repository</h3>
+                        <p>Browse all example projects in our GitHub repository</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="../images/logos/logo6.png" alt="Nexus Logo" class="footer-logo-image">
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>PRODUCTS</h4>
+                        <ul>
+                            <li><a href="../products.html#maps">Maps</a></li>
+                            <li><a href="../products.html#navigation">Navigation</a></li>
+                            <li><a href="../products.html#carshare">CarShare</a></li>
+                            <li><a href="../products.html#robotaxi">RoboTaxi</a></li>
+                            <li><a href="../products.html#fleet">Fleet</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>SOLUTIONS</h4>
+                        <ul>
+                            <li><a href="../solutions.html#logistics">Logistics</a></li>
+                            <li><a href="../solutions.html#automotive">Automotive</a></li>
+                            <li><a href="../solutions.html#carsharing">Carsharing</a></li>
+                            <li><a href="../solutions.html#insurance">Insurance</a></li>
+                            <li><a href="../solutions.html#transit">Public Transit</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>DEVELOPERS</h4>
+                        <ul>
+                            <li><a href="../developers.html#docs">Documentation</a></li>
+                            <li><a href="../developers.html#tutorials">Tutorials</a></li>
+                            <li><a href="../developers.html#api">API Reference</a></li>
+                            <li><a href="../developers.html#support">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="../company.html#about">About us</a></li>
+                            <li><a href="../company.html#careers">Careers</a></li>
+                            <li><a href="../company.html#press">Press</a></li>
+                            <li><a href="../company.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            hljs.highlightAll();
+            
+            // Handle code tabs
+            const codeTabs = document.querySelectorAll('.code-tab');
+            codeTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Get parent container of tabs
+                    const tabsContainer = this.closest('.code-tabs');
+                    const panelsContainer = tabsContainer.nextElementSibling;
+                    
+                    // Remove active class from all tabs in this container
+                    tabsContainer.querySelectorAll('.code-tab').forEach(t => {
+                        t.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Hide all panels
+                    const allPanels = document.querySelectorAll('.code-panel');
+                    allPanels.forEach(panel => {
+                        panel.classList.remove('active');
+                    });
+                    
+                    // Show the panel that corresponds to the clicked tab
+                    const panelId = `${this.getAttribute('data-lang')}-panel`;
+                    const targetPanel = document.getElementById(panelId) || 
+                                        tabsContainer.parentElement.querySelector(`#${panelId}`);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

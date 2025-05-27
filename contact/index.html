@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Lattis-Nexus</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../">
+                    <img src="../../images/logos/logo6.png" alt="Lattis-Nexus Logo" class="logo-image">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="../products/">Products</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../solutions/">Solutions</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../developers/">Developers</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../company/">Company</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../resources/">Resources</a>
+                    </li>
+                    <li><a href="../pricing/">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="index.html" class="contact-link active">Contact us</a>
+                <a href="#account" class="account-button">Go to account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h1>Get in Touch</h1>
+                <p>Our team of fleet mobility experts is ready to help with your location intelligence needs</p>
+            </div>
+        </section>
+
+        <section class="contact-options">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h2>Sales Inquiries</h2>
+                    <p>Talk to our sales team about how Lattis-Nexus can transform your fleet operations.</p>
+                    <a href="mailto:sales@lattis-nexus.com" class="contact-link-btn">sales@lattis-nexus.com</a>
+                    <a href="tel:+15551234567" class="contact-link-text">+1 (555) 123-4567</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-life-ring"></i>
+                    </div>
+                    <h2>Technical Support</h2>
+                    <p>Get help with your existing Lattis-Nexus implementation or technical questions.</p>
+                    <a href="mailto:support@lattis-nexus.com" class="contact-link-btn">support@lattis-nexus.com</a>
+                    <a href="#" class="contact-link-text">Support Portal</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h2>Partnership Inquiries</h2>
+                    <p>Explore partnership opportunities and integrations with Lattis-Nexus.</p>
+                    <a href="mailto:partners@lattis-nexus.com" class="contact-link-btn">partners@lattis-nexus.com</a>
+                    <a href="#" class="contact-link-text">Partner Program</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="contact-form-container">
+                <div class="form-header">
+                    <h2>Contact Form</h2>
+                    <p>Send us a message and we'll get back to you within 24 hours</p>
+                </div>
+                
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="interest">I'm interested in</label>
+                        <select id="interest" name="interest">
+                            <option value="">-- Please select --</option>
+                            <option value="Maps">Lattis-Nexus Maps</option>
+                            <option value="Navigation">Lattis-Nexus Navigation</option>
+                            <option value="Search">Lattis-Nexus Search</option>
+                            <option value="Analytics">Lattis-Nexus Analytics</option>
+                            <option value="Data">Lattis-Nexus Data</option>
+                            <option value="Autonomous">Autonomous Solutions</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group full-width check-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to our newsletter</label>
+                    </div>
+                    
+                    <div class="form-group full-width check-group">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">I agree to the <a href="#">privacy policy</a></label>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="offices-section">
+            <h2>Global Offices</h2>
+            <div class="offices-grid">
+                <div class="office-card">
+                    <div class="office-image" style="background-image: url('../../images/backgrounds/dark-map-bg.jpg')"></div>
+                    <div class="office-details">
+                        <h3>San Francisco</h3>
+                        <p>123 Market Street<br>San Francisco, CA 94105<br>United States</p>
+                        <a href="tel:+14155551234" class="office-phone">+1 (415) 555-1234</a>
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-image" style="background-image: url('../../images/backgrounds/dark-map-bg.jpg')"></div>
+                    <div class="office-details">
+                        <h3>Berlin</h3>
+                        <p>Unter den Linden 21<br>10117 Berlin<br>Germany</p>
+                        <a href="tel:+493012345678" class="office-phone">+49 (30) 1234-5678</a>
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-image" style="background-image: url('../../images/backgrounds/dark-map-bg.jpg')"></div>
+                    <div class="office-details">
+                        <h3>Tokyo</h3>
+                        <p>1-1-2 Roppongi<br>Minato City, Tokyo 106-0032<br>Japan</p>
+                        <a href="tel:+81345678901" class="office-phone">+81 (3) 4567-8901</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="../../images/logos/logo6.png" alt="Lattis-Nexus Logo" class="footer-logo-image">
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>PRODUCTS</h4>
+                        <ul>
+                            <li><a href="#">Maps</a></li>
+                            <li><a href="#">Navigation</a></li>
+                            <li><a href="#">Search</a></li>
+                            <li><a href="#">Analytics</a></li>
+                            <li><a href="#">Data</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>SOLUTIONS</h4>
+                        <ul>
+                            <li><a href="#">Logistics</a></li>
+                            <li><a href="#">Autonomous</a></li>
+                            <li><a href="#">Ridesharing</a></li>
+                            <li><a href="#">Public Transit</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>DEVELOPERS</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#">SDKs</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2013-2025 Lattis-Nexus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/contact.js"></script>
+</body>
+</html>

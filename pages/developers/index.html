@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Resources - Lattis-Nexus</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/developers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../">
+                    <img src="../../images/logos/logo6.png" alt="Lattis-Nexus Logo" class="logo-image">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="../products/">Products</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../solutions/">Solutions</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="../developers/">Developers</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../company/">Company</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../resources/">Resources</a>
+                    </li>
+                    <li><a href="../pricing/">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="../contact/index.html" class="contact-link">Contact us</a>
+                <a href="http://localhost:3001/signup" class="account-button">Go to account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dev-hero">
+            <div class="dev-hero-content">
+                <span class="hero-badge">Developer Platform</span>
+                <h1>Build the Future of Fleet Management</h1>
+                <p>Access powerful APIs, comprehensive SDKs, and developer tools to create next-generation mobility applications on the Lattis-Nexus platform</p>
+                <div class="hero-buttons">
+                    <a href="#docs" class="primary-button">Get Started</a>
+                    <a href="#api" class="secondary-button">API Reference</a>
+                    <a href="#playground" class="tertiary-button">Try API Playground</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Enterprise Customers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10B+</span>
+                        <span class="stat-label">API Calls Monthly</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.99%</span>
+                        <span class="stat-label">Global Uptime</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dev-nav">
+            <div class="dev-nav-container">
+                <a href="#docs" class="dev-nav-item active">
+                    <i class="fas fa-book"></i>
+                    <span>Documentation</span>
+                </a>
+                <a href="#api" class="dev-nav-item">
+                    <i class="fas fa-code"></i>
+                    <span>API Reference</span>
+                </a>
+                <a href="#sdks" class="dev-nav-item">
+                    <i class="fas fa-cubes"></i>
+                    <span>SDKs</span>
+                </a>
+                <a href="#examples" class="dev-nav-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Examples</span>
+                </a>
+                <a href="#playground" class="dev-nav-item">
+                    <i class="fas fa-flask"></i>
+                    <span>API Playground</span>
+                </a>
+                <a href="#webhooks" class="dev-nav-item">
+                    <i class="fas fa-plug"></i>
+                    <span>Webhooks</span>
+                </a>
+                <a href="#support" class="dev-nav-item">
+                    <i class="fas fa-headset"></i>
+                    <span>Support</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="docs" class="dev-section active-section">
+            <div class="dev-container">
+                <div class="section-header">
+                    <h2>Documentation</h2>
+                    <p>Comprehensive guides to help you implement Lattis-Nexus in your applications</p>
+                </div>
+
+                <div class="docs-intro">
+                    <div class="docs-intro-content">
+                        <h3>Getting Started with Lattis-Nexus</h3>
+                        <p>Our platform provides a comprehensive set of tools for building advanced fleet management and mobility applications. Whether you're creating a custom dashboard for vehicle tracking, implementing route optimization, or building a complete fleet management solution, our documentation will guide you through every step.</p>
+                        <div class="docs-paths">
+                            <div class="docs-path">
+                                <h4><i class="fas fa-rocket"></i> New Developers</h4>
+                                <p>Start here if you're new to the Lattis-Nexus platform</p>
+                                <a href="#" class="path-link">Begin Your Journey</a>
+                            </div>
+                            <div class="docs-path">
+                                <h4><i class="fas fa-tools"></i> Migration Guide</h4>
+                                <p>Moving from another platform? Follow our migration guide</p>
+                                <a href="#" class="path-link">Migrate to Lattis-Nexus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-cards">
+                    <div class="doc-card featured">
+                        <div class="doc-badge">Popular</div>
+                        <div class="doc-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Quick Start Guide</h3>
+                        <p>Get up and running with the Lattis-Nexus platform in minutes with our step-by-step quickstart guide.</p>
+                        <ul class="doc-features">
+                            <li><i class="fas fa-check-circle"></i> API key setup</li>
+                            <li><i class="fas fa-check-circle"></i> Basic authentication</li>
+                            <li><i class="fas fa-check-circle"></i> Your first API call</li>
+                        </ul>
+                        <a href="#" class="doc-link">Get Started <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <h3>Maps Integration</h3>
+                        <p>Create interactive maps with vehicle markers, heat maps, geofencing, and real-time updates.</p>
+                        <a href="#" class="doc-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Navigation & Routing</h3>
+                        <p>Implement turn-by-turn directions, traffic-aware routing, and multi-stop optimization.</p>
+                        <a href="#" class="doc-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Vehicle Tracking</h3>
+                        <p>Real-time fleet tracking with telemetry integration, geofencing, and status monitoring.</p>
+                        <a href="#" class="doc-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Authentication & Security</h3>
+                        <p>Implement OAuth 2.0, JWT tokens, and role-based access controls in your applications.</p>
+                        <a href="#" class="doc-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Analytics & Reporting</h3>
+                        <p>Build data-driven dashboards with historical trends, usage patterns, and predictive insights.</p>
+                        <a href="#" class="doc-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Real-time Data</h3>
+                        <p>Implement WebSockets and server-sent events for real-time vehicle tracking and updates.</p>
+                        <a href="#" class="doc-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile SDK Integration</h3>
+                        <p>Build location-aware mobile apps for both drivers and fleet managers.</p>
+                        <a href="#" class="doc-link">Read Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="docs-resources">
+                    <h3>Additional Resources</h3>
+                    <div class="resources-grid">
+                        <a href="#" class="resource-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>API Reference PDF</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <i class="fas fa-video"></i>
+                            <span>Tutorial Videos</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Developer Academy</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <i class="fas fa-flask"></i>
+                            <span>Sandbox Environment</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="api" class="dev-section">
+            <div class="dev-container">
+                <div class="section-header">
+                    <h2>API Reference</h2>
+                    <p>Comprehensive API documentation for the Lattis-Nexus platform</p>
+                </div>
+
+                <div class="api-overview">
+                    <div class="api-overview-content">
+                        <h3>RESTful APIs for Fleet Management</h3>
+                        <p>Our well-documented APIs follow REST principles and provide consistent patterns across all endpoints. Use our APIs to integrate mapping, routing, tracking, and advanced fleet management capabilities into your applications.</p>
+                        <div class="api-stats">
+                            <div class="api-stat">
+                                <span class="stat-value">150+</span>
+                                <span class="stat-name">Endpoints</span>
+                            </div>
+                            <div class="api-stat">
+                                <span class="stat-value">99.99%</span>
+                                <span class="stat-name">Uptime</span>
+                            </div>
+                            <div class="api-stat">
+                                <span class="stat-value">&lt;100ms</span>
+                                <span class="stat-name">Response Time</span>
+                            </div>
+                        </div>
+                        <div class="api-tools">
+                            <a href="#" class="api-tool-link"><i class="fas fa-download"></i> OpenAPI Spec</a>
+                            <a href="#" class="api-tool-link"><i class="fas fa-file-code"></i> Postman Collection</a>
+                            <a href="#" class="api-tool-link"><i class="fas fa-code"></i> API Console</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api-explorer">
+                    <div class="api-sidebar">
+                        <div class="api-search">
+                            <input type="text" placeholder="Search APIs..." class="api-search-input">
+                            <i class="fas fa-search search-icon"></i>
+                        </div>
+                        <div class="api-group">
+                            <h4>AUTHENTICATION</h4>
+                            <ul>
+                                <li class="active"><a href="#">OAuth 2.0</a></li>
+                                <li><a href="#">API Keys</a></li>
+                                <li><a href="#">JWT Tokens</a></li>
+                                <li><a href="#">SSO Integration</a></li>
+                            </ul>
+                        </div>
+                        <div class="api-group">
+                            <h4>VEHICLE MANAGEMENT</h4>
+                            <ul>
+                                <li><a href="#">Vehicle Registry</a></li>
+                                <li><a href="#">Status & Telemetry</a></li>
+                                <li><a href="#">Maintenance</a></li>
+                                <li><a href="#">Assignments</a></li>
+                            </ul>
+                        </div>
+                        <div class="api-group">
+                            <h4>LOCATION SERVICES</h4>
+                            <ul>
+                                <li><a href="#">Maps Rendering</a></li>
+                                <li><a href="#">Geocoding</a></li>
+                                <li><a href="#">Reverse Geocoding</a></li>
+                                <li><a href="#">Places</a></li>
+                            </ul>
+                        </div>
+                        <div class="api-group">
+                            <h4>ROUTING</h4>
+                            <ul>
+                                <li><a href="#">Route Calculation</a></li>
+                                <li><a href="#">Multi-Stop Routing</a></li>
+                                <li><a href="#">Traffic-Aware</a></li>
+                                <li><a href="#">Isochrones</a></li>
+                            </ul>
+                        </div>
+                        <div class="api-group">
+                            <h4>REAL-TIME</h4>
+                            <ul>
+                                <li><a href="#">Tracking</a></li>
+                                <li><a href="#">Geofencing</a></li>
+                                <li><a href="#">Notifications</a></li>
+                                <li><a href="#">Events</a></li>
+                            </ul>
+                        </div>
+                        <div class="api-group">
+                            <h4>ANALYTICS</h4>
+                            <ul>
+                                <li><a href="#">Usage Reports</a></li>
+                                <li><a href="#">Fleet Performance</a></li>
+                                <li><a href="#">Driver Behavior</a></li>
+                                <li><a href="#">Insights</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="api-content">
+                        <div class="api-header">
+                            <div class="api-title-wrap">
+                                <h3>OAuth 2.0 Authentication</h3>
+                                <div class="api-version">v2.1</div>
+                            </div>
+                            <div class="api-actions">
+                                <button class="api-action-btn"><i class="fas fa-copy"></i> Copy</button>
+                                <button class="api-action-btn"><i class="fas fa-code"></i> Try It</button>
+                            </div>
+                        </div>
+                        
+                        <div class="api-description">
+                            <p>The Authentication API allows you to securely authenticate your applications with the Lattis-Nexus platform using OAuth 2.0 and JWT tokens. This endpoint provides access tokens that must be included in all subsequent API requests.</p>
+                        </div>
+                        
+                        <div class="api-section">
+                            <h4 class="api-section-title">Base URL</h4>
+                            <div class="api-base-url">
+                                <code>https://api.lattis-nexus.com</code>
+                            </div>
+                        </div>
+                        
+                        <div class="api-section">
+                            <h4 class="api-section-title">Endpoint</h4>
+                            <div class="endpoint">
+                                <div class="http-method post">POST</div>
+                                <div class="endpoint-path">/v2/auth/token</div>
+                            </div>
+                        </div>
+                        
+                        <div class="api-section">
+                            <h4 class="api-section-title">Headers</h4>
+                            <div class="param-table">
+                                <div class="param-row header">
+                                    <div class="param-name">Name</div>
+                                    <div class="param-required">Required</div>
+                                    <div class="param-type">Type</div>
+                                    <div class="param-description">Description</div>
+                                </div>
+                                <div class="param-row">
+                                    <div class="param-name">Content-Type</div>
+                                    <div class="param-required">Yes</div>
+                                    <div class="param-type">String</div>
+                                    <div class="param-description">Set to "application/json"</div>
+                                </div>
+                                <div class="param-row">
+                                    <div class="param-name">Accept</div>
+                                    <div class="param-required">No</div>
+                                    <div class="param-type">String</div>
+                                    <div class="param-description">Set to "application/json"</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="api-section">
+                            <h4 class="api-section-title">Request Body</h4>
+                            <div class="param-table">
+                                <div class="param-row header">
+                                    <div class="param-name">Name</div>
+                                    <div class="param-required">Required</div>
+                                    <div class="param-type">Type</div>
+                                    <div class="param-description">Description</div>
+                                </div>
+                                <div class="param-row">
+                                    <div class="param-name">client_id</div>
+                                    <div class="param-required">Yes</div>
+                                    <div class="param-type">String</div>
+                                    <div class="param-description">Your API client ID</div>
+                                </div>
+                                <div class="param-row">
+                                    <div class="param-name">client_secret</div>
+                                    <div class="param-required">Yes</div>
+                                    <div class="param-type">String</div>
+                                    <div class="param-description">Your API client secret</div>
+                                </div>
+                                <div class="param-row">
+                                    <div class="param-name">grant_type</div>
+                                    <div class="param-required">Yes</div>
+                                    <div class="param-type">String</div>
+                                    <div class="param-description">Set to "client_credentials"</div>
+                                </div>
+                                <div class="param-row">
+                                    <div class="param-name">scope</div>
+                                    <div class="param-required">No</div>
+                                    <div class="param-type">String</div>
+                                    <div class="param-description">Space-separated list of access scopes</div>
+                                </div>
+                            </div>
+                            
+                            <pre><code class="language-json">{
+  "client_id": "YOUR_CLIENT_ID",
+  "client_secret": "YOUR_CLIENT_SECRET",
+  "grant_type": "client_credentials",
+  "scope": "maps vehicles routes:read analytics:read"
+}</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <h4 class="api-section-title">Response</h4>
+                            <div class="api-response-codes">
+                                <div class="response-code success">
+                                    <span class="code">200</span>
+                                    <span class="description">OK - Authentication successful</span>
+                                </div>
+                                <div class="response-code error">
+                                    <span class="code">400</span>
+                                    <span class="description">Bad Request - Invalid parameters</span>
+                                </div>
+                                <div class="response-code error">
+                                    <span class="code">401</span>
+                                    <span class="description">Unauthorized - Invalid credentials</span>
+                                </div>
+                            </div>
+                            
+                            <pre><code class="language-json">{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "token_type": "bearer",
+  "expires_in": 3600,
+  "scope": "maps vehicles routes:read analytics:read",
+  "refresh_token": "def502..."
+}</code></pre>
+
+                            <div class="param-table">
+                                <div class="param-row header">
+                                    <div class="param-name">Field</div>
+                                    <div class="param-type">Type</div>
+                                    <div class="param-description">Description</div>
+                                </div>
+                                <div class="param-row">
+                                    <div class="param-name">access_token</div>
+                                    <div class="param-type">String</div>
+                                    <div class="param-description">JWT token to use for API authorization</div>
+                                </div>
+                                <div class="param-row">
+                                    <div class="param-name">token_type</div>
+                                    <div class="param-type">String</div>
+                                    <div class="param-description">Always "bearer"</div>
+                                </div>
+                                <div class="param-row">
+                                    <div class="param-name">expires_in</div>
+                                    <div class="param-type">Integer</div>
+                                    <div class="param-description">Token validity in seconds</div>
+                                </div>
+                                <div class="param-row">
+                                    <div class="param-name">scope</div>
+                                    <div class="param-type">String</div>
+                                    <div class="param-description">Granted scopes, space-separated</div>
+                                </div>
+                                <div class="param-row">
+                                    <div class="param-name">refresh_token</div>
+                                    <div class="param-type">String</div>
+                                    <div class="param-description">Token to get a new access token</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="api-section">
+                            <h4 class="api-section-title">Code Examples</h4>
+                            <div class="code-tabs">
+                                <button class="code-tab active" data-lang="curl">cURL</button>
+                                <button class="code-tab" data-lang="js">JavaScript</button>
+                                <button class="code-tab" data-lang="python">Python</button>
+                                <button class="code-tab" data-lang="java">Java</button>
+                                <button class="code-tab" data-lang="csharp">C#</button>
+                            </div>
+                            <div class="code-panel active" id="curl-panel">
+                                <pre><code class="language-bash">curl -X POST https://api.lattis-nexus.com/v2/auth/token \
+  -H "Content-Type: application/json" \
+  -d '{
+    "client_id": "YOUR_CLIENT_ID",
+    "client_secret": "YOUR_CLIENT_SECRET",
+    "grant_type": "client_credentials",
+    "scope": "maps vehicles routes:read analytics:read"
+  }'</code></pre>
+                            </div>
+                            <div class="code-panel" id="js-panel">
+                                <pre><code class="language-javascript">const getToken = async () => {
+  const response = await fetch('https://api.lattis-nexus.com/v2/auth/token', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      client_id: 'YOUR_CLIENT_ID',
+      client_secret: 'YOUR_CLIENT_SECRET',
+      grant_type: 'client_credentials',
+      scope: 'maps vehicles routes:read analytics:read'
+    })
+  });
+
+  const data = await response.json();
+  
+  // Store the token for later use
+  localStorage.setItem('accessToken', data.access_token);
+  
+  return data.access_token;
+};</code></pre>
+                            </div>
+                            <div class="code-panel" id="python-panel">
+                                <pre><code class="language-python">import requests
+
+def get_token():
+    response = requests.post(
+        'https://api.lattis-nexus.com/v2/auth/token',
+        json={
+            'client_id': 'YOUR_CLIENT_ID',
+            'client_secret': 'YOUR_CLIENT_SECRET',
+            'grant_type': 'client_credentials',
+            'scope': 'maps vehicles routes:read analytics:read'
+        }
+    )
+    
+    data = response.json()
+    
+    # Store the token for later use
+    access_token = data['access_token']
+    
+    return access_token</code></pre>
+                            </div>
+                            <div class="code-panel" id="java-panel">
+                                <pre><code class="language-java">import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import org.json.JSONObject;
+
+public String getToken() throws Exception {
+    HttpClient client = HttpClient.newHttpClient();
+    
+    JSONObject requestBody = new JSONObject();
+    requestBody.put("client_id", "YOUR_CLIENT_ID");
+    requestBody.put("client_secret", "YOUR_CLIENT_SECRET");
+    requestBody.put("grant_type", "client_credentials");
+    requestBody.put("scope", "maps vehicles routes:read analytics:read");
+    
+    HttpRequest request = HttpRequest.newBuilder()
+        .uri(URI.create("https://api.lattis-nexus.com/v2/auth/token"))
+        .header("Content-Type", "application/json")
+        .POST(HttpRequest.BodyPublishers.ofString(requestBody.toString()))
+        .build();
+    
+    HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+    
+    JSONObject responseData = new JSONObject(response.body());
+    String accessToken = responseData.getString("access_token");
+    
+    return accessToken;
+}</code></pre>
+                            </div>
+                            <div class="code-panel" id="csharp-panel">
+                                <pre><code class="language-csharp">using System;
+using System.Net.Http;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
+
+public async Task<string> GetToken()
+{
+    using (var client = new HttpClient())
+    {
+        var requestBody = new 
+        {
+            client_id = "YOUR_CLIENT_ID",
+            client_secret = "YOUR_CLIENT_SECRET",
+            grant_type = "client_credentials",
+            scope = "maps vehicles routes:read analytics:read"
+        };
+        
+        var content = new StringContent(
+            JsonSerializer.Serialize(requestBody),
+            Encoding.UTF8,
+            "application/json"
+        );
+        
+        var response = await client.PostAsync(
+            "https://api.lattis-nexus.com/v2/auth/token", 
+            content
+        );
+        
+        response.EnsureSuccessStatusCode();
+        
+        var responseBody = await response.Content.ReadAsStringAsync();
+        var tokenResponse = JsonSerializer.Deserialize<TokenResponse>(responseBody);
+        
+        return tokenResponse.access_token;
+    }
+}
+
+public class TokenResponse
+{
+    public string access_token { get; set; }
+    public string token_type { get; set; }
+    public int expires_in { get; set; }
+    public string scope { get; set; }
+    public string refresh_token { get; set; }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sdks" class="dev-section">
+            <div class="dev-container">
+                <div class="section-header">
+                    <h2>SDKs</h2>
+                    <p>Software Development Kits for seamless integration with Lattis-Nexus</p>
+                </div>
+
+                <div class="sdk-cards">
+                    <div class="sdk-card">
+                        <div class="sdk-logo">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3>JavaScript SDK</h3>
+                        <div class="sdk-version">v2.4.0</div>
+                        <p>Integrate Lattis-Nexus into your web applications with our JavaScript SDK.</p>
+                        <div class="sdk-buttons">
+                            <a href="#" class="sdk-button primary">Documentation</a>
+                            <a href="#" class="sdk-button secondary">NPM Package</a>
+                        </div>
+                        <div class="sdk-install">
+                            <pre><code>npm install @lattis-nexus/sdk</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="sdk-card">
+                        <div class="sdk-logo">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <h3>Android SDK</h3>
+                        <div class="sdk-version">v1.9.2</div>
+                        <p>Build location-aware Android applications with our native SDK.</p>
+                        <div class="sdk-buttons">
+                            <a href="#" class="sdk-button primary">Documentation</a>
+                            <a href="#" class="sdk-button secondary">Maven Package</a>
+                        </div>
+                        <div class="sdk-install">
+                            <pre><code>implementation 'com.lattisnexus:sdk:1.9.2'</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="sdk-card">
+                        <div class="sdk-logo">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <h3>iOS SDK</h3>
+                        <div class="sdk-version">v1.8.3</div>
+                        <p>Integrate Lattis-Nexus into your iOS applications with our Swift SDK.</p>
+                        <div class="sdk-buttons">
+                            <a href="#" class="sdk-button primary">Documentation</a>
+                            <a href="#" class="sdk-button secondary">CocoaPods</a>
+                        </div>
+                        <div class="sdk-install">
+                            <pre><code>pod 'LattisNexusSDK', '~> 1.8.3'</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="sdk-card">
+                        <div class="sdk-logo">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3>Python SDK</h3>
+                        <div class="sdk-version">v1.5.1</div>
+                        <p>Build server-side applications and data processing pipelines with our Python SDK.</p>
+                        <div class="sdk-buttons">
+                            <a href="#" class="sdk-button primary">Documentation</a>
+                            <a href="#" class="sdk-button secondary">PyPI Package</a>
+                        </div>
+                        <div class="sdk-install">
+                            <pre><code>pip install lattis-nexus-sdk</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="examples" class="dev-section">
+            <div class="dev-container">
+                <div class="section-header">
+                    <h2>Code Examples</h2>
+                    <p>Practical examples to help you implement Lattis-Nexus features</p>
+                </div>
+
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h3>Fleet Tracking Map</h3>
+                        </div>
+                        <p>Display real-time vehicle locations on an interactive map.</p>
+                        <div class="example-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Maps API</span>
+                        </div>
+                        <a href="#" class="example-link">View Example</a>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-icon">
+                                <i class="fas fa-route"></i>
+                            </div>
+                            <h3>Multi-Stop Route Optimizer</h3>
+                        </div>
+                        <p>Optimize routes with multiple stops for efficient deliveries.</p>
+                        <div class="example-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Navigation API</span>
+                            <span class="tech-tag">Optimization</span>
+                        </div>
+                        <a href="#" class="example-link">View Example</a>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3>Fleet Analytics Dashboard</h3>
+                        </div>
+                        <p>Build a comprehensive analytics dashboard for fleet performance.</p>
+                        <div class="example-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Analytics API</span>
+                        </div>
+                        <a href="#" class="example-link">View Example</a>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <h3>Geofence Alerts</h3>
+                        </div>
+                        <p>Implement geofence-based alerts for vehicle monitoring.</p>
+                        <div class="example-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Geofence API</span>
+                        </div>
+                        <a href="#" class="example-link">View Example</a>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>Mobile Driver App</h3>
+                        </div>
+                        <p>Create a mobile application for drivers with navigation.</p>
+                        <div class="example-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Maps API</span>
+                            <span class="tech-tag">Navigation API</span>
+                        </div>
+                        <a href="#" class="example-link">View Example</a>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-header">
+                            <div class="example-icon">
+                                <i class="fas fa-search-location"></i>
+                            </div>
+                            <h3>Address Autocomplete</h3>
+                        </div>
+                        <p>Implement address search with autocomplete functionality.</p>
+                        <div class="example-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Search API</span>
+                            <span class="tech-tag">Geocoding API</span>
+                        </div>
+                        <a href="#" class="example-link">View Example</a>
+                    </div>
+                </div>
+
+                <div class="view-all">
+                    <a href="#" class="view-all-link">View All Examples <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="playground" class="dev-section">
+            <div class="dev-container">
+                <div class="section-header">
+                    <h2>API Playground</h2>
+                    <p>Test and experiment with the Lattis-Nexus APIs in an interactive environment</p>
+                </div>
+                
+                <div class="playground-container">
+                    <div class="playground-sidebar">
+                        <div class="sidebar-header">
+                            <h3>API Endpoints</h3>
+                        </div>
+                        <div class="endpoint-list">
+                            <div class="endpoint-category">
+                                <h4>AUTHENTICATION</h4>
+                                <ul>
+                                    <li class="active"><a href="#">Get Token</a></li>
+                                    <li><a href="#">Refresh Token</a></li>
+                                </ul>
+                            </div>
+                            <div class="endpoint-category">
+                                <h4>VEHICLE MANAGEMENT</h4>
+                                <ul>
+                                    <li><a href="#">List Vehicles</a></li>
+                                    <li><a href="#">Get Vehicle</a></li>
+                                    <li><a href="#">Update Vehicle</a></li>
+                                </ul>
+                            </div>
+                            <div class="endpoint-category">
+                                <h4>LOCATION & ROUTING</h4>
+                                <ul>
+                                    <li><a href="#">Get Vehicle Location</a></li>
+                                    <li><a href="#">Calculate Route</a></li>
+                                    <li><a href="#">Optimize Multi-Stop</a></li>
+                                </ul>
+                            </div>
+                            <div class="endpoint-category">
+                                <h4>ANALYTICS</h4>
+                                <ul>
+                                    <li><a href="#">Fleet Performance</a></li>
+                                    <li><a href="#">Driver Analytics</a></li>
+                                    <li><a href="#">Usage Reports</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="playground-content">
+                        <div class="playground-header">
+                            <h3>Authentication - Get Token</h3>
+                            <div class="playground-actions">
+                                <select class="http-method-select">
+                                    <option value="GET">GET</option>
+                                    <option value="POST" selected>POST</option>
+                                    <option value="PUT">PUT</option>
+                                    <option value="DELETE">DELETE</option>
+                                </select>
+                                <input type="text" class="endpoint-url" value="https://api.lattis-nexus.com/v2/auth/token" />
+                                <button class="playground-button">Send Request</button>
+                            </div>
+                        </div>
+                        
+                        <div class="playground-editor">
+                            <div class="editor-tabs">
+                                <button class="editor-tab active" data-tab="request-body">Request Body</button>
+                                <button class="editor-tab" data-tab="headers">Headers</button>
+                                <button class="editor-tab" data-tab="query-params">Query Parameters</button>
+                                <button class="editor-tab" data-tab="path-params">Path Parameters</button>
+                            </div>
+                            
+                            <div class="editor-content active" id="request-body-editor">
+                                <pre><code class="language-json">{
+  "client_id": "YOUR_CLIENT_ID",
+  "client_secret": "YOUR_CLIENT_SECRET",
+  "grant_type": "client_credentials",
+  "scope": "maps vehicles routes:read analytics:read"
+}</code></pre>
+                            </div>
+                            
+                            <div class="editor-content" id="headers-editor">
+                                <div class="param-editor">
+                                    <div class="param-row header">
+                                        <div class="param-key">Key</div>
+                                        <div class="param-value">Value</div>
+                                        <div class="param-actions"></div>
+                                    </div>
+                                    <div class="param-row">
+                                        <div class="param-key">
+                                            <input type="text" value="Content-Type" />
+                                        </div>
+                                        <div class="param-value">
+                                            <input type="text" value="application/json" />
+                                        </div>
+                                        <div class="param-actions">
+                                            <button class="delete-param"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="param-row">
+                                        <div class="param-key">
+                                            <input type="text" value="Accept" />
+                                        </div>
+                                        <div class="param-value">
+                                            <input type="text" value="application/json" />
+                                        </div>
+                                        <div class="param-actions">
+                                            <button class="delete-param"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </div>
+                                    <button class="add-param">+ Add Header</button>
+                                </div>
+                            </div>
+                            
+                            <div class="editor-content" id="query-params-editor">
+                                <div class="param-editor">
+                                    <div class="param-row header">
+                                        <div class="param-key">Key</div>
+                                        <div class="param-value">Value</div>
+                                        <div class="param-actions"></div>
+                                    </div>
+                                    <div class="param-row">
+                                        <div class="param-key">
+                                            <input type="text" placeholder="Parameter key" />
+                                        </div>
+                                        <div class="param-value">
+                                            <input type="text" placeholder="Parameter value" />
+                                        </div>
+                                        <div class="param-actions">
+                                            <button class="delete-param"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </div>
+                                    <button class="add-param">+ Add Query Parameter</button>
+                                </div>
+                            </div>
+                            
+                            <div class="editor-content" id="path-params-editor">
+                                <p class="no-params-message">No path parameters for this endpoint.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="playground-response">
+                            <div class="response-header">
+                                <h4>Response</h4>
+                                <div class="response-meta">
+                                    <span class="response-status success">200 OK</span>
+                                    <span class="response-time">234ms</span>
+                                </div>
+                            </div>
+                            <pre class="response-body"><code class="language-json">{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "token_type": "bearer",
+  "expires_in": 3600,
+  "scope": "maps vehicles routes:read analytics:read",
+  "refresh_token": "def502..."
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="webhooks" class="dev-section">
+            <div class="dev-container">
+                <div class="section-header">
+                    <h2>Webhooks</h2>
+                    <p>Receive real-time notifications when events occur in your Lattis-Nexus account</p>
+                </div>
+                
+                <div class="webhooks-overview">
+                    <div class="overview-content">
+                        <h3>What are Webhooks?</h3>
+                        <p>Webhooks allow your application to receive real-time notifications when certain events occur in your Lattis-Nexus account. Instead of constantly polling our APIs to check for updates, you can use webhooks to be notified immediately when something happens.</p>
+                        
+                        <div class="webhook-benefits">
+                            <div class="benefit">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Real-time Updates</h4>
+                                    <p>Receive instant notifications when events occur, without polling our APIs.</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Reduced API Load</h4>
+                                    <p>Eliminate the need for frequent API calls to check for changes.</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Event-driven Architecture</h4>
+                                    <p>Build responsive applications that react to events as they happen.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="webhook-events">
+                    <h3>Available Webhook Events</h3>
+                    <p>You can subscribe to the following event types:</p>
+                    
+                    <div class="events-grid">
+                        <div class="event-card">
+                            <div class="event-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div class="event-content">
+                                <h4>Vehicle Events</h4>
+                                <ul class="event-list">
+                                    <li>vehicle.created</li>
+                                    <li>vehicle.updated</li>
+                                    <li>vehicle.deleted</li>
+                                    <li>vehicle.maintenance_due</li>
+                                    <li>vehicle.status_changed</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="event-content">
+                                <h4>Location Events</h4>
+                                <ul class="event-list">
+                                    <li>location.updated</li>
+                                    <li>geofence.entered</li>
+                                    <li>geofence.exited</li>
+                                    <li>route.started</li>
+                                    <li>route.completed</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="event-content">
+                                <h4>Driver Events</h4>
+                                <ul class="event-list">
+                                    <li>driver.created</li>
+                                    <li>driver.updated</li>
+                                    <li>driver.deleted</li>
+                                    <li>driver.assignment_changed</li>
+                                    <li>driver.activity_changed</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <div class="event-content">
+                                <h4>Task Events</h4>
+                                <ul class="event-list">
+                                    <li>task.created</li>
+                                    <li>task.updated</li>
+                                    <li>task.assigned</li>
+                                    <li>task.started</li>
+                                    <li>task.completed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="webhook-setup">
+                    <h3>Setting Up Webhooks</h3>
+                    
+                    <div class="setup-steps">
+                        <div class="setup-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Create a Webhook Endpoint</h4>
+                                <p>First, you'll need to create an endpoint on your server to receive webhook events.</p>
+                                <div class="code-preview">
+                                    <pre><code class="language-javascript">// Example Node.js webhook endpoint
+app.post('/webhooks/lattis-nexus', (req, res) => {
+  const event = req.body;
+  
+  // Verify webhook signature
+  if (!verifyWebhookSignature(req)) {
+    return res.status(401).send('Invalid signature');
+  }
+  
+  // Process the event based on type
+  switch (event.type) {
+    case 'vehicle.status_changed':
+      handleVehicleStatusChange(event.data);
+      break;
+    case 'geofence.entered':
+      handleGeofenceEntry(event.data);
+      break;
+    // Handle other event types
+  }
+  
+  // Acknowledge receipt of the webhook
+  res.status(200).send('Webhook received');
+});</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="setup-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Register Your Webhook URL</h4>
+                                <p>Register your webhook URL in the Lattis-Nexus Dashboard and select the events you want to receive.</p>
+                                <a href="#" class="dashboard-link">Open Webhook Settings in Dashboard <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="setup-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Verify Webhook Signatures</h4>
+                                <p>For security, verify the signature included in each webhook request.</p>
+                                <div class="code-preview">
+                                    <pre><code class="language-javascript">function verifyWebhookSignature(req) {
+  const signature = req.headers['lattis-nexus-signature'];
+  const timestamp = req.headers['lattis-nexus-timestamp'];
+  const payload = req.rawBody; // Raw request body
+  
+  // Compute expected signature
+  const hmac = crypto.createHmac('sha256', WEBHOOK_SECRET);
+  const expectedSignature = hmac
+    .update(`${timestamp}.${payload}`)
+    .digest('hex');
+  
+  // Compare signatures using a constant-time comparison
+  return crypto.timingSafeEqual(
+    Buffer.from(signature),
+    Buffer.from(expectedSignature)
+  );
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="webhook-testing">
+                    <h3>Testing Webhooks</h3>
+                    <p>You can use our webhook testing tool to simulate events and ensure your endpoint is properly configured.</p>
+                    <a href="#" class="testing-link">Open Webhook Testing Tool <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="dev-section">
+            <div class="dev-container">
+                <div class="section-header">
+                    <h2>Developer Support</h2>
+                    <p>Resources to help you succeed with the Lattis-Nexus platform</p>
+                </div>
+
+                <div class="support-grid">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Developer Community</h3>
+                        <p>Join our community of developers to share knowledge and get help from peers.</p>
+                        <a href="#" class="support-button">Join Community</a>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <h3>Technical Support</h3>
+                        <p>Submit support tickets and get help from our engineering team.</p>
+                        <a href="#" class="support-button">Contact Support</a>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Office Hours</h3>
+                        <p>Schedule time with our engineers for dedicated assistance with your integration.</p>
+                        <a href="#" class="support-button">Book Session</a>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3>FAQ</h3>
+                        <p>Find answers to common questions about using the Lattis-Nexus platform.</p>
+                        <a href="#" class="support-button">View FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="../../images/logos/logo6.png" alt="Lattis-Nexus Logo" class="footer-logo-image">
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>PRODUCTS</h4>
+                        <ul>
+                            <li><a href="../products/#maps">Maps</a></li>
+                            <li><a href="../products/#navigation">Navigation</a></li>
+                            <li><a href="../products/#search">Search</a></li>
+                            <li><a href="../products/#analytics">Analytics</a></li>
+                            <li><a href="../products/#data">Data</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>SOLUTIONS</h4>
+                        <ul>
+                            <li><a href="../solutions/#logistics">Logistics</a></li>
+                            <li><a href="../solutions/#autonomous">Autonomous</a></li>
+                            <li><a href="../solutions/#carsharing">Carsharing</a></li>
+                            <li><a href="../solutions/#public-transit">Public Transit</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>DEVELOPERS</h4>
+                        <ul>
+                            <li><a href="#docs">Documentation</a></li>
+                            <li><a href="#api">API Reference</a></li>
+                            <li><a href="#sdks">SDKs</a></li>
+                            <li><a href="#support">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="../company/#about">About us</a></li>
+                            <li><a href="../company/#careers">Careers</a></li>
+                            <li><a href="../company/#press">Press</a></li>
+                            <li><a href="../contact/">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2013-2025 Lattis-Nexus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            hljs.highlightAll();
+        });
+    </script>
+</body>
+</html>
