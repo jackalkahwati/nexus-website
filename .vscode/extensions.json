@@ -1,0 +1,56 @@
+{
+  "recommendations": [
+    // JavaScript and TypeScript
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "mikestead.dotenv",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "streetsidesoftware.code-spell-checker",
+    
+    // React
+    "dsznajder.es7-react-js-snippets",
+    "burkeholland.simple-react-snippets",
+    "xabikos.reactsnippets",
+    "msjsdiag.vscode-react-native",
+    "jpoissonnier.vscode-styled-components",
+    
+    // Testing
+    "firsttris.vscode-jest-runner",
+    "hbenl.vscode-test-explorer",
+    "kavod-io.vscode-jest-test-adapter",
+    "hbenl.vscode-mocha-test-adapter",
+    "ms-vscode.test-adapter-converter",
+    
+    // Git
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+    "donjayamanne.githistory",
+    "codezombiech.gitignore",
+    
+    // Database
+    "ms-ossdata.vscode-postgresql",
+    "mtxr.sqltools",
+    "mtxr.sqltools-driver-pg",
+    "ms-azuretools.vscode-cosmosdb",
+    
+    // Docker
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode-remote.remote-ssh-edit",
+    
+    // Productivity
+    "wix.vscode-import-cost",
+    "waderyan.gitblame",
+    "gruntfuggly.todo-tree",
+    "usernamehw.errorlens",
+    "visualstudioexptteam.vscodeintellicode",
+    "eamodio.tsl-problem-matcher",
+    "editorconfig.editorconfig",
+    "naumovs.color-highlight"
+  ]
+}

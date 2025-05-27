@@ -1,0 +1,22 @@
+# Explicitly specify the Node.js provider
+providers = ["nodejs"]
+
+# Setup phase
+[phases.setup]
+nixPkgs = ["nodejs"]
+
+# Install phase (if needed)
+[phases.install]
+cmds = []
+
+# No special build needed for our simple app
+[phases.build]
+cmds = []
+
+# Start command
+[start]
+cmd = "node server.js"
+
+# Environment variables
+[variables]
+NODE_ENV = "production" 

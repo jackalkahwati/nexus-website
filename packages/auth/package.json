@@ -1,0 +1,27 @@
+{
+  "name": "@nexus/auth",
+  "version": "0.1.0",
+  "description": "Shared authentication service for Nexus applications",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src/**/*.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.0",
+    "next-auth": "^4.22.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.5.0",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "next": "^13.0.0 || ^14.0.0"
+  }
+}

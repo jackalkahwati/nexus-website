@@ -1,0 +1,29 @@
+# Snyk (https://snyk.io) policy file
+version: v1.25.0
+
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-NEXTAUTH-5925716:
+    - '*':
+        reason: 'No fix available yet, risk mitigated through proper session handling'
+        expires: 2024-06-01T00:00:00.000Z
+  SNYK-JS-PRISMA-5968435:
+    - '*':
+        reason: 'Low severity, no user input reaches affected code paths'
+        expires: 2024-06-01T00:00:00.000Z
+
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - lodash:
+        patched: '2024-02-01T00:00:00.000Z'
+
+exclude:
+  global:
+    - node_modules
+    - dist
+    - .next
+  code:
+    - test/**
+    - e2e/**
+    - performance/** 
