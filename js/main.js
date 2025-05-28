@@ -4,29 +4,29 @@ document.addEventListener('DOMContentLoaded', function() {
     if (ctaSection) {
         // Create a new demo button
         const demoButton = document.createElement('a');
-        demoButton.href = 'http://localhost:3001/signup';
+        demoButton.href = 'https://nexus-dashboard.pages.dev/login/';
         demoButton.className = 'primary-button';
         demoButton.id = 'try-demo-button';
         demoButton.innerHTML = 'Access Demo';
         demoButton.style.backgroundColor = '#0891b2'; // Teal color to stand out
-        
+
         // Add it to the CTA section
         ctaSection.prepend(demoButton);
-        
+
         // Add click event to auto-fill demo credentials
         demoButton.addEventListener('click', function(e) {
             e.preventDefault();
             // Store demo credentials in localStorage so the login page can read them
             localStorage.setItem('autofill_demo', 'true');
             // Navigate to login page
-            window.location.href = 'http://localhost:3001/signup';
+            window.location.href = 'https://nexus-dashboard.pages.dev/login/';
         });
     }
-    
+
     // Ensure all account buttons go straight to Nexus Core dashboard
     document.querySelectorAll('.account-button').forEach(btn => {
         // Redirect account button to the new dashboard sign-in route
-        btn.setAttribute('href', 'http://localhost:3001/signup');
+        btn.setAttribute('href', 'https://nexus-dashboard.pages.dev/login/');
     });
 
     // Login button redirect directly to Nexus Core dashboard without alerts
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loginButton.addEventListener('click', function(e) {
             e.preventDefault();
             // Navigate to dashboard sign-in
-            window.location.href = 'http://localhost:3001/signup';
+            window.location.href = 'https://nexus-dashboard.pages.dev/login/';
         });
     }
 
@@ -56,11 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scroll-based animations
     const animateOnScroll = () => {
         const elements = document.querySelectorAll('.feature-block, .story-content');
-        
+
         elements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
             const elementBottom = element.getBoundingClientRect().bottom;
-            
+
             if (elementTop < window.innerHeight * 0.8 && elementBottom > 0) {
                 element.classList.add('animate');
             }
@@ -85,13 +85,13 @@ document.addEventListener('DOMContentLoaded', function() {
             tabButtons.forEach(btn => btn.classList.remove('active'));
             // Add active class to clicked button
             button.classList.add('active');
-            
+
             // Hide all story contents
             storyContents.forEach(content => {
                 content.style.opacity = '0';
                 content.style.display = 'none';
             });
-            
+
             // Show selected story content with fade animation
             const selectedContent = document.querySelector('.story-content.active');
             if (selectedContent) {
@@ -170,20 +170,20 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             const formData = new FormData(contactForm);
             const data = Object.fromEntries(formData.entries());
-            
+
             try {
                 // Here you would typically send the data to your backend
                 // For now, we'll just show a success message
                 const successMessage = document.createElement('div');
                 successMessage.className = 'success-message';
                 successMessage.textContent = 'Thank you for your message! We will get back to you soon.';
-                
+
                 contactForm.appendChild(successMessage);
                 contactForm.reset();
-                
+
                 setTimeout(() => {
                     successMessage.remove();
                 }, 5000);
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     // Process CTA buttons - redirect without alerts
     document.querySelectorAll('.primary-button, .secondary-button, .feature-link').forEach(button => {
         // No special handling needed - links will work directly
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Ensure all Login buttons navigate correctly even without JS click handlers
     document.querySelectorAll('#login-button').forEach(btn => {
-        btn.setAttribute('href', 'http://localhost:3001/signup');
+        btn.setAttribute('href', 'https://nexus-dashboard.pages.dev/login/');
         // Optional: remove id to avoid duplicate IDs after initial use
         btn.removeAttribute('id');
     });
