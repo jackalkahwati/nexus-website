@@ -1,0 +1,5 @@
+# Next.js API routes
+/api/* /api/:splat 200
+
+# Next.js pages - handle client-side routing
+/* /index.html 200
